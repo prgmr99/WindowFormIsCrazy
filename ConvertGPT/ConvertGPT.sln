@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertGPT", "ConvertGPT\ConvertGPT.csproj", "{5FCBDEFB-C40F-4F0D-AC0F-ACE425D4BCA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FCBDEFB-C40F-4F0D-AC0F-ACE425D4BCA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCBDEFB-C40F-4F0D-AC0F-ACE425D4BCA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCBDEFB-C40F-4F0D-AC0F-ACE425D4BCA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCBDEFB-C40F-4F0D-AC0F-ACE425D4BCA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {095C4E58-C77C-4A80-B12C-146B07C62841}
+	EndGlobalSection
+EndGlobal
