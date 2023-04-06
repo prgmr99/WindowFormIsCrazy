@@ -1,0 +1,15 @@
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe.config
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.pdb
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.Design.dll
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.dll
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.AssemblyReference.cache
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.SuggestedBindingRedirects.cache
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.Form1.resources
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.Properties.Resources.resources
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.GenerateResource.cache
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.CoreCompileInputs.cache
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.CopyComplete
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.exe
+C:\Users\alexn\Desktop\3학년\응용소프트웨어실습\팀플\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.pdb
