@@ -18,7 +18,7 @@ namespace ConvertGPT
             string str = "";
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = "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"
+                ApiKey = "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"
             });
 
             var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
@@ -41,7 +41,7 @@ namespace ConvertGPT
             {
                 foreach(var result in completionResult.Choices)
                 {
-                    str+= result.ToString();
+                    str += result.Message.Content;
                 }
             }
             else

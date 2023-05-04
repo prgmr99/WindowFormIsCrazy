@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,7 +18,11 @@ namespace ConvertGPT
         int height = 680;
 
         public Form1()
-        {
+        {/*
+            GPTTest gt = new GPTTest();
+            Task<string> str = gt.gpttestAsync("cout<<\"Hello\"<<endl;");
+            str.Wait();
+            Console.WriteLine(str.Result);*/
             InitializeComponent();
             // 창크기 제한
             windowSize_Limit(width,height);
