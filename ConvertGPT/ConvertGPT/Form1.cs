@@ -18,14 +18,19 @@ namespace ConvertGPT
         int height = 680;
 
         public Form1()
-        {/*
-            GPTTest gt = new GPTTest();
-            Task<string> str = gt.gpttestAsync("cout<<\"Hello\"<<endl;");
-            str.Wait();
-            Console.WriteLine(str.Result);*/
+        {
+            
             InitializeComponent();
+            test();
             // 창크기 제한
             windowSize_Limit(width,height);
+        }
+        public async void test()
+        {
+            GPTTest gt = new GPTTest();
+            Task<string> str = gt.gpttestAsync("C#","Python","cout<<\"Hello\"<<endl;");
+            await str;
+            Console.Out.WriteLine(str.Result);
         }
 
         private void windowSize_Limit(int width,int height)

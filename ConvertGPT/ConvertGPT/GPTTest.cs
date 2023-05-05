@@ -13,20 +13,20 @@ namespace ConvertGPT
 {
     internal class GPTTest
     {
-        public async Task<string> gpttestAsync(string code)
+        public async Task<string> gpttestAsync(string from_lang,string to_lang,string code)
         {
             string str = "";
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = "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"
+                ApiKey = "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"
             });
 
             var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
             {
                 Messages = new List<ChatMessage>
     {
-        
-        ChatMessage.FromUser("##### Translate this function  from c# into Python\r\n###" + code +"### Python")
+
+        ChatMessage.FromUser("##### Translate this function  from "+from_lang+" into "+to_lang+"\n###"+from_lang+"\n" + code +"\n###"+to_lang)
     },
                 Model = Models.ChatGpt3_5Turbo,
                 MaxTokens = 1500//optional
@@ -36,13 +36,14 @@ namespace ConvertGPT
                 FrequencyPenalty = 0,
                 PresencePenalty = 0,
                 Stop = "###"
-            });
+            }) ;
             if (completionResult.Successful)
             {
                 foreach(var result in completionResult.Choices)
                 {
                     str += result.Message.Content;
                 }
+                return str;
             }
             else
             {
@@ -53,7 +54,7 @@ namespace ConvertGPT
 
                 Console.WriteLine($"{completionResult.Error.Code}: {completionResult.Error.Message}");
             }
-            return str;
+            return string.Empty;
         }
     }
 }
