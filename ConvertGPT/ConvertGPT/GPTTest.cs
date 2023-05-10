@@ -18,16 +18,16 @@ namespace ConvertGPT
             string str = "";
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = "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"
+                ApiKey = "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"
             });
 
             var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
             {
                 Messages = new List<ChatMessage>
-    {
-
-        ChatMessage.FromUser("##### Translate this function  from "+from_lang+" into "+to_lang+"\n###"+from_lang+"\n" + code +"\n###"+to_lang)
-    },
+                
+                {
+                    ChatMessage.FromUser("##### Translate this function  from "+from_lang+" into "+to_lang+"\n###"+  from_lang+"\n" + code +"\n###"+to_lang)
+                },
                 Model = Models.ChatGpt3_5Turbo,
                 MaxTokens = 1500//optional
                 ,
