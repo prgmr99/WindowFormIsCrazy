@@ -26,6 +26,22 @@ namespace ConvertGPT
         {
             
             InitializeComponent();
+            this.MinimumSize = new Size(900, 700); // 창크기 최소 폭 900, 높이 700 제한
+            
+        }
+        //
+        // ------- 폼 사이즈 변경시 관련요소 위치 및 크기 설정 -------
+        //
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            outputTextBox.Location = new Point(this.Width / 2 + 10, inputTextBox.Location.Y);
+            CopyBtn.Location = new Point(this.Width / 2 + 10, convertBtn.Location.Y);
+
+            inputTextBox.Width = this.Width / 2 - 10;
+            outputTextBox.Width = this.Width / 2 - 20;
+
+            convertBtn.Width = this.Width / 2 - 10;
+            CopyBtn.Width = this.Width / 2 - 20;
             
             table.Columns.Add("Name", typeof(string)); // 이름 Column(보류 -> 로그인 기능 구현)
             table.Columns.Add("Code", typeof(string)); // 코드 Column
@@ -34,6 +50,9 @@ namespace ConvertGPT
 
             windowSize_Limit(900, 680); // 창크기 제한
         }
+        //
+        // ------- 창크기 제한 -------
+        //
         private void windowSize_Limit(int width,int height)
         {
             // 코드 내용은 각 메서드를 커서로 놓으면 세부 내용이 나옴

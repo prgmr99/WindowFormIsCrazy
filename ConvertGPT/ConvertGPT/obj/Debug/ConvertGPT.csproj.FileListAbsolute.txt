@@ -133,6 +133,7 @@ C:\MyFile\CSharpProjects\WindowFormIsCrazy\ConvertGPT\ConvertGPT\obj\Debug\Conve
 C:\MyFile\CSharpProjects\WindowFormIsCrazy\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.exe
 C:\MyFile\CSharpProjects\WindowFormIsCrazy\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.pdb
 C:\MyFile\CSharpProjects\WindowFormIsCrazy\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.MainForm.resources
+<<<<<<< HEAD
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe.config
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.pdb
@@ -208,3 +209,65 @@ C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\K4
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\MySql.Data.xml
 C:\Users\johny\Desktop\test\WindowFormIsCrazy\ConvertGPT\ConvertGPT\bin\Debug\System.IO.Pipelines.xml
+=======
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe.config
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.exe
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\ConvertGPT.pdb
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.Design.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Http.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\OpenAI.GPT3.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Buffers.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Memory.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Net.Http.Json.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Text.Json.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.ValueTuple.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Http.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\OpenAI.GPT3.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Buffers.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Memory.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Net.Http.Json.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Text.Json.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\System.ValueTuple.xml
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.MainForm.resources
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.Properties.Resources.resources
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.GenerateResource.cache
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.CopyComplete
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.exe
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.pdb
+>>>>>>> main
