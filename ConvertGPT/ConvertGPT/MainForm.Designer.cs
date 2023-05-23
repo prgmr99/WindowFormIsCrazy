@@ -130,6 +130,7 @@
             this.CopyBtn.UseCustomBackColor = true;
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
+            this.CopyBtn.Click += new System.EventHandler(this.CopyBtn_Click);
             // 
             // outputTextBox
             // 

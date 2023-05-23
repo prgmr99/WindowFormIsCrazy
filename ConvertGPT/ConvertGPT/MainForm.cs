@@ -264,5 +264,21 @@ namespace ConvertGPT
             // Important for Python
             outputTextBox.ViewWhitespace = WhitespaceMode.VisibleAlways; // 공백 문자 항상 표시하기
         }
+        //
+        // ----- 복사 이벤트 함수 -----
+        //
+        private async void CopyBtn_Click(object sender, EventArgs e)
+        {
+            // 텍스트 박스에서 텍스트 가져오기
+            string copiedText = outputTextBox.Text;
+
+            // 클립보드에 텍스트 복사
+            Clipboard.SetText(copiedText);
+
+            // 복사 반응(2초 딜레이)
+            CopyBtn.Text = "Copied!";
+            await Task.Delay(2000);
+            CopyBtn.Text = "Copy";
+        }
     }
 }
