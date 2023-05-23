@@ -193,3 +193,5 @@ C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.c
 C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.csproj.CopyComplete
 C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.exe
 C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\obj\Debug\ConvertGPT.pdb
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\ScintillaNET.dll
+C:\Users\user\Desktop\폼 미쳤다\ConvertGPT\ConvertGPT\bin\Debug\ScintillaNET.xml

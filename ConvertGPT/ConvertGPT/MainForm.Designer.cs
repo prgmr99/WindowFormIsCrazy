@@ -30,9 +30,9 @@
         {
             this.selectLanguageComboBox = new MetroFramework.Controls.MetroComboBox();
             this.inputTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.outputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.convertBtn = new MetroFramework.Controls.MetroButton();
             this.CopyBtn = new MetroFramework.Controls.MetroButton();
+            this.outputTextBox = new ScintillaNET.Scintilla();
             this.SuspendLayout();
             // 
             // selectLanguageComboBox
@@ -55,6 +55,7 @@
             this.selectLanguageComboBox.TabIndex = 0;
             this.selectLanguageComboBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.selectLanguageComboBox.UseSelectable = true;
+            this.selectLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.selectLanguageComboBox_SelectedIndexChanged);
             // 
             // inputTextBox
             // 
@@ -95,41 +96,6 @@
             this.inputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.inputTextBox.Click += new System.EventHandler(this.convertBtn_MouseEnter);
             // 
-            // outputTextBox
-            // 
-            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.outputTextBox.CustomButton.Image = null;
-            this.outputTextBox.CustomButton.Location = new System.Drawing.Point(-39, 1);
-            this.outputTextBox.CustomButton.Name = "";
-            this.outputTextBox.CustomButton.Size = new System.Drawing.Size(473, 473);
-            this.outputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.outputTextBox.CustomButton.TabIndex = 1;
-            this.outputTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.outputTextBox.CustomButton.UseSelectable = true;
-            this.outputTextBox.CustomButton.Visible = false;
-            this.outputTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.outputTextBox.Lines = new string[0];
-            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
-            this.outputTextBox.MaxLength = 32767;
-            this.outputTextBox.Multiline = true;
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.PasswordChar = '\0';
-            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.SelectedText = "";
-            this.outputTextBox.SelectionLength = 0;
-            this.outputTextBox.SelectionStart = 0;
-            this.outputTextBox.ShortcutsEnabled = true;
-            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
-            this.outputTextBox.Style = MetroFramework.MetroColorStyle.Orange;
-            this.outputTextBox.TabIndex = 2;
-            this.outputTextBox.UseSelectable = true;
-            this.outputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.outputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // convertBtn
             // 
             this.convertBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -165,14 +131,27 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
+            // outputTextBox
+            // 
+            this.outputTextBox.AdditionalCaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
+            this.outputTextBox.TabIndex = 5;
+            this.outputTextBox.UseTabs = true;
+            this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
+            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.convertBtn);
-            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.selectLanguageComboBox);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -191,9 +170,9 @@
 
         private MetroFramework.Controls.MetroComboBox selectLanguageComboBox;
         private MetroFramework.Controls.MetroTextBox inputTextBox;
-        private MetroFramework.Controls.MetroTextBox outputTextBox;
         private MetroFramework.Controls.MetroButton convertBtn;
         private MetroFramework.Controls.MetroButton CopyBtn;
+        private ScintillaNET.Scintilla outputTextBox;
     }
 }
 
