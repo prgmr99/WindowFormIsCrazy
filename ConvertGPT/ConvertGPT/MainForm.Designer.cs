@@ -33,6 +33,7 @@
             this.outputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.convertBtn = new MetroFramework.Controls.MetroButton();
             this.CopyBtn = new MetroFramework.Controls.MetroButton();
+            this.lblDB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectLanguageComboBox
@@ -165,11 +166,24 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
+<<<<<<< HEAD
+            // lblDB
+            // 
+            this.lblDB.AutoSize = true;
+            this.lblDB.Location = new System.Drawing.Point(815, 30);
+            this.lblDB.Name = "lblDB";
+            this.lblDB.Size = new System.Drawing.Size(40, 15);
+            this.lblDB.TabIndex = 5;
+            this.lblDB.Text = "Server";
+            // 
+=======
+>>>>>>> main
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
+            this.Controls.Add(this.lblDB);
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.convertBtn);
             this.Controls.Add(this.outputTextBox);
@@ -182,8 +196,13 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+<<<<<<< HEAD
+            this.Load += new System.EventHandler(this.MainForm_Load);
+=======
             this.Resize += new System.EventHandler(this.MainForm_Resize);
+>>>>>>> main
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -194,6 +213,7 @@
         private MetroFramework.Controls.MetroTextBox outputTextBox;
         private MetroFramework.Controls.MetroButton convertBtn;
         private MetroFramework.Controls.MetroButton CopyBtn;
+        private System.Windows.Forms.Label lblDB;
     }
 }
 
