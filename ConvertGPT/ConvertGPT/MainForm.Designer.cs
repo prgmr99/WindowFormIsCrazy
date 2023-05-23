@@ -37,7 +37,8 @@
             // 
             // selectLanguageComboBox
             // 
-            this.selectLanguageComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.selectLanguageComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectLanguageComboBox.FormattingEnabled = true;
             this.selectLanguageComboBox.ItemHeight = 23;
@@ -57,7 +58,8 @@
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
@@ -95,7 +97,8 @@
             // 
             // outputTextBox
             // 
-            this.outputTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
@@ -129,7 +132,7 @@
             // 
             // convertBtn
             // 
-            this.convertBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.convertBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.convertBtn.BackColor = System.Drawing.Color.DarkOrange;
             this.convertBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.convertBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
@@ -148,7 +151,7 @@
             // 
             // CopyBtn
             // 
-            this.CopyBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CopyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CopyBtn.BackColor = System.Drawing.Color.DarkOrange;
             this.CopyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CopyBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
@@ -162,7 +165,7 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,11 +177,12 @@
             this.Controls.Add(this.selectLanguageComboBox);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(22, 80, 22, 27);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.ResumeLayout(false);
 
         }
