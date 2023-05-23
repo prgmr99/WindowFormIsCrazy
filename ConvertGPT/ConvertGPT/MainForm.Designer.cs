@@ -33,6 +33,7 @@
             this.outputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.convertBtn = new MetroFramework.Controls.MetroButton();
             this.CopyBtn = new MetroFramework.Controls.MetroButton();
+            this.lblDB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectLanguageComboBox
@@ -162,11 +163,21 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
-            // Form1
+            // lblDB
+            // 
+            this.lblDB.AutoSize = true;
+            this.lblDB.Location = new System.Drawing.Point(815, 30);
+            this.lblDB.Name = "lblDB";
+            this.lblDB.Size = new System.Drawing.Size(40, 15);
+            this.lblDB.TabIndex = 5;
+            this.lblDB.Text = "Server";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
+            this.Controls.Add(this.lblDB);
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.convertBtn);
             this.Controls.Add(this.outputTextBox);
@@ -174,12 +185,14 @@
             this.Controls.Add(this.selectLanguageComboBox);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(22, 80, 22, 27);
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -190,6 +203,7 @@
         private MetroFramework.Controls.MetroTextBox outputTextBox;
         private MetroFramework.Controls.MetroButton convertBtn;
         private MetroFramework.Controls.MetroButton CopyBtn;
+        private System.Windows.Forms.Label lblDB;
     }
 }
 

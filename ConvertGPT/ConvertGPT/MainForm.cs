@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConvertGPT.Error;
+using MySql.Data.MySqlClient;
 
 namespace ConvertGPT
 {
@@ -16,11 +18,20 @@ namespace ConvertGPT
     {
 
         // ------- 생명주기 함수 ------- 
+
+        // Database 객체 생성
+        DataTable table = new DataTable();
+
         public MainForm()
         {
             
             InitializeComponent();
             
+            table.Columns.Add("Name", typeof(string)); // 이름 Column(보류 -> 로그인 기능 구현)
+            table.Columns.Add("Code", typeof(string)); // 코드 Column
+            table.Columns.Add("Conversion", typeof(string)); // 변환 정보 Column
+
+
             windowSize_Limit(900, 680); // 창크기 제한
         }
         private void windowSize_Limit(int width,int height)
@@ -55,27 +66,39 @@ namespace ConvertGPT
         {
             var text = inputTextBox.Text;
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
-            var fromLanguage = "ㅁㄴㅇㄻㄴㅇㄹ";
+            var fromLanguage = "Javascript";
 
-            try
+            String Name = "SeungJun"; // if 로그인 구현 X -> no need
+            String Lang = "\"C++\"";
+            String dbText = "\"" + text + "\"";
+            
+            // Database에 정보 저장
+            using (MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=modeldb;Uid=root;Pwd=sjyeom2105"))
             {
-                if (text == null || text == "")
+                conn.Open();
+                string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
+                try
                 {
-                    throw new ConvertGPTException(ErrorCode.EmptyInput);
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    command.ExecuteNonQuery();
+
+                    if (text == null || text == "")
+                    {
+                        throw new ConvertGPTException(ErrorCode.EmptyInput);
+                    }
+                    if (toLanguageItem == null)
+                    {
+                        throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
+                    }
+
+                    //requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
+
                 }
-                if (toLanguageItem == null)
+                catch (ConvertGPTException ex)
                 {
-                    throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
+                    Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
                 }
-
-                requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
-                
             }
-            catch (ConvertGPTException ex)
-            {
-                Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
-            }
-
         }
 
         private void convertBtn_MouseEnter(object sender, EventArgs e)
@@ -89,5 +112,23 @@ namespace ConvertGPT
             // 버튼에서 마우스가 벗어날 때 배경색 원래대로 변경
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection("datasource = localhost;" +
+                "port=3306;" +
+                "username=root;" +
+                "password=sjyeom2105;");
+            connection.Open();
+            if(connection.State == System.Data.ConnectionState.Open)
+            {
+                lblDB.Text = "Connected";
+                lblDB.ForeColor = Color.Blue;
+            }
+            else
+            {
+                lblDB.Text = "DisConnected";
+                lblDB.ForeColor = Color.Red;
+            }
+        }
     }
 }
