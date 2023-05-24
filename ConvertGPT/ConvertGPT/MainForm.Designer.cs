@@ -166,19 +166,17 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
-
             // lblDB
-            // 
+            //
             this.lblDB.AutoSize = true;
             this.lblDB.Location = new System.Drawing.Point(815, 30);
             this.lblDB.Name = "lblDB";
             this.lblDB.Size = new System.Drawing.Size(40, 15);
             this.lblDB.TabIndex = 5;
             this.lblDB.Text = "Server";
-            // 
-
+            //
             // MainForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
@@ -196,7 +194,9 @@
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
 
+
             this.Load += new System.EventHandler(this.MainForm_Load);
+
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
