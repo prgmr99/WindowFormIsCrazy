@@ -163,8 +163,7 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             // lblDB
             // 
             this.lblDB.AutoSize = true;
@@ -174,12 +173,8 @@
             this.lblDB.TabIndex = 5;
             this.lblDB.Text = "Server";
             // 
-=======
->>>>>>> main
+
             // MainForm
-=======
-            // Form1
->>>>>>> parent of eaf2265 (Merge pull request #21 from prgmr99/Feat/#20)
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,14 +192,11 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             this.Load += new System.EventHandler(this.MainForm_Load);
-=======
+
             this.Resize += new System.EventHandler(this.MainForm_Resize);
->>>>>>> main
-=======
->>>>>>> parent of eaf2265 (Merge pull request #21 from prgmr99/Feat/#20)
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
