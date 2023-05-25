@@ -33,11 +33,12 @@
             this.convertBtn = new MetroFramework.Controls.MetroButton();
             this.CopyBtn = new MetroFramework.Controls.MetroButton();
             this.outputTextBox = new ScintillaNET.Scintilla();
+            this.lblDB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // selectLanguageComboBox
             // 
-            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectLanguageComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectLanguageComboBox.FormattingEnabled = true;
@@ -59,7 +60,7 @@
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
@@ -95,6 +96,41 @@
             this.inputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.inputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.inputTextBox.Click += new System.EventHandler(this.convertBtn_MouseEnter);
+            // 
+            // outputTextBox
+            // 
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            // 
+            // 
+            // 
+            this.outputTextBox.CustomButton.Image = null;
+            this.outputTextBox.CustomButton.Location = new System.Drawing.Point(-39, 1);
+            this.outputTextBox.CustomButton.Name = "";
+            this.outputTextBox.CustomButton.Size = new System.Drawing.Size(473, 473);
+            this.outputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.outputTextBox.CustomButton.TabIndex = 1;
+            this.outputTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.outputTextBox.CustomButton.UseSelectable = true;
+            this.outputTextBox.CustomButton.Visible = false;
+            this.outputTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.outputTextBox.Lines = new string[0];
+            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
+            this.outputTextBox.MaxLength = 32767;
+            this.outputTextBox.Multiline = true;
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.PasswordChar = '\0';
+            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.outputTextBox.SelectedText = "";
+            this.outputTextBox.SelectionLength = 0;
+            this.outputTextBox.SelectionStart = 0;
+            this.outputTextBox.ShortcutsEnabled = true;
+            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
+            this.outputTextBox.Style = MetroFramework.MetroColorStyle.Orange;
+            this.outputTextBox.TabIndex = 2;
+            this.outputTextBox.UseSelectable = true;
+            this.outputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.outputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // convertBtn
             // 
@@ -145,12 +181,22 @@
             this.outputTextBox.UseTabs = true;
             this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
             // 
+            // lblDB
+            //
+            this.lblDB.AutoSize = true;
+            this.lblDB.Location = new System.Drawing.Point(815, 30);
+            this.lblDB.Name = "lblDB";
+            this.lblDB.Size = new System.Drawing.Size(40, 15);
+            this.lblDB.TabIndex = 5;
+            this.lblDB.Text = "Server";
+            //
             // MainForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
             this.Controls.Add(this.outputTextBox);
+            this.Controls.Add(this.lblDB);
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.convertBtn);
             this.Controls.Add(this.inputTextBox);
@@ -162,8 +208,13 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+
+
+            this.Load += new System.EventHandler(this.MainForm_Load);
+
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,6 +225,7 @@
         private MetroFramework.Controls.MetroButton convertBtn;
         private MetroFramework.Controls.MetroButton CopyBtn;
         private ScintillaNET.Scintilla outputTextBox;
+        private System.Windows.Forms.Label lblDB;
     }
 }
 
