@@ -38,7 +38,7 @@
             // 
             // selectLanguageComboBox
             // 
-            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.selectLanguageComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.selectLanguageComboBox.FormattingEnabled = true;
@@ -59,7 +59,7 @@
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
@@ -98,7 +98,7 @@
             // 
             // outputTextBox
             // 
-            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
@@ -166,20 +166,17 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
-<<<<<<< HEAD
             // lblDB
-            // 
+            //
             this.lblDB.AutoSize = true;
             this.lblDB.Location = new System.Drawing.Point(815, 30);
             this.lblDB.Name = "lblDB";
             this.lblDB.Size = new System.Drawing.Size(40, 15);
             this.lblDB.TabIndex = 5;
             this.lblDB.Text = "Server";
-            // 
-=======
->>>>>>> main
+            //
             // MainForm
-            // 
+            //
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
@@ -196,11 +193,11 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ConvertGPT";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-<<<<<<< HEAD
+
+
             this.Load += new System.EventHandler(this.MainForm_Load);
-=======
+
             this.Resize += new System.EventHandler(this.MainForm_Resize);
->>>>>>> main
             this.ResumeLayout(false);
             this.PerformLayout();
 
