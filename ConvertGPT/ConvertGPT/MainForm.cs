@@ -27,7 +27,11 @@ namespace ConvertGPT
             
             InitializeComponent();
             this.MinimumSize = new Size(900, 700); // 창크기 최소 폭 900, 높이 700 제한
-            
+
+            table.Columns.Add("Name", typeof(string)); // 이름 Column(보류 -> 로그인 기능 구현)
+            table.Columns.Add("Code", typeof(string)); // 코드 Column
+            table.Columns.Add("Conversion", typeof(string)); // 변환 정보 Column
+
         }
         //
         // ------- 폼 사이즈 변경시 관련요소 위치 및 크기 설정 -------
@@ -43,9 +47,7 @@ namespace ConvertGPT
             convertBtn.Width = this.Width / 2 - 10;
             CopyBtn.Width = this.Width / 2 - 20;
             
-            table.Columns.Add("Name", typeof(string)); // 이름 Column(보류 -> 로그인 기능 구현)
-            table.Columns.Add("Code", typeof(string)); // 코드 Column
-            table.Columns.Add("Conversion", typeof(string)); // 변환 정보 Column
+            
 
 
             windowSize_Limit(900, 680); // 창크기 제한
