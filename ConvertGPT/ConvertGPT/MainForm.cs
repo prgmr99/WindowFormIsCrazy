@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConvertGPT.Error;
 using ScintillaNET;
+using MySql.Data.MySqlClient;
 
 namespace ConvertGPT
 {
@@ -17,12 +19,20 @@ namespace ConvertGPT
     {
 
         // ------- 생명주기 함수 ------- 
+
+        // Database 객체 생성
+        DataTable table = new DataTable();
+
         public MainForm()
         {
             
             InitializeComponent();
             this.MinimumSize = new Size(900, 700); // 창크기 최소 폭 900, 높이 700 제한
             outputTextBox.Styles[ScintillaNET.Style.Default].Size = 12; // 기본 폰트 사이즈 설정
+
+            table.Columns.Add("Name", typeof(string)); // 이름 Column(보류 -> 로그인 기능 구현)
+            table.Columns.Add("Code", typeof(string)); // 코드 Column
+            table.Columns.Add("Conversion", typeof(string)); // 변환 정보 Column
 
         }
         //
@@ -38,6 +48,11 @@ namespace ConvertGPT
 
             convertBtn.Width = this.Width / 2 - 10;
             CopyBtn.Width = this.Width / 2 - 20;
+            
+            
+
+
+            windowSize_Limit(900, 680); // 창크기 제한
         }
         //
         // ------- 창크기 제한 -------
@@ -74,10 +89,17 @@ namespace ConvertGPT
         {
             var text = inputTextBox.Text;
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
-            var fromLanguage = "ㅁㄴㅇㄻㄴㅇㄹ";
+            var fromLanguage = "Javascript";
+
+            String Name = "SeungJun"; // if 로그인 구현 X -> no need
+            String Lang = "\"C++\"";
+            String dbText = "\"" + text + "\"";
 
             try
             {
+                //MySqlCommand command = new MySqlCommand(sql, conn);
+                //command.ExecuteNonQuery();
+
                 if (text == null || text == "")
                 {
                     throw new ConvertGPTException(ErrorCode.EmptyInput);
@@ -88,13 +110,20 @@ namespace ConvertGPT
                 }
 
                 requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
-                
+
             }
             catch (ConvertGPTException ex)
             {
                 Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
             }
 
+            // Database에 정보 저장
+            //using (MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=modeldb;Uid=root;Pwd=sjyeom2105"))
+            //{
+            //    conn.Open();
+            //    string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
+               
+            //}
         }
 
         private void convertBtn_MouseEnter(object sender, EventArgs e)
@@ -263,6 +292,24 @@ namespace ConvertGPT
 
             // Important for Python
             outputTextBox.ViewWhitespace = WhitespaceMode.VisibleAlways; // 공백 문자 항상 표시하기
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection("datasource = localhost;" +
+                "port=3306;" +
+                "username=root;" +
+                "password=sjyeom2105;");
+            //connection.Open();
+            if(connection.State == System.Data.ConnectionState.Open)
+            {
+                lblDB.Text = "Connected";
+                lblDB.ForeColor = Color.Blue;
+            }
+            else
+            {
+                lblDB.Text = "DisConnected";
+                lblDB.ForeColor = Color.Red;
+            }
         }
     }
 }
