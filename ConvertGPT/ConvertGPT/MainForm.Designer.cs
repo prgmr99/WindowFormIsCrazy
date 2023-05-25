@@ -30,9 +30,9 @@
         {
             this.selectLanguageComboBox = new MetroFramework.Controls.MetroComboBox();
             this.inputTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.outputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.convertBtn = new MetroFramework.Controls.MetroButton();
             this.CopyBtn = new MetroFramework.Controls.MetroButton();
+            this.outputTextBox = new ScintillaNET.Scintilla();
             this.lblDB = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             this.selectLanguageComboBox.TabIndex = 0;
             this.selectLanguageComboBox.Theme = MetroFramework.MetroThemeStyle.Light;
             this.selectLanguageComboBox.UseSelectable = true;
+            this.selectLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.selectLanguageComboBox_SelectedIndexChanged);
             // 
             // inputTextBox
             // 
@@ -166,6 +167,19 @@
             this.CopyBtn.UseCustomForeColor = true;
             this.CopyBtn.UseSelectable = true;
             // 
+            // outputTextBox
+            // 
+            this.outputTextBox.AdditionalCaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
+            this.outputTextBox.TabIndex = 5;
+            this.outputTextBox.UseTabs = true;
+            this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
+            // 
             // lblDB
             //
             this.lblDB.AutoSize = true;
@@ -180,10 +194,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 680);
+            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.lblDB);
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.convertBtn);
-            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.inputTextBox);
             this.Controls.Add(this.selectLanguageComboBox);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -207,9 +221,9 @@
 
         private MetroFramework.Controls.MetroComboBox selectLanguageComboBox;
         private MetroFramework.Controls.MetroTextBox inputTextBox;
-        private MetroFramework.Controls.MetroTextBox outputTextBox;
         private MetroFramework.Controls.MetroButton convertBtn;
         private MetroFramework.Controls.MetroButton CopyBtn;
+        private ScintillaNET.Scintilla outputTextBox;
         private System.Windows.Forms.Label lblDB;
     }
 }
