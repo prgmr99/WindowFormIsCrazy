@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ConvertGPT.Error;
 using ScintillaNET;
 using MySql.Data.MySqlClient;
 

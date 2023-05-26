@@ -59,8 +59,9 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Lines = new string[] {
         "metroTextBox1"};
-            this.metroTextBox1.Location = new System.Drawing.Point(379, 143);
+            this.metroTextBox1.Location = new System.Drawing.Point(368, 74);
             this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Multiline = true;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
             this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -68,7 +69,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(220, 50);
+            this.metroTextBox1.Size = new System.Drawing.Size(220, 300);
             this.metroTextBox1.TabIndex = 1;
             this.metroTextBox1.Text = "metroTextBox1";
             this.metroTextBox1.UseSelectable = true;
