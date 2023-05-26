@@ -1,4 +1,6 @@
-﻿namespace ConvertGPT
+﻿using ScintillaNET;
+
+namespace ConvertGPT
 {
     partial class MainForm
     {
@@ -99,38 +101,16 @@
             // 
             // outputTextBox
             // 
+            this.outputTextBox.AdditionalCaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.outputTextBox.CustomButton.Image = null;
-            this.outputTextBox.CustomButton.Location = new System.Drawing.Point(-39, 1);
-            this.outputTextBox.CustomButton.Name = "";
-            this.outputTextBox.CustomButton.Size = new System.Drawing.Size(473, 473);
-            this.outputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.outputTextBox.CustomButton.TabIndex = 1;
-            this.outputTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.outputTextBox.CustomButton.UseSelectable = true;
-            this.outputTextBox.CustomButton.Visible = false;
-            this.outputTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.outputTextBox.Lines = new string[0];
+            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.outputTextBox.Location = new System.Drawing.Point(455, 110);
-            this.outputTextBox.MaxLength = 32767;
-            this.outputTextBox.Multiline = true;
             this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.PasswordChar = '\0';
-            this.outputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputTextBox.SelectedText = "";
-            this.outputTextBox.SelectionLength = 0;
-            this.outputTextBox.SelectionStart = 0;
-            this.outputTextBox.ShortcutsEnabled = true;
             this.outputTextBox.Size = new System.Drawing.Size(435, 475);
-            this.outputTextBox.Style = MetroFramework.MetroColorStyle.Orange;
-            this.outputTextBox.TabIndex = 2;
-            this.outputTextBox.UseSelectable = true;
-            this.outputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.outputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.outputTextBox.TabIndex = 5;
+            this.outputTextBox.UseTabs = true;
+            this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
             // 
             // convertBtn
             // 
