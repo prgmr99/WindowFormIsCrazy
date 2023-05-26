@@ -164,6 +164,7 @@
     <Compile Include="Error\ConvertGPTException.cs" />
     <Compile Include="Error\ErrorCode.cs" />
     <Compile Include="ExplainCode.cs" />
+    <Compile Include="Global\ConvertGPTGlobal.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +172,18 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GPTTest.cs" />
+    <Compile Include="MainScene\HomeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainScene\HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainScene\ResultScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainScene\ResultScene.Designer.cs">
+      <DependentUpon>ResultScene.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DragForm.resx">
@@ -178,6 +191,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScene\HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScene\ResultScene.resx">
+      <DependentUpon>ResultScene.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -214,6 +233,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

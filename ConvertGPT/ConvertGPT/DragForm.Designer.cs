@@ -28,13 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SuspendLayout();
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1000, 500);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            this.metroPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.metroPanel1_Paint);
             // 
             // DragForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1101, 583);
+            this.Controls.Add(this.metroPanel1);
             this.Name = "DragForm";
             this.Text = "DragForm";
             this.Load += new System.EventHandler(this.DragForm_Load);
@@ -43,5 +60,6 @@
         }
 
         #endregion
+        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }
