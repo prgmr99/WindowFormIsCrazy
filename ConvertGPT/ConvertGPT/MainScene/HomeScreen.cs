@@ -26,7 +26,9 @@ namespace ConvertGPT.MainScene
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            homeEventSender(sender, HomeEvent.nextButtonClicked);
+            homeEventSender(sender, HomeEvent.nextButtonClicked, metroTextBox1.Text);
         }
+
+     
     }
 }

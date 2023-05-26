@@ -39,19 +39,26 @@ namespace ConvertGPT
             resultScreen.resultEventSender += ResultEventSender;
         }
 
-        private void HomeEventSender(object sender, HomeEvent homeEvent) {
+        private void HomeEventSender(object sender, HomeEvent homeEvent, Object data) {
             Console.WriteLine("nextButton 이벤트가 MainController에 전달 되었습니다");
 
             switch (homeEvent) {
                 case HomeEvent.nextButtonClicked:
                     metroPanel1.Controls.Clear();
+
+
+
+                    resultScreen.dataBind(data.ToString());
+
                     metroPanel1.Controls.Add(resultScreen);
+                    
+
                     break;
                 default: break;
             }
         }
 
-        private void ResultEventSender(object sender, ResultEvent resultEvent)
+        private void ResultEventSender(object sender, ResultEvent resultEvent,Object data)
         {
             Console.WriteLine("back 이벤트가 MainController에 전달 되었습니다");
 

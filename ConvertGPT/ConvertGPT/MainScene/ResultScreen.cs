@@ -27,7 +27,12 @@ namespace ConvertGPT.MainScene
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            resultEventSender(sender, ResultEvent.backButtonClicked);
+            resultEventSender(sender, ResultEvent.backButtonClicked, "");
+        }
+
+        public void dataBind(String text)
+        {
+            metroLabel1.Text = text;
         }
     }
 }

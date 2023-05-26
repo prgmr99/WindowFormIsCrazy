@@ -20,7 +20,7 @@ namespace ConvertGPT
         backButtonClicked
     }
 
-    public delegate void HomeEventSender(object sender, HomeEvent homeEvent);
-    public delegate void ResultEventSender(object sender, ResultEvent resultEvent);
+    public delegate void HomeEventSender(object sender, HomeEvent homeEvent, Object data);
+    public delegate void ResultEventSender(object sender, ResultEvent resultEvent, Object data);
 
 }

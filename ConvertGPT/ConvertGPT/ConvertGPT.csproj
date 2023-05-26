@@ -178,11 +178,11 @@
     <Compile Include="MainScene\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScene\ResultScene.cs">
+    <Compile Include="MainScene\ResultScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainScene\ResultScene.Designer.cs">
-      <DependentUpon>ResultScene.cs</DependentUpon>
+    <Compile Include="MainScene\ResultScreen.Designer.cs">
+      <DependentUpon>ResultScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,8 +195,8 @@
     <EmbeddedResource Include="MainScene\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScene\ResultScene.resx">
-      <DependentUpon>ResultScene.cs</DependentUpon>
+    <EmbeddedResource Include="MainScene\ResultScreen.resx">
+      <DependentUpon>ResultScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
