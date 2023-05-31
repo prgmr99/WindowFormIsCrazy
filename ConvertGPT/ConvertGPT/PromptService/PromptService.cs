@@ -30,7 +30,7 @@ namespace ConvertGPT
                 {
                     Output += result.Message.Content;
                 }
-                Console.Out.WriteLine(Output);
+                //Console.Out.WriteLine(Output);
                 return Output;
             }
             else
