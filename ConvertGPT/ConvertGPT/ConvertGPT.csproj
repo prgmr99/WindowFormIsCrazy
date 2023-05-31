@@ -155,65 +155,75 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DragForm.cs">
+    <Compile Include="Presentation\DragForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DragForm.Designer.cs">
+    <Compile Include="Presentation\DragForm.Designer.cs">
       <DependentUpon>DragForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Error\ConvertGPTException.cs" />
-    <Compile Include="Error\ErrorCode.cs" />
-    <Compile Include="ExplainCode.cs" />
+    <Compile Include="Global\Error\ConvertGPTException.cs" />
+    <Compile Include="Global\Error\ErrorCode.cs" />
+    <Compile Include="Network\ExplainCode.cs" />
     <Compile Include="Global\ConvertGPTGlobal.cs" />
-    <Compile Include="HistoryScene\HistoryScreen.cs">
+    <Compile Include="Presentation\HistoryScene\HistoryScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HistoryScene\HistoryScreen.Designer.cs">
+    <Compile Include="Presentation\HistoryScene\HistoryScreen.Designer.cs">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Presentation\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GPTTest.cs" />
-    <Compile Include="MainScene\GuideScreen.cs">
+    <Compile Include="Network\GPTTest.cs" />
+    <Compile Include="Presentation\MainScene\GuideScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainScene\GuideScreen.Designer.cs">
+    <Compile Include="Presentation\MainScene\GuideScreen.Designer.cs">
       <DependentUpon>GuideScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScene\HomeScreen.cs">
+    <Compile Include="Presentation\MainScene\HomeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainScene\HomeScreen.Designer.cs">
+    <Compile Include="Presentation\MainScene\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainScene\ResultScreen.cs">
+    <Compile Include="Presentation\MainScene\LanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\MainScene\LanguageForm.Designer.cs">
+      <DependentUpon>LanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MainScene\ResultScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MainScene\ResultScreen.Designer.cs">
+    <Compile Include="Presentation\MainScene\ResultScreen.Designer.cs">
       <DependentUpon>ResultScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Data\ConvertRequestModel.cs" />
+    <Compile Include="Application\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DragForm.resx">
+    <EmbeddedResource Include="Presentation\DragForm.resx">
       <DependentUpon>DragForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoryScene\HistoryScreen.resx">
+    <EmbeddedResource Include="Presentation\HistoryScene\HistoryScreen.resx">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Presentation\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScene\GuideScreen.resx">
+    <EmbeddedResource Include="Presentation\MainScene\GuideScreen.resx">
       <DependentUpon>GuideScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScene\HomeScreen.resx">
+    <EmbeddedResource Include="Presentation\MainScene\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainScene\ResultScreen.resx">
+    <EmbeddedResource Include="Presentation\MainScene\LanguageForm.resx">
+      <DependentUpon>LanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MainScene\ResultScreen.resx">
       <DependentUpon>ResultScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -224,8 +234,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
+    <None Include="Application\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -237,7 +248,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Application\App.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -250,6 +261,14 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\C#.png" />
+    <Content Include="Resource\cpp.png" />
+    <Content Include="Resource\java.jpg" />
+    <Content Include="Resource\js.png" />
+    <Content Include="Resource\python.png" />
+    <Content Include="Resource\swift.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

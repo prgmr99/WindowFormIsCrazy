@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("돋움", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(182, 271);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(642, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "아무곳에나 파일을 넣으세요";
             // 
             // GuideScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.Controls.Add(this.label1);
             this.Name = "GuideScreen";
-            this.Size = new System.Drawing.Size(1101, 583);
+            this.Size = new System.Drawing.Size(1000, 740);
             this.Load += new System.EventHandler(this.GuideScreen_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
