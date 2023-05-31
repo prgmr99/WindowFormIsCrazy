@@ -164,6 +164,7 @@
     <Compile Include="Error\ConvertGPTException.cs" />
     <Compile Include="Error\ErrorCode.cs" />
     <Compile Include="ExplainCode.cs" />
+    <Compile Include="KeySyntax.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
