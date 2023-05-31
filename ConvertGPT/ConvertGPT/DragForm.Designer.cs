@@ -28,20 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SuspendLayout();
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(20, 60);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1058, 500);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
             // 
             // DragForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1101, 583);
+            this.Controls.Add(this.metroPanel1);
             this.Name = "DragForm";
             this.Text = "DragForm";
             this.Load += new System.EventHandler(this.DragForm_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragForm_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragForm_DragEnter);
+            this.DragOver += new System.Windows.Forms.DragEventHandler(this.DragForm_DragOver);
+            this.DragLeave += new System.EventHandler(this.DragForm_DragLeave);
+            this.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.DragForm_GiveFeedback);
+            this.QueryContinueDrag += new System.Windows.Forms.QueryContinueDragEventHandler(this.DragForm_QueryContinueDrag);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        private MetroFramework.Controls.MetroPanel metroPanel1;
     }
 }

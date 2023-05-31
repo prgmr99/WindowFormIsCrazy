@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ConvertGPT.Error;
 using ScintillaNET;
 using MySql.Data.MySqlClient;
 
@@ -49,9 +48,6 @@ namespace ConvertGPT
             convertBtn.Width = this.Width / 2 - 10;
             CopyBtn.Width = this.Width / 2 - 20;
             
-            
-
-
             windowSize_Limit(900, 680); // 창크기 제한
         }
         //
