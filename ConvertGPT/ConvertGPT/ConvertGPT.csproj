@@ -165,6 +165,12 @@
     <Compile Include="Error\ErrorCode.cs" />
     <Compile Include="ExplainCode.cs" />
     <Compile Include="Global\ConvertGPTGlobal.cs" />
+    <Compile Include="HistoryScene\HistoryScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HistoryScene\HistoryScreen.Designer.cs">
+      <DependentUpon>HistoryScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GPTTest.cs" />
+    <Compile Include="MainScene\GuideScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainScene\GuideScreen.Designer.cs">
+      <DependentUpon>GuideScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScene\HomeScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,8 +201,14 @@
     <EmbeddedResource Include="DragForm.resx">
       <DependentUpon>DragForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistoryScene\HistoryScreen.resx">
+      <DependentUpon>HistoryScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScene\GuideScreen.resx">
+      <DependentUpon>GuideScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScene\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>

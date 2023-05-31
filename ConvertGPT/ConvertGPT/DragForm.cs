@@ -122,12 +122,6 @@ namespace ConvertGPT
             Console.WriteLine("DragForm_QueryContinueDrag");
         }
 
-        private void label1_MouseDown(object sender, MouseEventArgs e)
-        {
-            Console.WriteLine("label1_MouseDown");
-           // label1.AllowDrop = true;
-            //label1.DoDragDrop(label1.Text, DragDropEffects.Copy | DragDropEffects.Move);
-        }
 
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {

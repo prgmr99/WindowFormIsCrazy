@@ -59,6 +59,12 @@
             this.Name = "DragForm";
             this.Text = "DragForm";
             this.Load += new System.EventHandler(this.DragForm_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragForm_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.DragForm_DragEnter);
+            this.DragOver += new System.Windows.Forms.DragEventHandler(this.DragForm_DragOver);
+            this.DragLeave += new System.EventHandler(this.DragForm_DragLeave);
+            this.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.DragForm_GiveFeedback);
+            this.QueryContinueDrag += new System.Windows.Forms.QueryContinueDragEventHandler(this.DragForm_QueryContinueDrag);
             this.ResumeLayout(false);
 
         }
