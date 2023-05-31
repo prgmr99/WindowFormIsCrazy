@@ -90,39 +90,40 @@ namespace ConvertGPT
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
             var fromLanguage = "Javascript";
 
-            String Name = "SeungJun"; // if 로그인 구현 X -> no need
+            String Name = "SeungJunzz"; // if 로그인 구현 X -> no need
             String Lang = "\"C++\"";
             String dbText = "\"" + text + "\"";
 
-            try
-            {
-                //MySqlCommand command = new MySqlCommand(sql, conn);
-                //command.ExecuteNonQuery();
-
-                if (text == null || text == "")
-                {
-                    throw new ConvertGPTException(ErrorCode.EmptyInput);
-                }
-                if (toLanguageItem == null)
-                {
-                    throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
-                }
-
-                requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
-
-            }
-            catch (ConvertGPTException ex)
-            {
-                Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
-            }
+            
 
             // Database에 정보 저장
-            //using (MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=modeldb;Uid=root;Pwd=sjyeom2105"))
-            //{
-            //    conn.Open();
-            //    string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
-               
-            //}
+            using (MySqlConnection conn = new MySqlConnection("Server=203.229.49.5;Port=3306;Database=modeldb;Uid=client;Pwd=mysql0000!"))
+            {
+                conn.Open();
+                string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
+
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    command.ExecuteNonQuery();
+
+                    if (text == null || text == "")
+                    {
+                        throw new ConvertGPTException(ErrorCode.EmptyInput);
+                    }
+                    if (toLanguageItem == null)
+                    {
+                        throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
+                    }
+
+                    //requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
+
+                }
+                catch (ConvertGPTException ex)
+                {
+                    Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
+                }
+            }
         }
 
         private void convertBtn_MouseEnter(object sender, EventArgs e)
@@ -310,11 +311,11 @@ namespace ConvertGPT
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource = localhost;" +
+            MySqlConnection connection = new MySqlConnection("datasource = 203.229.49.5;" +
                 "port=3306;" +
-                "username=root;" +
-                "password=sjyeom2105;");
-            //connection.Open();
+                "username=client;" +
+                "password=mysql0000!;");
+            connection.Open();
             if(connection.State == System.Data.ConnectionState.Open)
             {
                 lblDB.Text = "Connected";
