@@ -21,11 +21,8 @@ namespace ConvertGPT
         // Life Cycle
         public DragForm()
         {
-
             InitializeComponent();
             this.AllowDrop = true;
-            this.DragEnter += DragForm_DragEnter;
-            this.DragDrop += DragForm_DragDrop;
         }
 
 
@@ -78,34 +75,5 @@ namespace ConvertGPT
                 default: break;
             }
         }
-
-
-
-
-
-        private void DragForm_DragEnter(object sender, DragEventArgs e)
-        {
-            Console.WriteLine("DragForm_DragEnter");
-
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                e.Effect = DragDropEffects.Copy;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
-        }
-
-        private void DragForm_DragDrop(object sender, DragEventArgs e)
-        {
-            Console.WriteLine("DragForm_DragDrop");
-            string[] filePaths = (string[])e.Data.GetData(DataFormats.FileDrop);
-            //foreach (string path in filePaths)
-            //{
-            //    label1.Text = path;
-            //}
-        }
-
     }
 }

@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nextButton = new MetroFramework.Controls.MetroButton();
+            this.nextButton = new System.Windows.Forms.Button();
             this.inputTextBox = new MetroFramework.Controls.MetroTextBox();
             this.explainLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,14 +40,17 @@
             // nextButton
             // 
             this.nextButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.nextButton.FlatAppearance.BorderSize = 4;
+            this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.nextButton.Location = new System.Drawing.Point(20, 630);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(605, 95);
-            this.nextButton.Style = MetroFramework.MetroColorStyle.Silver;
             this.nextButton.TabIndex = 0;
             this.nextButton.Text = "코드 변환하기";
-            this.nextButton.UseCustomBackColor = true;
-            this.nextButton.UseSelectable = true;
+            this.nextButton.UseVisualStyleBackColor = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // inputTextBox
@@ -157,7 +160,7 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroButton nextButton;
+        private System.Windows.Forms.Button nextButton;
         private MetroFramework.Controls.MetroTextBox inputTextBox;
         private System.Windows.Forms.Label explainLabel;
         private System.Windows.Forms.Label label1;
