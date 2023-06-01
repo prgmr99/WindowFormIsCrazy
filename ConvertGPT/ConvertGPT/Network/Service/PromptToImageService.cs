@@ -10,7 +10,7 @@ namespace ConvertGPT
 {
     internal class PromptToImageService : PromptService
     {
-        public PromptToImageService(string apikey) : base(apikey)
+        public PromptToImageService() : base()
         {
         }
         public override async Task<string> GetResponse(IPromptType pit)

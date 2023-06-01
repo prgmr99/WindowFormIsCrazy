@@ -46,9 +46,9 @@ namespace ConvertGPT
 
         }
 
-        public PromptService(string apikey)
+        public PromptService()
         {
-            APIkey = apikey;
+            APIkey = Secret.APIKEYS;
             openAIService = new OpenAIService(new OpenAiOptions { ApiKey = APIkey });
         }
     }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScintillaNET;
 using MySql.Data.MySqlClient;
-using System.Configuration;
+//using System.Configuration;
 
 namespace ConvertGPT
 {
@@ -89,12 +89,13 @@ namespace ConvertGPT
             var text = inputTextBox.Text;
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
             var fromLanguage = "Javascript";
-            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
-            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
 
             Console.WriteLine(toLanguageItem);
             // Database에 정보 저장
-            using (MySqlConnection conn = new MySqlConnection($"{exConfig}"))
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
+
+            using (MySqlConnection conn = new MySqlConnection(exConfig))
             {
                 conn.Open();
                 string sql = string.Format("INSERT INTO history (FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
@@ -308,9 +309,10 @@ namespace ConvertGPT
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
-            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
-            MySqlConnection connection = new MySqlConnection($"{exConfig}");
+
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
+            MySqlConnection connection = new MySqlConnection(exConfig);
             connection.Open();
             if(connection.State == System.Data.ConnectionState.Open)
             {

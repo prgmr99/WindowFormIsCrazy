@@ -196,6 +196,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global\Secret.cs" />
     <Compile Include="Presentation\DragForm.cs">
       <SubType>Form</SubType>
     </Compile>
