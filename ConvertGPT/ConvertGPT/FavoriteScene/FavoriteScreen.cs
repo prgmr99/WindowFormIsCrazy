@@ -10,13 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvertGPT.HistoryScreen
+namespace ConvertGPT.FavoriteScene
 {
-    public partial class HistoryScreen : UserControl
+    public partial class FavoriteScreen : UserControl
     {
-        public HistoryScreen()
+        public FavoriteScreen()
         {
             InitializeComponent();
+        }
+
+        private void FavoriteScreen_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,7 +41,7 @@ namespace ConvertGPT.HistoryScreen
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
 
-            DataTable dt = ds.Tables["history"];
+            DataTable dt = ds.Tables["favorite"];
             da.Fill(ds, "temp1");
             dataGridView1.DataSource = ds.Tables["temp1"];
             conn.Close();

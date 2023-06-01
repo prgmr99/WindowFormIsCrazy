@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScintillaNET;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace ConvertGPT
 {
@@ -21,7 +22,9 @@ namespace ConvertGPT
 
         // Database 객체 생성
         DataTable table = new DataTable();
-
+        
+        // string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+        // string exConfig = ConfigurationManager.AppSettings["ExConnect"];
         public MainForm()
         {
             
@@ -48,9 +51,6 @@ namespace ConvertGPT
             convertBtn.Width = this.Width / 2 - 10;
             CopyBtn.Width = this.Width / 2 - 20;
             
-            
-
-
             windowSize_Limit(900, 680); // 창크기 제한
         }
         //
@@ -89,18 +89,15 @@ namespace ConvertGPT
             var text = inputTextBox.Text;
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
             var fromLanguage = "Javascript";
+            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
 
-            String Name = "SeungJunzz"; // if 로그인 구현 X -> no need
-            String Lang = "\"C++\"";
-            String dbText = "\"" + text + "\"";
-
-            
-
+            Console.WriteLine(toLanguageItem);
             // Database에 정보 저장
-            using (MySqlConnection conn = new MySqlConnection("Server=203.229.49.5;Port=3306;Database=modeldb;Uid=client;Pwd=mysql0000!"))
+            using (MySqlConnection conn = new MySqlConnection($"{localConfig}"))
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
+                string sql = string.Format("INSERT INTO history (FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
 
                 try
                 {
@@ -311,10 +308,9 @@ namespace ConvertGPT
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource = 203.229.49.5;" +
-                "port=3306;" +
-                "username=client;" +
-                "password=mysql0000!;");
+            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
+            MySqlConnection connection = new MySqlConnection($"{localConfig}");
             connection.Open();
             if(connection.State == System.Data.ConnectionState.Open)
             {
