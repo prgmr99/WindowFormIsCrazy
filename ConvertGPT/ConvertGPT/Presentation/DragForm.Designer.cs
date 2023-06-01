@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel = new MetroFramework.Controls.MetroPanel();
+            this.panel = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.bottomCheckBox = new System.Windows.Forms.CheckBox();
             this.historyButton = new System.Windows.Forms.Button();
@@ -45,18 +45,13 @@
             // panel
             // 
             this.panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel.BackColor = System.Drawing.Color.LightGray;
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel.HorizontalScrollbarBarColor = true;
-            this.panel.HorizontalScrollbarHighlightOnWheel = false;
-            this.panel.HorizontalScrollbarSize = 10;
             this.panel.Location = new System.Drawing.Point(202, 3);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(795, 734);
             this.panel.TabIndex = 2;
-            this.panel.VerticalScrollbarBarColor = true;
-            this.panel.VerticalScrollbarHighlightOnWheel = false;
-            this.panel.VerticalScrollbarSize = 10;
             // 
             // slidePanel
             // 
@@ -91,6 +86,7 @@
             // 
             // historyButton
             // 
+            this.historyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.historyButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.historyButton.FlatAppearance.BorderSize = 0;
             this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -106,6 +102,7 @@
             // 
             // favoriteButton
             // 
+            this.favoriteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.favoriteButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.favoriteButton.FlatAppearance.BorderSize = 0;
             this.favoriteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -121,6 +118,7 @@
             // 
             // convertDBButton
             // 
+            this.convertDBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.convertDBButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.convertDBButton.FlatAppearance.BorderSize = 0;
             this.convertDBButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -136,6 +134,7 @@
             // 
             // convertCodeButton
             // 
+            this.convertCodeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.convertCodeButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.convertCodeButton.FlatAppearance.BorderSize = 0;
             this.convertCodeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -186,7 +185,7 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroPanel panel;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel slidePanel;
         private System.Windows.Forms.Button convertCodeButton;
         private System.Windows.Forms.Button convertDBButton;

@@ -322,13 +322,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\star.png" />
     <Content Include="Resource\C#.png" />
     <Content Include="Resource\cpp.png" />
+    <Content Include="Resource\IconBig\icon_database.png" />
+    <Content Include="Resource\IconBig\icon_history.png" />
+    <Content Include="Resource\IconBig\icon_home.png" />
+    <Content Include="Resource\IconBig\icon_left.png" />
+    <Content Include="Resource\IconBig\icon_right.png" />
     <Content Include="Resource\Icon\icon_database.png" />
     <Content Include="Resource\Icon\icon_history.png" />
     <Content Include="Resource\Icon\icon_home.png" />
     <Content Include="Resource\Icon\icon_left.png" />
     <Content Include="Resource\Icon\icon_right.png" />
+    <Content Include="Resource\Icon\icon_star.png" />
     <Content Include="Resource\java.jpg" />
     <Content Include="Resource\js.png" />
     <Content Include="Resource\python.png" />

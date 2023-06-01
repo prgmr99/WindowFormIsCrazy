@@ -16,7 +16,7 @@ namespace ConvertGPT
 
 
         const Single MAX_SLIDING_RATIO = 20F;
-        const Single MIN_SLIDING_RATIO = 5F;
+        const Single MIN_SLIDING_RATIO = 8F;
 
         //슬라이딩 메뉴가 보이는/접히는 속도 조절
         //최초 슬라이딩 메뉴 크기
@@ -40,6 +40,7 @@ namespace ConvertGPT
         {
             //this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             panel.Controls.Add(homeScreen);
+            homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             setDelegate();
         }
 
@@ -65,7 +66,7 @@ namespace ConvertGPT
                     resultScreen.dataBind(data.ToString());
 
                     panel.Controls.Add(resultScreen);
-                    
+                    resultScreen.Dock = System.Windows.Forms.DockStyle.Fill;
 
                     break;
                 default: break;
@@ -81,6 +82,7 @@ namespace ConvertGPT
                 case ResultEvent.backButtonClicked:
                     panel.Controls.Clear();
                     panel.Controls.Add(homeScreen);
+                    homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
                     break;
                 default: break;
             }
@@ -110,7 +112,20 @@ namespace ConvertGPT
                 ////슬라이딩 메뉴를 숨기는 동작
                 currentRatio -= Step_Sliding;
                 if (currentRatio <= MIN_SLIDING_RATIO)
+                {
+
                     timerSliding.Stop();
+                    convertCodeButton.Text = "";
+                    convertDBButton.Text = "";
+                    historyButton.Text = "";
+                    favoriteButton.Text = "";
+
+                    convertCodeButton.Image = global::ConvertGPT.Properties.Resources.icon_home;
+                    convertDBButton.Image = global::ConvertGPT.Properties.Resources.icon_database;
+                    historyButton.Image = global::ConvertGPT.Properties.Resources.icon_history;
+                    favoriteButton.Image = global::ConvertGPT.Properties.Resources.icon_star;
+                }
+
 
             }
             else
@@ -118,8 +133,21 @@ namespace ConvertGPT
                 //슬라이딩 메뉴를 보이는 동작
                 currentRatio += Step_Sliding;
                 if (currentRatio >= MAX_SLIDING_RATIO)
+                {
+                    convertCodeButton.Text = "코드 변환";
+                    convertDBButton.Text = "DB 변환";
+                    historyButton.Text = "기록";
+                    favoriteButton.Text = "즐겨찾기";
+
+                    convertCodeButton.Image = null ;
+                    convertDBButton.Image = null;
+                    historyButton.Image = null;
+                    favoriteButton.Image = null;
                     timerSliding.Stop();
+                    
+                }
             }
+
 
             this.tableLayoutPanel1.ColumnStyles[0].Width = currentRatio;
             this.tableLayoutPanel1.ColumnStyles[1].Width = 100F - currentRatio;
