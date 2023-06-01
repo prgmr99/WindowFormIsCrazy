@@ -94,7 +94,7 @@ namespace ConvertGPT
 
             Console.WriteLine(toLanguageItem);
             // Database에 정보 저장
-            using (MySqlConnection conn = new MySqlConnection($"{localConfig}"))
+            using (MySqlConnection conn = new MySqlConnection($"{exConfig}"))
             {
                 conn.Open();
                 string sql = string.Format("INSERT INTO history (FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
@@ -310,7 +310,7 @@ namespace ConvertGPT
         {
             string localConfig = ConfigurationManager.AppSettings["LocalHost"];
             string exConfig = ConfigurationManager.AppSettings["ExConnect"];
-            MySqlConnection connection = new MySqlConnection($"{localConfig}");
+            MySqlConnection connection = new MySqlConnection($"{exConfig}");
             connection.Open();
             if(connection.State == System.Data.ConnectionState.Open)
             {

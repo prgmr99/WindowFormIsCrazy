@@ -1,0 +1,339 @@
+[33mcommit b8dc768e073a9eec53a583aa6b6f98121595e0b1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mFeat/#22[m[33m, [m[1;32mFeat/#15[m[33m)[m
+Merge: 6764711 2cac721
+Author: Daewon Kang <96184691+Daewony@users.noreply.github.com>
+Date:   Fri May 26 01:23:41 2023 +0900
+
+    Merge pull request #26 from prgmr99/Feat/#24
+    
+    [Feat] Copy 버튼 기능 및 반응 추가 #24
+
+[33mcommit 2cac721556af33efe6e08e0e6424ffcd69908186[m[33m ([m[1;31morigin/Feat/#24[m[33m)[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 01:22:25 2023 +0900
+
+    머지 후 캐시 #24
+
+[33mcommit 7629694abd9a3a83b3d9dd1a15e71b4e9bd642f7[m
+Merge: 26a0799 6764711
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 01:21:29 2023 +0900
+
+    [Conflict] 해결 #24
+
+[33mcommit 6764711be4869ccae87dcf278163bae30027bdf5[m
+Merge: ebe7fee 5a9b331
+Author: Daewon Kang <96184691+Daewony@users.noreply.github.com>
+Date:   Fri May 26 01:13:49 2023 +0900
+
+    Merge pull request #25 from prgmr99/Feat/#22
+    
+    [Feat] 프로그래밍 언어별 코드 색상 구현 #22
+
+[33mcommit 5a9b33106eeb011dc412feba9696401629ba22f7[m[33m ([m[1;31morigin/Feat/#22[m[33m)[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 01:12:53 2023 +0900
+
+    머지 후 캐시 삭제 #22
+
+[33mcommit 0f176a3301b2db4a4fb53376a3a681af3683d837[m
+Merge: de68295 ebe7fee
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 01:11:30 2023 +0900
+
+    [Conflict] 해결 #22
+
+[33mcommit de6829584f73ffa0abc969e60566bb8784658835[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 00:53:19 2023 +0900
+
+    Apply .gitignore
+
+[33mcommit ebe7fee0876a39a937de0170eaed11168ff076b0[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 00:47:25 2023 +0900
+
+    [Fix] 데이터베이스 주석 처리
+
+[33mcommit 3d572a04d60d92a4c7a364a18670fa82cdbfe2aa[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Fri May 26 00:25:25 2023 +0900
+
+    Apply .gitignore
+
+[33mcommit 6bbe53a1c950e66a6bf542a073d141d97f93d544[m
+Merge: 77c4fd8 d3982e9
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Fri May 26 00:05:51 2023 +0900
+
+    [Fix] gitignore error
+
+[33mcommit 77c4fd8e92f655ea55e3b7bd619a37b1d563a1cd[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Fri May 26 00:01:12 2023 +0900
+
+    [Fix] gitignore error
+
+[33mcommit d3982e9182eebb71ad845f14ac54e4a87152c2bc[m
+Merge: 0e450ba d845904
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 10:17:27 2023 +0900
+
+    [Fix] Merge error fixed
+
+[33mcommit 0e450ba9caeae0e0957e6dca6917ddcdf18ba519[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 10:15:04 2023 +0900
+
+    [Fix] Merge error fixed
+
+[33mcommit d845904cfde1c9ae1a3a4b18f66ce3446a2ef28d[m
+Merge: e7f7d66 e440451
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Wed May 24 01:17:20 2023 +0900
+
+    Merge pull request #23 from prgmr99/Feat/#19
+    
+    [Feat] DB 연동 및 구현
+
+[33mcommit e440451779a44582d2a3261c0fcfba703ae2f2b7[m[33m ([m[1;31morigin/Feat/#19[m[33m)[m
+Merge: 13f02a6 e7f7d66
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 01:16:25 2023 +0900
+
+    [Etc] git merge
+
+[33mcommit 13f02a6811ba0dd14ad7ad87c1a4a76374d939b0[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 01:07:17 2023 +0900
+
+    [Feat] DB 연동 및 구현
+
+[33mcommit e7f7d664a5b1fa80d9cf26db51a1ab8f9a17d5db[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 01:03:31 2023 +0900
+
+    [Add] gitignore 추가
+
+[33mcommit 26a07992d45654142313aad76586e7bdc784897a[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Wed May 24 00:50:10 2023 +0900
+
+    [Feat] 복사 버튼 이벤트 및 반응 구현 #24
+
+[33mcommit 18586f695c87657a781c1a700d7a9ae15f035164[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 24 00:35:39 2023 +0900
+
+    [Feat] DB 연동 및 구현
+
+[33mcommit 505ff0d475c309f01843f202cc6a0f1c1c2f903d[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Wed May 24 00:21:54 2023 +0900
+
+    [Feat] 프로그래밍 언어별 코드 색상 구현 #22
+
+[33mcommit eaf22657cabaffca5dd5d26c0304d38337c5a680[m
+Merge: 635c233 b4478fb
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Wed May 24 00:07:20 2023 +0900
+
+    Merge pull request #21 from prgmr99/Feat/#20
+    
+    [Feat] 폼 사이즈 변경시 관련요소 위치 및 크기 설정 구현 #20
+
+[33mcommit 040da7ab293c862547a4f57d4cde49c57a9d3847[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Tue May 23 23:06:18 2023 +0900
+
+    [Feat] DB 연동 및 구현
+
+[33mcommit b4478fbf3ff553f4069c4e5269e3393cc4d5c16f[m[33m ([m[1;31morigin/Feat/#20[m[33m)[m
+Author: Daewon Kang <alexnori.com@gmail.com>
+Date:   Tue May 23 11:24:45 2023 +0900
+
+    [Feat] 폼 사이즈 변경시 관련요소 위치 및 크기 설정 구현 #20
+
+[33mcommit 635c233d4360f237f3d6b03b10b0b7dc0f4613a0[m
+Merge: df9b233 69d07cc
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Wed May 17 01:29:37 2023 +0900
+
+    Merge pull request #17 from prgmr99/Add/#14
+    
+    [Add] 코드 설명 구현 #14
+
+[33mcommit 69d07cc1d0a683314ef1390c1696bf37eb0352b6[m[33m ([m[1;31morigin/Add/#14[m[33m)[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Wed May 17 01:18:48 2023 +0900
+
+    [Add] 코드 설명 구현 #14
+
+[33mcommit df9b2330b8ac7586961a4cc55a66aac14c5218e9[m
+Merge: 2ef83d1 de03d43
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Thu May 11 16:17:56 2023 +0900
+
+    Merge pull request #16 from prgmr99/Feat/#15
+    
+    [Feat] 코드 변환 API 구현 #15
+
+[33mcommit de03d43ce86d9ef141571b370f60551834f51024[m[33m ([m[1;31morigin/Feat/#15[m[33m)[m
+Author: westnine <seokwoo2000@naver.com>
+Date:   Thu May 11 03:33:45 2023 +0900
+
+    [Feat] 코드 변환 API 구현 #15
+
+[33mcommit 2ef83d1853f6f1881afeff4ebf4f38997e0b415d[m
+Merge: 7532961 2eb1aba
+Author: Seokwoo Jang <57269348+meltsplit@users.noreply.github.com>
+Date:   Thu May 11 03:30:19 2023 +0900
+
+    Merge pull request #13 from prgmr99/Feat/#12
+    
+    GPT Test
+
+[33mcommit 2eb1aba35e3550554d167c0cd3fa33a6af84ccbf[m[33m ([m[1;31morigin/Feat/#12[m[33m, [m[1;32mFeat/#12[m[33m)[m
+Author: kimgyeran <kgh08813@gmail.com>
+Date:   Fri May 5 15:18:52 2023 +0900
+
+    GPT Test Fix
+
+[33mcommit bcf849e105c49003407fe8411f5c7a4cfccdf414[m
+Author: kimgyeran <kgh08813@gmail.com>
+Date:   Thu May 4 11:29:15 2023 +0900
+
+    GPT Test 메소드 반환값 수정
+
+[33mcommit 3887ccb0e47626646885da1ede72f2437ee6e338[m
+Author: kimgyeran <kgh08813@gmail.com>
+Date:   Thu May 4 11:07:12 2023 +0900
+
+    GPT Test
+
+[33mcommit 7532961d9fffd362c5f69a88874bedc84fbe77c9[m
+Merge: be1b2b1 6ea2041
+Author: Daewon Kang <96184691+Daewony@users.noreply.github.com>
+Date:   Thu Apr 6 12:22:12 2023 +0900
+
+    Merge pull request #11 from prgmr99/Add/#10
+    
+    [Add] 프로젝트 추가 #10
+
+[33mcommit 6ea2041cebe21d61f4cd263e8a271a892665635c[m[33m ([m[1;31morigin/Add/#10[m[33m)[m
+Author: Daewony <alexnori.com@gmail.com>
+Date:   Thu Apr 6 12:07:00 2023 +0900
+
+    [Add] 프로젝트 추가 #10
+
+[33mcommit be1b2b1ab818efaf0bbd5c8fa838c87141d950b8[m
+Author: Daewony <alexnori.com@gmail.com>
+Date:   Thu Apr 6 11:58:22 2023 +0900
+
+    [Del] 기존 프로젝트 삭제
+
+[33mcommit 4dd2b84d5c1fa02a2fab59d98b5cda0a44207ccf[m
+Author: prgmr99 <johnyeom24@naver.com>
+Date:   Sat Apr 1 12:43:17 2023 +0900
+
+    [Add] Project 추가
+
+[33mcommit 271c480dccaeeed31c2d845a37eb9ec6ab6d0af3[m
+Merge: dbcb2ae f7483b4
+Author: Daewon Kang <96184691+Daewony@users.noreply.github.com>
+Date:   Thu Mar 30 12:05:35 2023 +0900
+
+    Merge pull request #8 from prgmr99/#7
+    
+    [Feat] 작업 #7
+
+[33mcommit f7483b4a5e6d211e8f72a01f5cbeb1ad58b9918c[m
+Author: Daewon Kang <96184691+Daewony@users.noreply.github.com>
+Date:   Thu Mar 30 12:04:17 2023 +0900
+
+    [Feat] 작업 #7
+
+[33mcommit dbcb2aeece5c9869b0567018238767d4e20204ec[m
+Merge: fc1b0d6 547f095
+Author: kimgyeran <95453695+kimgyeran@users.noreply.github.com>
+Date:   Thu Mar 30 12:03:00 2023 +0900
+
+    Merge pull request #5 from prgmr99/#3
+    
+    [Debug]리드미 이슈해결
+
+[33mcommit 547f095c815e938b1a7deb9f58a767d17cbd8031[m
+Merge: dfa567c fc1b0d6
+Author: kimgyeran <95453695+kimgyeran@users.noreply.github.com>
+Date:   Thu Mar 30 12:02:43 2023 +0900
+
+    Merge branch 'main' into #3
+
+[33mcommit fc1b0d664fdd92a0ae3e35776af5602846795185[m
+Merge: 0bd7fc1 692e32b
+Author: Seokwoo Jang <57269348+meltsplit@users.noreply.github.com>
+Date:   Thu Mar 30 12:00:17 2023 +0900
+
+    Merge pull request #6 from prgmr99/#2
+    
+    [Feat] 리드미 #2
+
+[33mcommit 692e32befdebe5ebf98140ff352ff39f961bfd1a[m
+Merge: 8c25454 0bd7fc1
+Author: Seokwoo Jang <57269348+meltsplit@users.noreply.github.com>
+Date:   Thu Mar 30 12:00:09 2023 +0900
+
+    Merge branch 'main' into #2
+
+[33mcommit 0bd7fc1bd790680366e8fa966967debac4c5fe4c[m
+Merge: ff18ac2 0b1225c
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Thu Mar 30 11:59:09 2023 +0900
+
+    Merge pull request #4 from prgmr99/#1
+    
+    [Feat] Hi 추가 #1
+
+[33mcommit 0b1225c927a99c387631cb793a50c80b91950f28[m
+Merge: ae1f33f ff18ac2
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Thu Mar 30 11:58:54 2023 +0900
+
+    Merge branch 'main' into #1
+
+[33mcommit 8c25454daefb7a817739429493f2f760bcfe451e[m
+Author: Seokwoo Jang <57269348+meltsplit@users.noreply.github.com>
+Date:   Thu Mar 30 11:56:42 2023 +0900
+
+    [Feat] #2 작업함
+
+[33mcommit dfa567c369e4cf7a9b9d3208826b9030eeb3c209[m
+Author: kimgyeran <95453695+kimgyeran@users.noreply.github.com>
+Date:   Thu Mar 30 11:55:24 2023 +0900
+
+    [Debug]리드미 이슈해결
+    
+    이슈가 있었슈
+
+[33mcommit ff18ac2e1a4380c3a26dd00eaee384967cce00c3[m
+Author: Seokwoo Jang <57269348+meltsplit@users.noreply.github.com>
+Date:   Thu Mar 30 11:54:51 2023 +0900
+
+    [Feat] 리드미 수정함 #2
+
+[33mcommit ae1f33f9af48015b63553cfedfe4d7cd9eb38cec[m
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Thu Mar 30 11:54:40 2023 +0900
+
+    [Feat] Hi 추가 #1
+
+[33mcommit ae136368e003bc7adf66f86a941c9517a07f1d11[m
+Author: Melt <seokwoo2000@naver.com>
+Date:   Thu Mar 23 10:38:24 2023 +0900
+
+    [Add] ISSUE, PULL REQUEST 템플릿 추가
+
+[33mcommit ec5eab6a25c3c0ac9a5a3db4a7535588e4dd67e1[m
+Author: Yeom <76275691+prgmr99@users.noreply.github.com>
+Date:   Sun Mar 12 16:01:07 2023 +0900
+
+    Initial commit

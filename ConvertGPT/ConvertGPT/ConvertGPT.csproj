@@ -205,6 +205,12 @@
     <Compile Include="Error\ConvertGPTException.cs" />
     <Compile Include="Error\ErrorCode.cs" />
     <Compile Include="ExplainCode.cs" />
+    <Compile Include="FavoriteScene\FavoriteScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FavoriteScene\FavoriteScreen.Designer.cs">
+      <DependentUpon>FavoriteScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="KeySyntax.cs" />
     <Compile Include="Global\ConvertGPTGlobal.cs" />
     <Compile Include="HistoryScene\HistoryScreen.cs">
@@ -249,6 +255,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DragForm.resx">
       <DependentUpon>DragForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FavoriteScene\FavoriteScreen.resx">
+      <DependentUpon>FavoriteScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HistoryScene\HistoryScreen.resx">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
