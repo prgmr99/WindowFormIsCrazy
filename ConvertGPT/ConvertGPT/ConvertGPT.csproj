@@ -197,6 +197,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Presentation\DatabaseScene\DatabaseScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\DatabaseScene\DatabaseScreen.Designer.cs">
+      <DependentUpon>DatabaseScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\DragForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     <Compile Include="Network\Service\PromptService.cs" />
     <Compile Include="Network\Service\PromptToImageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\DatabaseScene\DatabaseScreen.resx">
+      <DependentUpon>DatabaseScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\DragForm.resx">
       <DependentUpon>DragForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,14 +331,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\star.png" />
     <Content Include="Resource\C#.png" />
     <Content Include="Resource\cpp.png" />
-    <Content Include="Resource\IconBig\icon_database.png" />
-    <Content Include="Resource\IconBig\icon_history.png" />
-    <Content Include="Resource\IconBig\icon_home.png" />
-    <Content Include="Resource\IconBig\icon_left.png" />
-    <Content Include="Resource\IconBig\icon_right.png" />
     <Content Include="Resource\Icon\icon_database.png" />
     <Content Include="Resource\Icon\icon_history.png" />
     <Content Include="Resource\Icon\icon_home.png" />

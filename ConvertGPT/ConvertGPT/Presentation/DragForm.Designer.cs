@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DragForm));
             this.panel = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
-            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
             this.historyButton = new System.Windows.Forms.Button();
             this.favoriteButton = new System.Windows.Forms.Button();
             this.convertDBButton = new System.Windows.Forms.Button();
             this.convertCodeButton = new System.Windows.Forms.Button();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
             this.slidePanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,24 +67,6 @@
             this.slidePanel.Size = new System.Drawing.Size(193, 734);
             this.slidePanel.TabIndex = 3;
             // 
-            // bottomCheckBox
-            // 
-            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
-            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bottomCheckBox.ForeColor = System.Drawing.Color.White;
-            this.bottomCheckBox.Location = new System.Drawing.Point(0, 684);
-            this.bottomCheckBox.Name = "bottomCheckBox";
-            this.bottomCheckBox.Size = new System.Drawing.Size(193, 50);
-            this.bottomCheckBox.TabIndex = 4;
-            this.bottomCheckBox.Text = "<";
-            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bottomCheckBox.UseVisualStyleBackColor = true;
-            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
-            // 
             // historyButton
             // 
             this.historyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -99,6 +82,7 @@
             this.historyButton.TabIndex = 2;
             this.historyButton.Text = "기록";
             this.historyButton.UseVisualStyleBackColor = true;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
             // favoriteButton
             // 
@@ -115,6 +99,7 @@
             this.favoriteButton.TabIndex = 1;
             this.favoriteButton.Text = "즐겨찾기";
             this.favoriteButton.UseVisualStyleBackColor = true;
+            this.favoriteButton.Click += new System.EventHandler(this.favoriteButton_Click);
             // 
             // convertDBButton
             // 
@@ -131,6 +116,7 @@
             this.convertDBButton.TabIndex = 3;
             this.convertDBButton.Text = "DB 변환";
             this.convertDBButton.UseVisualStyleBackColor = true;
+            this.convertDBButton.Click += new System.EventHandler(this.convertDBButton_Click);
             // 
             // convertCodeButton
             // 
@@ -147,6 +133,7 @@
             this.convertCodeButton.TabIndex = 0;
             this.convertCodeButton.Text = "코드 변환";
             this.convertCodeButton.UseVisualStyleBackColor = true;
+            this.convertCodeButton.Click += new System.EventHandler(this.convertCodeButton_Click);
             // 
             // timerSliding
             // 
@@ -167,6 +154,24 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 740);
             this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // bottomCheckBox
+            // 
+            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
+            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bottomCheckBox.ForeColor = System.Drawing.Color.White;
+            this.bottomCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("bottomCheckBox.Image")));
+            this.bottomCheckBox.Location = new System.Drawing.Point(0, 684);
+            this.bottomCheckBox.Name = "bottomCheckBox";
+            this.bottomCheckBox.Size = new System.Drawing.Size(193, 50);
+            this.bottomCheckBox.TabIndex = 4;
+            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomCheckBox.UseVisualStyleBackColor = true;
+            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
             // 
             // DragForm
             // 

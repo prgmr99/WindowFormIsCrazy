@@ -28,6 +28,10 @@ namespace ConvertGPT
         MainScene.HomeScreen homeScreen = new MainScene.HomeScreen();
         MainScene.ResultScreen resultScreen = new MainScene.ResultScreen();
 
+        FavoriteScreen favoriteScreen = new FavoriteScreen();
+        HistoryScreen historyScreen = new HistoryScreen();
+        DatabaseScreen databaseScreen = new DatabaseScreen();
+
         // Life Cycle
         public DragForm()
         {
@@ -93,12 +97,12 @@ namespace ConvertGPT
             if (bottomCheckBox.Checked == true)
             {
                 //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
-                bottomCheckBox.Text = ">";
+                bottomCheckBox.Image = global::ConvertGPT.Properties.Resources.icon_right;
             }
             else
             {
                 //슬라이딩 메뉴가 보였을 때, 메뉴 버튼의 표시
-                bottomCheckBox.Text = "<";
+                bottomCheckBox.Image = global::ConvertGPT.Properties.Resources.icon_left;
             }
 
             //타이머 시작
@@ -151,6 +155,34 @@ namespace ConvertGPT
 
             this.tableLayoutPanel1.ColumnStyles[0].Width = currentRatio;
             this.tableLayoutPanel1.ColumnStyles[1].Width = 100F - currentRatio;
+        }
+
+        private void convertCodeButton_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(homeScreen);
+            homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+        }
+
+        private void convertDBButton_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(databaseScreen);
+            databaseScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+        }
+
+        private void favoriteButton_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(favoriteScreen);
+            favoriteScreen.Dock = System.Windows.Forms.DockStyle.Fill;
+        }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(historyScreen);
+            historyScreen.Dock = System.Windows.Forms.DockStyle.Fill;
         }
 
     }

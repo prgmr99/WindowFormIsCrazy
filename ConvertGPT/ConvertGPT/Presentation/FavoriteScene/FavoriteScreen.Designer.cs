@@ -1,4 +1,4 @@
-﻿namespace ConvertGPT.FavoriteScene
+﻿namespace ConvertGPT
 {
     partial class FavoriteScreen
     {
