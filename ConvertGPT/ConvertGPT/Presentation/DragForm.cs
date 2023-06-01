@@ -107,39 +107,5 @@ namespace ConvertGPT
             //}
         }
 
-
-
-        private void DragForm_DragLeave(object sender, EventArgs e)
-        {
-            Console.WriteLine("DragForm_DragLeave");
-        }
-
-        private void DragForm_DragOver(object sender, DragEventArgs e)
-        {
-            Console.WriteLine("DragForm_DragOver");
-        }
-
-        private void DragForm_GiveFeedback(object sender, GiveFeedbackEventArgs e)
-        {
-            Console.WriteLine("DragForm_GiveFeedback");
-        }
-
-        private void DragForm_QueryContinueDrag(object sender, QueryContinueDragEventArgs e)
-        {
-            Console.WriteLine("DragForm_QueryContinueDrag");
-        }
-
-
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void DragForm_Resize(object sender, EventArgs e)
-        {
-            //panel.Top = 40;
-            //panel.Width = this.Width;
-            //panel.Height = this.Height - 40;
-        }
     }
 }
