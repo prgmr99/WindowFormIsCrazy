@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ScintillaNET;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace ConvertGPT
 {
@@ -21,7 +22,9 @@ namespace ConvertGPT
 
         // Database 객체 생성
         DataTable table = new DataTable();
-
+        
+        // string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+        // string exConfig = ConfigurationManager.AppSettings["ExConnect"];
         public MainForm()
         {
             
@@ -48,9 +51,6 @@ namespace ConvertGPT
             convertBtn.Width = this.Width / 2 - 10;
             CopyBtn.Width = this.Width / 2 - 20;
             
-            
-
-
             windowSize_Limit(900, 680); // 창크기 제한
         }
         //
@@ -89,40 +89,38 @@ namespace ConvertGPT
             var text = inputTextBox.Text;
             var toLanguageItem = selectLanguageComboBox.SelectedItem;
             var fromLanguage = "Javascript";
+            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
 
-            String Name = "SeungJun"; // if 로그인 구현 X -> no need
-            String Lang = "\"C++\"";
-            String dbText = "\"" + text + "\"";
-
-            try
-            {
-                //MySqlCommand command = new MySqlCommand(sql, conn);
-                //command.ExecuteNonQuery();
-
-                if (text == null || text == "")
-                {
-                    throw new ConvertGPTException(ErrorCode.EmptyInput);
-                }
-                if (toLanguageItem == null)
-                {
-                    throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
-                }
-
-                requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
-
-            }
-            catch (ConvertGPTException ex)
-            {
-                Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
-            }
-
+            Console.WriteLine(toLanguageItem);
             // Database에 정보 저장
-            //using (MySqlConnection conn = new MySqlConnection("Server=localhost;Port=3306;Database=modeldb;Uid=root;Pwd=sjyeom2105"))
-            //{
-            //    conn.Open();
-            //    string sql = string.Format("INSERT INTO usertbl(userName, usageRecord, convertRecord) VALUES ('{0}', {1}, {2});", Name, dbText, Lang);
-               
-            //}
+            using (MySqlConnection conn = new MySqlConnection($"{exConfig}"))
+            {
+                conn.Open();
+                string sql = string.Format("INSERT INTO history (FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
+
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    command.ExecuteNonQuery();
+
+                    if (text == null || text == "")
+                    {
+                        throw new ConvertGPTException(ErrorCode.EmptyInput);
+                    }
+                    if (toLanguageItem == null)
+                    {
+                        throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
+                    }
+
+                    //requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
+
+                }
+                catch (ConvertGPTException ex)
+                {
+                    Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
+                }
+            }
         }
 
         private void convertBtn_MouseEnter(object sender, EventArgs e)
@@ -310,11 +308,10 @@ namespace ConvertGPT
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection("datasource = localhost;" +
-                "port=3306;" +
-                "username=root;" +
-                "password=sjyeom2105;");
-            //connection.Open();
+            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
+            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
+            MySqlConnection connection = new MySqlConnection($"{exConfig}");
+            connection.Open();
             if(connection.State == System.Data.ConnectionState.Open)
             {
                 lblDB.Text = "Connected";
