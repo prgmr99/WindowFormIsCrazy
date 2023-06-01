@@ -16,6 +16,11 @@ namespace ConvertGPT.MainScene
 
     public partial class HomeScreen : UserControl
     {
+
+        // Properties
+
+        ConvertRequestModel model = new ConvertRequestModel("","","");
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int radiusX, int radiusY);
 
@@ -38,12 +43,22 @@ namespace ConvertGPT.MainScene
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            languageForm = new MainScene.LanguageForm();
-            languageForm.Show();
+            model.code = inputTextBox.Text;
+            //model.fromLanguage = inpu
+
+            if (model.fromLanguage == "") {
+                MessageBox.Show("입력하신 언어를 선택해주세요.");
+            } else {
+                languageForm = new MainScene.LanguageForm();
+                languageForm.Show();
+            }
         }
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
+
+            string toLanguage = data.ToString();
+
             switch (selectLanguageEvent)
             {
                 case SelectLanguageEvent.languageClicked:
