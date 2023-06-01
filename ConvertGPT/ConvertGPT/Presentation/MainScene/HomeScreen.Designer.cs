@@ -39,15 +39,15 @@
             // 
             // nextButton
             // 
-            this.nextButton.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.nextButton.FlatAppearance.BorderSize = 4;
-            this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.ForeColor = System.Drawing.Color.Cornsilk;
             this.nextButton.Location = new System.Drawing.Point(20, 630);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(605, 95);
+            this.nextButton.Size = new System.Drawing.Size(503, 95);
             this.nextButton.TabIndex = 0;
             this.nextButton.Text = "코드 변환하기";
             this.nextButton.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             // 
             // 
             this.inputTextBox.CustomButton.Image = null;
-            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-5, 2);
+            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-107, 2);
             this.inputTextBox.CustomButton.Name = "";
             this.inputTextBox.CustomButton.Size = new System.Drawing.Size(607, 607);
             this.inputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -79,7 +79,7 @@
             this.inputTextBox.SelectionLength = 0;
             this.inputTextBox.SelectionStart = 0;
             this.inputTextBox.ShortcutsEnabled = true;
-            this.inputTextBox.Size = new System.Drawing.Size(605, 612);
+            this.inputTextBox.Size = new System.Drawing.Size(503, 612);
             this.inputTextBox.TabIndex = 1;
             this.inputTextBox.UseSelectable = true;
             this.inputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -88,11 +88,12 @@
             // explainLabel
             // 
             this.explainLabel.AllowDrop = true;
+            this.explainLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.explainLabel.AutoSize = true;
             this.explainLabel.BackColor = System.Drawing.Color.White;
             this.explainLabel.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.explainLabel.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.explainLabel.Location = new System.Drawing.Point(677, 278);
+            this.explainLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.explainLabel.Location = new System.Drawing.Point(537, 254);
             this.explainLabel.Margin = new System.Windows.Forms.Padding(0);
             this.explainLabel.Name = "explainLabel";
             this.explainLabel.Size = new System.Drawing.Size(246, 96);
@@ -111,11 +112,12 @@
             // label2
             // 
             this.label2.AllowDrop = true;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label2.Location = new System.Drawing.Point(675, 73);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.label2.Location = new System.Drawing.Point(558, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 40);
@@ -125,9 +127,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(787, 65);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.AutoSize = true;
+            this.button1.Location = new System.Drawing.Point(654, 65);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 75);
+            this.button1.Size = new System.Drawing.Size(117, 75);
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -145,7 +149,7 @@
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.inputTextBox);
             this.Name = "HomeScreen";
-            this.Size = new System.Drawing.Size(1000, 740);
+            this.Size = new System.Drawing.Size(800, 740);
             this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HomeScreen_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HomeScreen_DragEnter);

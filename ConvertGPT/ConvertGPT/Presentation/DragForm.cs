@@ -14,6 +14,13 @@ namespace ConvertGPT
 {
     public partial class DragForm : MetroFramework.Forms.MetroForm {
 
+        const int MAX_SLIDING_WIDTH = 200;
+        const int MIN_SLIDING_WIDTH = 50;
+        //슬라이딩 메뉴가 보이는/접히는 속도 조절
+        const int STEP_SLIDING = 10;
+        //최초 슬라이딩 메뉴 크기
+        int _posSliding = 200;
+
         // Screen
         MainScene.HomeScreen homeScreen = new MainScene.HomeScreen();
         MainScene.ResultScreen resultScreen = new MainScene.ResultScreen();
@@ -74,6 +81,43 @@ namespace ConvertGPT
                     break;
                 default: break;
             }
+        }
+
+        private void bottomCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (bottomCheckBox.Checked == true)
+            {
+                //슬라이딩 메뉴가 접혔을 때, 메뉴 버튼의 표시
+                bottomCheckBox.Text = ">";
+            }
+            else
+            {
+                //슬라이딩 메뉴가 보였을 때, 메뉴 버튼의 표시
+                bottomCheckBox.Text = "<";
+            }
+
+            //타이머 시작
+            timerSliding.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (bottomCheckBox.Checked == true)
+            {
+                //슬라이딩 메뉴를 숨기는 동작
+                _posSliding -= STEP_SLIDING;
+                if (_posSliding <= MIN_SLIDING_WIDTH)
+                    timerSliding.Stop();
+            }
+            else
+            {
+                //슬라이딩 메뉴를 보이는 동작
+                _posSliding += STEP_SLIDING;
+                if (_posSliding >= MAX_SLIDING_WIDTH)
+                    timerSliding.Stop();
+            }
+
+            this.splitContainer1.SplitterDistance = _posSliding;
         }
     }
 }

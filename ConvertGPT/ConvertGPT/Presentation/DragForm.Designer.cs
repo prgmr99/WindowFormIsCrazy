@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel = new MetroFramework.Controls.MetroPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.homeButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.slidePanel = new System.Windows.Forms.Panel();
+            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
+            this.historyButton = new System.Windows.Forms.Button();
+            this.favoriteButton = new System.Windows.Forms.Button();
+            this.convertDBButton = new System.Windows.Forms.Button();
+            this.convertCodeButton = new System.Windows.Forms.Button();
+            this.timerSliding = new System.Windows.Forms.Timer(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.slidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -46,82 +54,127 @@
             this.panel.HorizontalScrollbarBarColor = true;
             this.panel.HorizontalScrollbarHighlightOnWheel = false;
             this.panel.HorizontalScrollbarSize = 10;
-            this.panel.Location = new System.Drawing.Point(0, 60);
+            this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1000, 740);
+            this.panel.Size = new System.Drawing.Size(796, 740);
             this.panel.TabIndex = 2;
             this.panel.VerticalScrollbarBarColor = true;
             this.panel.VerticalScrollbarHighlightOnWheel = false;
             this.panel.VerticalScrollbarSize = 10;
             // 
-            // panel1
+            // slidePanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.homeButton);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 740);
-            this.panel1.TabIndex = 3;
+            this.slidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.slidePanel.Controls.Add(this.bottomCheckBox);
+            this.slidePanel.Controls.Add(this.historyButton);
+            this.slidePanel.Controls.Add(this.favoriteButton);
+            this.slidePanel.Controls.Add(this.convertDBButton);
+            this.slidePanel.Controls.Add(this.convertCodeButton);
+            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slidePanel.Location = new System.Drawing.Point(0, 0);
+            this.slidePanel.Name = "slidePanel";
+            this.slidePanel.Size = new System.Drawing.Size(200, 740);
+            this.slidePanel.TabIndex = 3;
             // 
-            // homeButton
+            // bottomCheckBox
             // 
-            this.homeButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.homeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.homeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeButton.ForeColor = System.Drawing.Color.White;
-            this.homeButton.Location = new System.Drawing.Point(0, 0);
-            this.homeButton.Name = "homeButton";
-            this.homeButton.Size = new System.Drawing.Size(200, 50);
-            this.homeButton.TabIndex = 0;
-            this.homeButton.Text = "홈";
-            this.homeButton.UseVisualStyleBackColor = true;
+            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
+            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bottomCheckBox.ForeColor = System.Drawing.Color.White;
+            this.bottomCheckBox.Location = new System.Drawing.Point(0, 690);
+            this.bottomCheckBox.Name = "bottomCheckBox";
+            this.bottomCheckBox.Size = new System.Drawing.Size(200, 50);
+            this.bottomCheckBox.TabIndex = 4;
+            this.bottomCheckBox.Text = "<";
+            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomCheckBox.UseVisualStyleBackColor = true;
+            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
             // 
-            // button2
+            // historyButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 50);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "홈";
-            this.button2.UseVisualStyleBackColor = true;
+            this.historyButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.historyButton.FlatAppearance.BorderSize = 0;
+            this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.historyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.historyButton.ForeColor = System.Drawing.Color.White;
+            this.historyButton.Location = new System.Drawing.Point(0, 150);
+            this.historyButton.Name = "historyButton";
+            this.historyButton.Size = new System.Drawing.Size(200, 50);
+            this.historyButton.TabIndex = 2;
+            this.historyButton.Text = "기록";
+            this.historyButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // favoriteButton
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 100);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "홈";
-            this.button3.UseVisualStyleBackColor = true;
+            this.favoriteButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.favoriteButton.FlatAppearance.BorderSize = 0;
+            this.favoriteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.favoriteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.favoriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoriteButton.ForeColor = System.Drawing.Color.White;
+            this.favoriteButton.Location = new System.Drawing.Point(0, 100);
+            this.favoriteButton.Name = "favoriteButton";
+            this.favoriteButton.Size = new System.Drawing.Size(200, 50);
+            this.favoriteButton.TabIndex = 1;
+            this.favoriteButton.Text = "즐겨찾기";
+            this.favoriteButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // convertDBButton
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 150);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "홈";
-            this.button4.UseVisualStyleBackColor = true;
+            this.convertDBButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.convertDBButton.FlatAppearance.BorderSize = 0;
+            this.convertDBButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.convertDBButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.convertDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertDBButton.ForeColor = System.Drawing.Color.White;
+            this.convertDBButton.Location = new System.Drawing.Point(0, 50);
+            this.convertDBButton.Name = "convertDBButton";
+            this.convertDBButton.Size = new System.Drawing.Size(200, 50);
+            this.convertDBButton.TabIndex = 3;
+            this.convertDBButton.Text = "DB 변환";
+            this.convertDBButton.UseVisualStyleBackColor = true;
+            // 
+            // convertCodeButton
+            // 
+            this.convertCodeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.convertCodeButton.FlatAppearance.BorderSize = 0;
+            this.convertCodeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.convertCodeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.convertCodeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertCodeButton.ForeColor = System.Drawing.Color.White;
+            this.convertCodeButton.Location = new System.Drawing.Point(0, 0);
+            this.convertCodeButton.Name = "convertCodeButton";
+            this.convertCodeButton.Size = new System.Drawing.Size(200, 50);
+            this.convertCodeButton.TabIndex = 0;
+            this.convertCodeButton.Text = "코드 변환";
+            this.convertCodeButton.UseVisualStyleBackColor = true;
+            // 
+            // timerSliding
+            // 
+            this.timerSliding.Interval = 10;
+            this.timerSliding.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 60);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.slidePanel);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel);
+            this.splitContainer1.Size = new System.Drawing.Size(1000, 740);
+            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.TabIndex = 4;
             // 
             // DragForm
             // 
@@ -129,22 +182,28 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 800);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "DragForm";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
             this.Load += new System.EventHandler(this.DragForm_Load);
-            this.panel1.ResumeLayout(false);
+            this.slidePanel.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private MetroFramework.Controls.MetroPanel panel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel slidePanel;
+        private System.Windows.Forms.Button convertCodeButton;
+        private System.Windows.Forms.Button convertDBButton;
+        private System.Windows.Forms.Button historyButton;
+        private System.Windows.Forms.Button favoriteButton;
+        private System.Windows.Forms.CheckBox bottomCheckBox;
+        private System.Windows.Forms.Timer timerSliding;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
