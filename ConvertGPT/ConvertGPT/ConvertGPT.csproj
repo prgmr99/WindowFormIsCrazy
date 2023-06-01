@@ -202,18 +202,16 @@
     <Compile Include="Presentation\DragForm.Designer.cs">
       <DependentUpon>DragForm.cs</DependentUpon>
     </Compile>
-
-
-    <Compile Include="FavoriteScene\FavoriteScreen.cs">
+    <Compile Include="Presentation\FavoriteScene\FavoriteScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FavoriteScene\FavoriteScreen.Designer.cs">
+    <Compile Include="Presentation\FavoriteScene\FavoriteScreen.Designer.cs">
       <DependentUpon>FavoriteScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeySyntax.cs" />
+    <Compile Include="Network\Deprecated\KeySyntax.cs" />
     <Compile Include="Global\Error\ConvertGPTException.cs" />
     <Compile Include="Global\Error\ErrorCode.cs" />
-    <Compile Include="Network\ExplainCode.cs" />
+    <Compile Include="Network\Deprecated\ExplainCode.cs" />
     <Compile Include="Global\ConvertGPTGlobal.cs" />
     <Compile Include="Presentation\HistoryScene\HistoryScreen.cs">
       <SubType>UserControl</SubType>
@@ -227,7 +225,7 @@
     <Compile Include="Presentation\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Network\GPTTest.cs" />
+    <Compile Include="Network\Deprecated\GPTTest.cs" />
     <Compile Include="Presentation\MainScene\GuideScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,10 +238,10 @@
     <Compile Include="Presentation\MainScene\HomeScreen.Designer.cs">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\MainScene\LanguageForm.cs">
+    <Compile Include="Presentation\Common\LanguageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\MainScene\LanguageForm.Designer.cs">
+    <Compile Include="Presentation\Common\LanguageForm.Designer.cs">
       <DependentUpon>LanguageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\MainScene\ResultScreen.cs">
@@ -254,18 +252,18 @@
     </Compile>
     <Compile Include="Data\ConvertRequestModel.cs" />
     <Compile Include="Application\Program.cs" />
-    <Compile Include="PromptService\Convert.cs" />
-    <Compile Include="PromptService\DBDiagram.cs" />
-    <Compile Include="PromptService\Explain.cs" />
-    <Compile Include="PromptService\Interface\IPromptType.cs" />
-    <Compile Include="PromptService\Interface\IPromptService.cs" />
-    <Compile Include="PromptService\PromptService.cs" />
-    <Compile Include="PromptService\PromptToImageService.cs" />
+    <Compile Include="Network\Type\ConvertType.cs" />
+    <Compile Include="Network\Type\DBDiagramType.cs" />
+    <Compile Include="Network\Type\ExplainType.cs" />
+    <Compile Include="Network\Interface\IPromptType.cs" />
+    <Compile Include="Network\Interface\IPromptService.cs" />
+    <Compile Include="Network\Service\PromptService.cs" />
+    <Compile Include="Network\Service\PromptToImageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\DragForm.resx">
       <DependentUpon>DragForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FavoriteScene\FavoriteScreen.resx">
+    <EmbeddedResource Include="Presentation\FavoriteScene\FavoriteScreen.resx">
       <DependentUpon>FavoriteScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\HistoryScene\HistoryScreen.resx">
@@ -280,7 +278,7 @@
     <EmbeddedResource Include="Presentation\MainScene\HomeScreen.resx">
       <DependentUpon>HomeScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\MainScene\LanguageForm.resx">
+    <EmbeddedResource Include="Presentation\Common\LanguageForm.resx">
       <DependentUpon>LanguageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainScene\ResultScreen.resx">

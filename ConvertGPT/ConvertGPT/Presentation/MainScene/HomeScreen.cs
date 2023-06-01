@@ -44,12 +44,11 @@ namespace ConvertGPT.MainScene
         private void nextButton_Click(object sender, EventArgs e)
         {
             model.code = inputTextBox.Text;
-            //model.fromLanguage = inpu
+            model.fromLanguage = "...";
 
             if (model.fromLanguage == "") {
                 MessageBox.Show("입력하신 언어를 선택해주세요.");
             } else {
-                languageForm = new MainScene.LanguageForm();
                 languageForm.Show();
             }
         }
@@ -57,8 +56,7 @@ namespace ConvertGPT.MainScene
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
 
-            string toLanguage = data.ToString();
-
+            model.toLanguage = data.ToString();
             switch (selectLanguageEvent)
             {
                 case SelectLanguageEvent.languageClicked:

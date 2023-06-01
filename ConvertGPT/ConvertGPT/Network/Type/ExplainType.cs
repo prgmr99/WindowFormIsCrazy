@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConvertGPT
 {
-    internal class Explain : IPromptType
+    internal class ExplainType : IPromptType
     {
         const string PROMPT_Template =
 @"# {0}
@@ -21,7 +21,7 @@ namespace ConvertGPT
         public string Prompt_Template => PROMPT_Template;
         public ChatCompletionCreateRequest Options { get; }
 
-        public Explain(string lang, string code)
+        public ExplainType(string lang, string code)
         {
 
             Prompt = string.Format(PROMPT_Template, lang, code);

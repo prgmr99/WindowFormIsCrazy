@@ -18,7 +18,7 @@ namespace ConvertGPT
             string str = "";
             var openAiService = new OpenAIService(new OpenAiOptions()
             {
-                ApiKey = "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"
+                ApiKey = "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"
             });
 
             var completionResult = await openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
