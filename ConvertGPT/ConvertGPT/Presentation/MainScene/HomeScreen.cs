@@ -37,7 +37,7 @@ namespace ConvertGPT.MainScene
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
-            nextButton.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, nextButton.Width, nextButton.Height, 50, 50));
+            //nextButton.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, nextButton.Width, nextButton.Height, 50, 50));
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
         }
 
@@ -49,6 +49,8 @@ namespace ConvertGPT.MainScene
             if (model.fromLanguage == "") {
                 MessageBox.Show("입력하신 언어를 선택해주세요.");
             } else {
+                MainScene.LanguageForm languageForm = new MainScene.LanguageForm();
+                languageForm.selectLanguageEventSender += SelectLanguageEventSender;
                 languageForm.Show();
             }
         }
@@ -126,6 +128,11 @@ namespace ConvertGPT.MainScene
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

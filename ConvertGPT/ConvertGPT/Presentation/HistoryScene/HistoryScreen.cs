@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvertGPT.HistoryScreen
+namespace ConvertGPT
 {
     public partial class HistoryScreen : UserControl
     {

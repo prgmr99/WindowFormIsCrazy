@@ -1,6 +1,6 @@
-﻿namespace ConvertGPT.MainScene
+﻿namespace ConvertGPT
 {
-    partial class GuideScreen
+    partial class DatabaseScreen
     {
         /// <summary> 
         /// 필수 디자이너 변수입니다.
@@ -33,24 +33,21 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("돋움", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(182, 271);
+            this.label1.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(258, 297);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(544, 48);
+            this.label1.Size = new System.Drawing.Size(351, 64);
             this.label1.TabIndex = 0;
-            this.label1.Text = "파일을 여기에 놓으세요";
+            this.label1.Text = "DB Screen";
             // 
-            // GuideScreen
+            // DatabaseScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.Controls.Add(this.label1);
-            this.Name = "GuideScreen";
-            this.Size = new System.Drawing.Size(1000, 740);
-            this.Load += new System.EventHandler(this.GuideScreen_Load);
+            this.Name = "DatabaseScreen";
+            this.Size = new System.Drawing.Size(800, 740);
             this.ResumeLayout(false);
             this.PerformLayout();
 
