@@ -163,14 +163,12 @@
             this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bottomCheckBox.ForeColor = System.Drawing.Color.White;
             this.bottomCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("bottomCheckBox.Image")));
             this.bottomCheckBox.Location = new System.Drawing.Point(0, 684);
             this.bottomCheckBox.Name = "bottomCheckBox";
             this.bottomCheckBox.Size = new System.Drawing.Size(193, 50);
             this.bottomCheckBox.TabIndex = 4;
             this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bottomCheckBox.UseVisualStyleBackColor = true;
             this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
             // 
             // DragForm

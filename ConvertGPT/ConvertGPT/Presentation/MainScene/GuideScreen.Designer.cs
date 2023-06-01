@@ -38,9 +38,9 @@
             this.label1.Font = new System.Drawing.Font("돋움", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(182, 271);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(642, 48);
+            this.label1.Size = new System.Drawing.Size(544, 48);
             this.label1.TabIndex = 0;
-            this.label1.Text = "아무곳에나 파일을 넣으세요";
+            this.label1.Text = "파일을 여기에 놓으세요";
             // 
             // GuideScreen
             // 
