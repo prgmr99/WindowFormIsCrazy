@@ -196,6 +196,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global\Secret.cs" />
     <Compile Include="Presentation\DragForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,9 +329,7 @@
     <Content Include="Resource\python.png" />
     <Content Include="Resource\swift.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Global\Serect\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

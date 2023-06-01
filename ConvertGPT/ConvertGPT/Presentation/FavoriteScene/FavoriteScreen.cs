@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -28,12 +27,11 @@ namespace ConvertGPT.FavoriteScene
         {
             DataSet ds = new DataSet();
 
-            string localConfig = ConfigurationManager.AppSettings["LocalHost"];
-            string exConfig = ConfigurationManager.AppSettings["ExConnect"];
-            string connectionString = $"{localConfig}";
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
             string sql = "SELECT * from history";
 
-            SqlConnection conn = new SqlConnection(connectionString);
+            SqlConnection conn = new SqlConnection(localConfig);
             conn.Open();
 
             SqlCommand cmd = new SqlCommand(sql, conn);
