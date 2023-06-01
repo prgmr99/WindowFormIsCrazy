@@ -14,9 +14,11 @@ namespace ConvertGPT
 {
     public partial class DragForm : MetroFramework.Forms.MetroForm {
 
+        // Screen
         MainScene.HomeScreen homeScreen = new MainScene.HomeScreen();
         MainScene.ResultScreen resultScreen = new MainScene.ResultScreen();
 
+        // Life Cycle
         public DragForm()
         {
 
@@ -29,28 +31,33 @@ namespace ConvertGPT
 
         private void DragForm_Load(object sender, EventArgs e)
         {
-            metroPanel1.Controls.Add(homeScreen);
+            //this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            panel.Controls.Add(homeScreen);
             setDelegate();
         }
 
+
+        // Custom Method
 
         private void setDelegate() {
             homeScreen.homeEventSender += HomeEventSender;
             resultScreen.resultEventSender += ResultEventSender;
         }
 
+        // Action Method
+
         private void HomeEventSender(object sender, HomeEvent homeEvent, Object data) {
             Console.WriteLine("nextButton 이벤트가 MainController에 전달 되었습니다");
 
             switch (homeEvent) {
                 case HomeEvent.nextButtonClicked:
-                    metroPanel1.Controls.Clear();
+                    panel.Controls.Clear();
 
 
 
                     resultScreen.dataBind(data.ToString());
 
-                    metroPanel1.Controls.Add(resultScreen);
+                    panel.Controls.Add(resultScreen);
                     
 
                     break;
@@ -65,8 +72,8 @@ namespace ConvertGPT
             switch (resultEvent)
             {
                 case ResultEvent.backButtonClicked:
-                    metroPanel1.Controls.Clear();
-                    metroPanel1.Controls.Add(homeScreen);
+                    panel.Controls.Clear();
+                    panel.Controls.Add(homeScreen);
                     break;
                 default: break;
             }
@@ -126,6 +133,13 @@ namespace ConvertGPT
         private void metroPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DragForm_Resize(object sender, EventArgs e)
+        {
+            //panel.Top = 40;
+            //panel.Width = this.Width;
+            //panel.Height = this.Height - 40;
         }
     }
 }

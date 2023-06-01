@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConvertGPT
 {
-    internal class Convert : IPromptType
+    internal class ConvertType : IPromptType
     {
         const string PROMPT_Template =
 @"##### Translate this code from {0} into {1} 
@@ -20,7 +20,7 @@ namespace ConvertGPT
         public string Prompt_Template => PROMPT_Template;
         public ChatCompletionCreateRequest Options { get; }
 
-        public Convert(string from_lang, string to_lang, string code)
+        public ConvertType(string from_lang, string to_lang, string code)
         {
             
             Prompt = string.Format(PROMPT_Template, from_lang, to_lang,code);

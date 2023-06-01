@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConvertGPT
 {
-    internal class DBDiagram : IPromptType
+    internal class DBDiagramType : IPromptType
     {
         const string PROMPT_Template =
 @"then translate below schema to PlantUML
@@ -20,7 +20,7 @@ namespace ConvertGPT
         public string Prompt_Template => PROMPT_Template;
         public ChatCompletionCreateRequest Options { get; }
 
-        public DBDiagram(string code)
+        public DBDiagramType(string code)
         {
 
             Prompt = string.Format(PROMPT_Template, code);

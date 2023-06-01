@@ -34,7 +34,6 @@ namespace ConvertGPT.MainScene
 
         public void dataBind(String text)
         {
-            metroLabel1.Text = text;
             inputText = text;
             setScreen();
         }
