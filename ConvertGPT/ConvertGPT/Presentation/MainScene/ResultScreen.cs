@@ -68,7 +68,7 @@ namespace ConvertGPT.MainScene
             using (MySqlConnection conn = new MySqlConnection(Secret.ExConnect))
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO history(FromLang, ToLang, codeRecord, codeResult) VALUES ({0}, {1}, {2}, {3});", "\'" + request.fromLanguage + "\'", "\'" + response.language + "\'", "\'" + request.code + "\'", "\'" + response.code + "\'");
+                string sql = string.Format("insert into history(fromlang, tolang, coderecord, coderesult) values ({0}, {1}, {2}, {3});", "\'" + request.fromLanguage + "\'", "\'" + response.language + "\'", "\'" + request.code + "\'", "\'" + response.code + "\'");
 
                 try
                 {
@@ -104,8 +104,6 @@ namespace ConvertGPT.MainScene
 
         private async void requestExplainAPI(ExplainRequest request)
         {
-            string localConfig = Secret.LocalHost;
-            string exConfig = Secret.ExConnect;
 
             Console.WriteLine("requestConvertAPI");
             PromptService ps = new PromptService();
