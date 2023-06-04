@@ -333,10 +333,13 @@
   <ItemGroup>
     <Content Include="Resource\C#.png" />
     <Content Include="Resource\cpp.png" />
+    <Content Include="Resource\Icon\icon_bulb.png" />
+    <Content Include="Resource\Icon\icon_copy.png" />
     <Content Include="Resource\Icon\icon_database.png" />
     <Content Include="Resource\Icon\icon_history.png" />
     <Content Include="Resource\Icon\icon_home.png" />
     <Content Include="Resource\Icon\icon_left.png" />
+    <Content Include="Resource\Icon\icon_refresh.png" />
     <Content Include="Resource\Icon\icon_right.png" />
     <Content Include="Resource\Icon\icon_star.png" />
     <Content Include="Resource\java.jpg" />

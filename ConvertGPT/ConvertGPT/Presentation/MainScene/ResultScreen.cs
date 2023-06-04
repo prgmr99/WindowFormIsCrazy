@@ -76,6 +76,7 @@ namespace ConvertGPT.MainScene
             Console.WriteLine("서버통신을 시작합니다");
             await result;
             Console.WriteLine("서버 응답이 왔습니다.");
+            Console.WriteLine($"{result.Result}");
             metroTextBox1.Text = result.Result;
             return;
         }
@@ -87,6 +88,11 @@ namespace ConvertGPT.MainScene
         }
 
         private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
         {
 
         }
