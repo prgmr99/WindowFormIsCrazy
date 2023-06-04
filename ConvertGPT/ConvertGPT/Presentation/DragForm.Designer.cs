@@ -75,6 +75,7 @@
             this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.historyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.historyButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.historyButton.ForeColor = System.Drawing.Color.White;
             this.historyButton.Location = new System.Drawing.Point(0, 150);
             this.historyButton.Name = "historyButton";
@@ -92,6 +93,7 @@
             this.favoriteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.favoriteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.favoriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoriteButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.favoriteButton.ForeColor = System.Drawing.Color.White;
             this.favoriteButton.Location = new System.Drawing.Point(0, 100);
             this.favoriteButton.Name = "favoriteButton";
@@ -109,6 +111,7 @@
             this.convertDBButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.convertDBButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.convertDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertDBButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.convertDBButton.ForeColor = System.Drawing.Color.White;
             this.convertDBButton.Location = new System.Drawing.Point(0, 50);
             this.convertDBButton.Name = "convertDBButton";
@@ -126,6 +129,7 @@
             this.convertCodeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.convertCodeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.convertCodeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertCodeButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.convertCodeButton.ForeColor = System.Drawing.Color.White;
             this.convertCodeButton.Location = new System.Drawing.Point(0, 0);
             this.convertCodeButton.Name = "convertCodeButton";
@@ -178,8 +182,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "DragForm";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
+            this.ShowIcon = false;
+            this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "Dev Helper";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.DragForm_Load);
             this.slidePanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

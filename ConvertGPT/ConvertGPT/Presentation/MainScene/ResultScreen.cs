@@ -15,7 +15,7 @@ namespace ConvertGPT.MainScene
 
         public event ResultEventSender resultEventSender;
 
-        string inputText;
+        ConvertRequest data = new ConvertRequest("","","");
 
         public ResultScreen()
         {
@@ -24,7 +24,8 @@ namespace ConvertGPT.MainScene
 
         private void ResultScene_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Load");
+            requestConvertAPI(this.data);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -32,63 +33,46 @@ namespace ConvertGPT.MainScene
             resultEventSender(sender, ResultEvent.backButtonClicked, "");
         }
 
-        public void dataBind(String text)
+        public void dataBind(object obj)
         {
-            inputText = text;
-            setScreen();
+            Console.WriteLine("dataBind");
+            if (obj is ConvertRequest)
+            {
+                ConvertRequest data = (ConvertRequest)obj;
+                this.data = data;
+            }
+
+            updateUI();
         }
 
-        private void setScreen() {
-            var text = inputText;
-            var toLanguageItem = "Swift";
-            var fromLanguage = "CSharp";
+        private void updateUI() {
 
-            String Name = "SeungJun"; // if 로그인 구현 X -> no need
-            String Lang = "\"C++\"";
-            String dbText = "\"" + text + "\"";
-
-            try
-            {
-                //MySqlCommand command = new MySqlCommand(sql, conn);
-                //command.ExecuteNonQuery();
-
-                //if (text == null || text == "")
-                //{
-                //    throw new ConvertGPTException(ErrorCode.EmptyInput);
-                //}
-                //if (toLanguageItem == null)
-                //{
-                //    throw new ConvertGPTException(ErrorCode.ToLanguageDeselected);
-                //}
-
-                requestConvertAPI(fromLanguage, toLanguageItem.ToString(), text);
-
-            }
-            catch (ConvertGPTException ex)
-            {
-                Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
-            }
+            this.languageLabel.Text = data.toLanguage;
         }
-        private async void requestConvertAPI(string from_lang, string to_lang, string code)
+        private async void requestConvertAPI(ConvertRequest data)
         {
-            GPTTest convertAPI = new GPTTest();
-            Task<string> result = convertAPI.gpttestAsync(from_lang, to_lang, code);
+            Console.WriteLine("requestConvertAPI");
+            PromptService ps = new PromptService();
+            Task<string> result = ps.GetResponse(new ConvertType(data));
+
             Console.WriteLine("서버통신을 시작합니다");
             await result;
-            Console.WriteLine("서버 응답이 왔습니다.");
+            Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
+
             metroTextBox1.Text = result.Result;
             return;
         }
 
 
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        private void metroTextBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void metroTextBox2_Click(object sender, EventArgs e)
+        private void refreshButton_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine("새로고침 버튼이 눌렸습니다.");
+            requestConvertAPI(this.data);
         }
     }
 }

@@ -50,7 +50,8 @@
             this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.nextButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextButton.ForeColor = System.Drawing.Color.Cornsilk;
+            this.nextButton.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nextButton.ForeColor = System.Drawing.Color.White;
             this.nextButton.Location = new System.Drawing.Point(3, 626);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(538, 105);
@@ -66,7 +67,7 @@
             // 
             // 
             this.inputTextBox.CustomButton.Image = null;
-            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(37, 1);
+            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-78, 1);
             this.inputTextBox.CustomButton.Name = "";
             this.inputTextBox.CustomButton.Size = new System.Drawing.Size(615, 615);
             this.inputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
