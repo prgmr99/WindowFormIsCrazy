@@ -93,6 +93,7 @@ namespace ConvertGPT.MainScene
         {
             Console.WriteLine("DragForm_DragEnter");
             Controls.Add(guideScreen);
+            guideScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             guideScreen.BringToFront();
 
             if (e.Data.GetDataPresent(DataFormats.FileDrop))

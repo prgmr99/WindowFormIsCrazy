@@ -37,6 +37,8 @@ namespace ConvertGPT
         {
             InitializeComponent();
             this.AllowDrop = true;
+
+            
         }
 
 
@@ -44,6 +46,7 @@ namespace ConvertGPT
         {
             //this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             panel.Controls.Add(homeScreen);
+            this.Padding = new Padding(0, 0, 0, 0);
             homeScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             setDelegate();
         }

@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DragForm));
             this.panel = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
             this.historyButton = new System.Windows.Forms.Button();
             this.favoriteButton = new System.Windows.Forms.Button();
             this.convertDBButton = new System.Windows.Forms.Button();
             this.convertCodeButton = new System.Windows.Forms.Button();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
             this.slidePanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,22 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(193, 734);
             this.slidePanel.TabIndex = 3;
+            // 
+            // bottomCheckBox
+            // 
+            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
+            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bottomCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("bottomCheckBox.Image")));
+            this.bottomCheckBox.Location = new System.Drawing.Point(0, 684);
+            this.bottomCheckBox.Name = "bottomCheckBox";
+            this.bottomCheckBox.Size = new System.Drawing.Size(193, 50);
+            this.bottomCheckBox.TabIndex = 4;
+            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
             // 
             // historyButton
             // 
@@ -155,22 +171,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 740);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
-            // bottomCheckBox
-            // 
-            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
-            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
-            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bottomCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("bottomCheckBox.Image")));
-            this.bottomCheckBox.Location = new System.Drawing.Point(0, 684);
-            this.bottomCheckBox.Name = "bottomCheckBox";
-            this.bottomCheckBox.Size = new System.Drawing.Size(193, 50);
-            this.bottomCheckBox.TabIndex = 4;
-            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
-            // 
             // DragForm
             // 
             this.AllowDrop = true;
@@ -178,8 +178,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "DragForm";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
+            this.ShowIcon = false;
+            this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "Dev Helper";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.DragForm_Load);
             this.slidePanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
