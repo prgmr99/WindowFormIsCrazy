@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 using MetroFramework;
 
 namespace ConvertGPT
 {
     public partial class DragForm : MetroFramework.Forms.MetroForm {
 
+        // Database 객체 생성
+        DataTable table = new DataTable();
 
         const Single MAX_SLIDING_RATIO = 20F;
         const Single MIN_SLIDING_RATIO = 8F;
