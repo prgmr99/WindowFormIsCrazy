@@ -98,7 +98,7 @@ namespace ConvertGPT
             using (MySqlConnection conn = new MySqlConnection(exConfig))
             {
                 conn.Open();
-                string sql = string.Format("INSERT INTO history (FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
+                string sql = string.Format("INSERT INTO history(FromLang, ToLang, codeRecord) VALUES ('{0}', {1}, {2});", "\"" + fromLanguage + "\"", "\"" + toLanguageItem.ToString() + "\"", "\"" + text + "\"");
 
                 try
                 {
