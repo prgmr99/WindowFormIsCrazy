@@ -257,7 +257,7 @@
     <Compile Include="Presentation\MainScene\ResultScreen.Designer.cs">
       <DependentUpon>ResultScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\ConvertRequestModel.cs" />
+    <Compile Include="Data\ConvertRequest.cs" />
     <Compile Include="Application\Program.cs" />
     <Compile Include="Network\Type\ConvertType.cs" />
     <Compile Include="Network\Type\DBDiagramType.cs" />

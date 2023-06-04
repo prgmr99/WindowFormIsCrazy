@@ -69,8 +69,7 @@ namespace ConvertGPT
                     panel.Controls.Clear();
 
 
-
-                    resultScreen.dataBind(data.ToString());
+                    resultScreen.dataBind(data);
 
                     panel.Controls.Add(resultScreen);
                     resultScreen.Dock = System.Windows.Forms.DockStyle.Fill;

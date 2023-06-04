@@ -21,7 +21,6 @@ namespace ConvertGPT
     }
 
     public enum SelectLanguageEvent { 
-        xButtonClicked,
         languageClicked
     }
 
