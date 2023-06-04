@@ -24,6 +24,7 @@ namespace ConvertGPT.MainScene
         {
             Button button = sender as Button;
             selectLanguageEventSender(sender, SelectLanguageEvent.languageClicked, button.Text);
+            this.Close();
         }
     }
 }

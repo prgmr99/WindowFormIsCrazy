@@ -22,7 +22,6 @@ namespace ConvertGPT.MainScene
         ConvertRequest model = new ConvertRequest("","","");
 
         MainScene.GuideScreen guideScreen = new MainScene.GuideScreen();
-        MainScene.LanguageForm languageForm = new MainScene.LanguageForm();
 
         public event HomeEventSender homeEventSender;
 
@@ -33,8 +32,6 @@ namespace ConvertGPT.MainScene
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
-            //nextButton.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, nextButton.Width, nextButton.Height, 50, 50));
-            languageForm.selectLanguageEventSender += SelectLanguageEventSender;
         }
 
         private void nextButton_Click(object sender, EventArgs e)
@@ -42,22 +39,16 @@ namespace ConvertGPT.MainScene
             model.code = inputTextBox.Text;
             model.fromLanguage = "...";
 
-            if (model.fromLanguage == "") {
-                MessageBox.Show("입력하신 언어를 선택해주세요.");
-            } else {
-                MainScene.LanguageForm languageForm = new MainScene.LanguageForm();
-                languageForm.selectLanguageEventSender += SelectLanguageEventSender;
-                languageForm.Show();
-            }
+            LanguageForm languageForm = new MainScene.LanguageForm();
+            languageForm.selectLanguageEventSender += SelectLanguageEventSender;
+            languageForm.ShowDialog();
         }
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
-
             model.toLanguage = data.ToString();
             homeEventSender(sender, HomeEvent.nextButtonClicked, model);
-            languageForm.Close();
-      
+
         }
 
 
