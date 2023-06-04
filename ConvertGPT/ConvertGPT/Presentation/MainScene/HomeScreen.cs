@@ -39,13 +39,9 @@ namespace ConvertGPT.MainScene
             model.code = inputTextBox.Text;
             model.fromLanguage = "...";
 
-            if (model.fromLanguage == "") {
-                MessageBox.Show("입력하신 언어를 선택해주세요.");
-            } else {
-                LanguageForm languageForm = new MainScene.LanguageForm();
-                languageForm.selectLanguageEventSender += SelectLanguageEventSender;
-                languageForm.ShowDialog();
-            }
+            LanguageForm languageForm = new MainScene.LanguageForm();
+            languageForm.selectLanguageEventSender += SelectLanguageEventSender;
+            languageForm.ShowDialog();
         }
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)

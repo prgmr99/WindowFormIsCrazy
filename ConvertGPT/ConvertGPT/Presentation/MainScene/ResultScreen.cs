@@ -71,8 +71,23 @@ namespace ConvertGPT.MainScene
 
         private void refreshButton_Click(object sender, EventArgs e)
         {
+
             Console.WriteLine("새로고침 버튼이 눌렸습니다.");
+            LanguageForm languageForm = new MainScene.LanguageForm();
+            languageForm.selectLanguageEventSender += SelectLanguageEventSender;
+            languageForm.ShowDialog();
+
+            metroTextBox1.Text = "로딩 중..";
+        }
+
+        private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
+        {
+
+            this.data.toLanguage = data.ToString();
+            languageLabel.Text= data.ToString();
             requestConvertAPI(this.data);
         }
     }
+
+
 }
