@@ -17,7 +17,7 @@ namespace ConvertGPT.MainScene
 
         public event ResultEventSender resultEventSender;
 
-        string inputText;
+        ConvertRequest data = new ConvertRequest("","","");
 
         public ResultScreen()
         {
@@ -26,7 +26,8 @@ namespace ConvertGPT.MainScene
 
         private void ResultScene_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Load");
+            requestConvertAPI(this.data);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -34,8 +35,9 @@ namespace ConvertGPT.MainScene
             resultEventSender(sender, ResultEvent.backButtonClicked, "");
         }
 
-        public void dataBind(String text)
+        public void dataBind(object obj)
         {
+<<<<<<< HEAD
             inputText = text;
             setScreen();
         }
@@ -64,9 +66,25 @@ namespace ConvertGPT.MainScene
             {
                 Console.WriteLine($"Error: {ex.ErrorMessage}, ErrorCode: {ex.ErrorCode}");
             }
+=======
+            Console.WriteLine("dataBind");
+            if (obj is ConvertRequest)
+            {
+                ConvertRequest data = (ConvertRequest)obj;
+                this.data = data;
+            }
+
+            updateUI();
         }
-        private async void requestConvertAPI(string from_lang, string to_lang, string code)
+
+        private void updateUI() {
+
+            this.languageLabel.Text = data.toLanguage;
+>>>>>>> main
+        }
+        private async void requestConvertAPI(ConvertRequest data)
         {
+<<<<<<< HEAD
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
 
@@ -84,20 +102,30 @@ namespace ConvertGPT.MainScene
                 MySqlCommand command = new MySqlCommand(sql, conn);
                 command.ExecuteNonQuery();
             }
+=======
+            Console.WriteLine("requestConvertAPI");
+            PromptService ps = new PromptService();
+            Task<string> result = ps.GetResponse(new ConvertType(data));
+
+            Console.WriteLine("서버통신을 시작합니다");
+            await result;
+            Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
+>>>>>>> main
 
             metroTextBox1.Text = result.Result;
             return;
         }
 
 
-        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        private void metroTextBox2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void metroTextBox2_Click(object sender, EventArgs e)
+        private void refreshButton_Click(object sender, EventArgs e)
         {
-
+            Console.WriteLine("새로고침 버튼이 눌렸습니다.");
+            requestConvertAPI(this.data);
         }
     }
 }

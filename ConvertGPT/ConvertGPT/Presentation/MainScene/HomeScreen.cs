@@ -19,11 +19,7 @@ namespace ConvertGPT.MainScene
 
         // Properties
 
-        ConvertRequestModel model = new ConvertRequestModel("","","");
-
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(int left, int top, int right, int bottom, int radiusX, int radiusY);
-
+        ConvertRequest model = new ConvertRequest("","","");
 
         MainScene.GuideScreen guideScreen = new MainScene.GuideScreen();
         MainScene.LanguageForm languageForm = new MainScene.LanguageForm();
@@ -59,13 +55,8 @@ namespace ConvertGPT.MainScene
         {
 
             model.toLanguage = data.ToString();
-            switch (selectLanguageEvent)
-            {
-                case SelectLanguageEvent.languageClicked:
-                    languageForm.Close();
-                    homeEventSender(sender, HomeEvent.nextButtonClicked, inputTextBox.Text);
-                    break;
-            }
+            homeEventSender(sender, HomeEvent.nextButtonClicked, model);
+            languageForm.Close();
       
         }
 
@@ -93,6 +84,7 @@ namespace ConvertGPT.MainScene
         {
             Console.WriteLine("DragForm_DragEnter");
             Controls.Add(guideScreen);
+            guideScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             guideScreen.BringToFront();
 
             if (e.Data.GetDataPresent(DataFormats.FileDrop))

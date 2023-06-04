@@ -83,6 +83,26 @@ namespace ConvertGPT.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_bulb {
+            get {
+                object obj = ResourceManager.GetObject("icon_bulb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_copy {
+            get {
+                object obj = ResourceManager.GetObject("icon_copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_database {
             get {
                 object obj = ResourceManager.GetObject("icon_database", resourceCulture);
@@ -116,6 +136,16 @@ namespace ConvertGPT.Properties {
         internal static System.Drawing.Bitmap icon_left {
             get {
                 object obj = ResourceManager.GetObject("icon_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_refresh {
+            get {
+                object obj = ResourceManager.GetObject("icon_refresh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
