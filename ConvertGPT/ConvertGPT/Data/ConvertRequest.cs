@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConvertGPT
 {
-    struct ConvertRequest
+    public struct ConvertRequest
     {
         public string code;
         public string fromLanguage;

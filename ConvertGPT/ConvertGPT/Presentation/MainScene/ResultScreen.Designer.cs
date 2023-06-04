@@ -177,11 +177,12 @@
             this.languageLabel.BackColor = System.Drawing.Color.DimGray;
             this.languageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.languageLabel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.languageLabel.ForeColor = System.Drawing.Color.White;
             this.languageLabel.Location = new System.Drawing.Point(33, 0);
             this.languageLabel.Name = "languageLabel";
             this.languageLabel.Size = new System.Drawing.Size(434, 30);
             this.languageLabel.TabIndex = 1;
-            this.languageLabel.Text = "C#";
+            this.languageLabel.Text = "Language";
             this.languageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -190,6 +191,7 @@
             this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(500, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";

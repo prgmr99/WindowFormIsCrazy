@@ -15,7 +15,11 @@ namespace ConvertGPT.MainScene
 
         public event ResultEventSender resultEventSender;
 
-        ConvertRequest data = new ConvertRequest("","","");
+        ConvertRequest convertRequest = new ConvertRequest();
+        ConvertResponse convertResponse = new ConvertResponse();
+        ExplainRequest explainRequest = new ExplainRequest();
+        ExplainResponse explainResponse = new ExplainResponse();
+
 
         public ResultScreen()
         {
@@ -34,34 +38,61 @@ namespace ConvertGPT.MainScene
 
         public void dataBind(object obj)
         {
-            Console.WriteLine("dataBind");
             if (obj is ConvertRequest)
             {
                 ConvertRequest data = (ConvertRequest)obj;
-                this.data = data;
+
+                this.convertRequest = data;
+                this.convertResponse.language = data.toLanguage;
+                this.explainRequest.language = data.toLanguage;
+                this.explainResponse.language = data.toLanguage;
+
+                requestConvertAPI(this.convertRequest);
             }
-
-            updateUI();
-            requestConvertAPI(this.data);
         }
 
-        private void updateUI() {
-
-            this.languageLabel.Text = data.toLanguage;
+        private void updateCodeTextBoxUI() {
+            this.languageLabel.Text = convertResponse.language;
+            this.metroTextBox1.Text = convertResponse.code;
         }
-        private async void requestConvertAPI(ConvertRequest data)
+
+        private void updateExplainBoxUI()
         {
-            Console.WriteLine("requestConvertAPI");
-            PromptService ps = new PromptService();
-            Task<string> result = ps.GetResponse(new ConvertType(data));
+            this.metroTextBox2.Text = explainResponse.explain;
+        }
 
-            Console.WriteLine("서버통신을 시작합니다");
+
+        private async void requestConvertAPI(ConvertRequest request)
+        {
+            PromptService ps = new PromptService();
+            Task<string> result = ps.GetResponse(new ConvertType(request));
+
+            Console.WriteLine("requestConvertAPI 서버통신을 시작합니다");
             await result;
             Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
 
-            metroTextBox1.Text = result.Result;
+            this.convertResponse.code = result.Result;
+            this.explainRequest.code = result.Result;
+
+            updateCodeTextBoxUI();
+            requestExplainAPI(this.explainRequest);
             return;
         }
+
+        private async void requestExplainAPI(ExplainRequest request)
+        {
+            PromptService ps = new PromptService();
+            Task<string> result = ps.GetResponse(new ExplainType(request));
+
+            Console.WriteLine("requestExplainAPI 서버통신을 시작합니다");
+            await result;
+            Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
+
+            this.explainResponse.explain = result.Result;
+            updateExplainBoxUI();
+            return;
+        }
+
 
 
         private void metroTextBox2_Click(object sender, EventArgs e)
@@ -78,14 +109,18 @@ namespace ConvertGPT.MainScene
             languageForm.ShowDialog();
 
             metroTextBox1.Text = "로딩 중..";
+            metroTextBox2.Text = "로딩 중..";
         }
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
+            convertRequest.toLanguage = data.ToString();
+            convertResponse.language = data.ToString();
+            explainRequest.language = data.ToString();
+            explainResponse.language = data.ToString();
 
-            this.data.toLanguage = data.ToString();
             languageLabel.Text= data.ToString();
-            requestConvertAPI(this.data);
+            requestConvertAPI(this.convertRequest);
         }
     }
 
