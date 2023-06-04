@@ -63,6 +63,25 @@ namespace ConvertGPT.MainScene
             this.metroTextBox2.Text = explainResponse.explain;
         }
 
+        private void saveConvertResultDataBase(ConvertRequest request, ConvertResponse response) {
+
+            using (MySqlConnection conn = new MySqlConnection(Secret.ExConnect))
+            {
+                conn.Open();
+                string sql = string.Format("INSERT INTO history(FromLang, ToLang, codeRecord, codeResult) VALUES ({0}, {1}, {2}, {3});", "\'" + request.fromLanguage + "\'", "\'" + response.language + "\'", "\'" + request.code + "\'", "\'" + response.code + "\'");
+
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
 
         private async void requestConvertAPI(ConvertRequest request)
         {
@@ -75,6 +94,8 @@ namespace ConvertGPT.MainScene
 
             this.convertResponse.code = result.Result;
             this.explainRequest.code = result.Result;
+
+            //saveConvertResultDataBase(this.convertRequest, this.convertResponse);
 
             updateCodeTextBoxUI();
             requestExplainAPI(this.explainRequest);
@@ -93,37 +114,15 @@ namespace ConvertGPT.MainScene
             Console.WriteLine("requestExplainAPI 서버통신을 시작합니다");
             await result;
             Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
-            using (MySqlConnection conn = new MySqlConnection(localConfig))
-            {
-                conn.Open();
-                string sql = string.Format("INSERT INTO history(FromLang, ToLang, codeRecord, codeResult) VALUES ({0}, {1}, {2}, {3});", "\'" + data.fromLanguage + "\'", "\'" + data.toLanguage + "\'", "\'" + data.code + "\'", "\'" + result.Result + "\'");
-
-                try
-                {
-                    MySqlCommand command = new MySqlCommand(sql, conn);
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            metroTextBox1.Text = result.Result;
+            
             this.explainResponse.explain = result.Result;
             updateExplainBoxUI();
             return;
         }
 
 
-
-        private void metroTextBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void refreshButton_Click(object sender, EventArgs e)
         {
-
             Console.WriteLine("새로고침 버튼이 눌렸습니다.");
             LanguageForm languageForm = new MainScene.LanguageForm();
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
@@ -140,7 +139,7 @@ namespace ConvertGPT.MainScene
             explainRequest.language = data.ToString();
             explainResponse.language = data.ToString();
 
-            languageLabel.Text= data.ToString();
+            languageLabel.Text = data.ToString();
             requestConvertAPI(this.convertRequest);
         }
     }

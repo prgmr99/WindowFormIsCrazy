@@ -46,11 +46,9 @@ namespace ConvertGPT.MainScene
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
-
             model.toLanguage = data.ToString();
             homeEventSender(sender, HomeEvent.nextButtonClicked, model);
-            //languageForm.Close();
-      
+
         }
 
 
