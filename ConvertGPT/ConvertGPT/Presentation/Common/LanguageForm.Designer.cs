@@ -246,10 +246,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 301);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.IsMdiContainer = true;
             this.Name = "LanguageForm";
             this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Empty;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

@@ -25,7 +25,6 @@ namespace ConvertGPT.MainScene
         private void ResultScene_Load(object sender, EventArgs e)
         {
             Console.WriteLine("Load");
-            requestConvertAPI(this.data);
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -43,6 +42,7 @@ namespace ConvertGPT.MainScene
             }
 
             updateUI();
+            requestConvertAPI(this.data);
         }
 
         private void updateUI() {
