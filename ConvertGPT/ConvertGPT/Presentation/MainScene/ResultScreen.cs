@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConvertGPT.MainScene
 {
@@ -81,13 +83,32 @@ namespace ConvertGPT.MainScene
 
         private async void requestExplainAPI(ExplainRequest request)
         {
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
+
+            Console.WriteLine("requestConvertAPI");
             PromptService ps = new PromptService();
             Task<string> result = ps.GetResponse(new ExplainType(request));
 
             Console.WriteLine("requestExplainAPI 서버통신을 시작합니다");
             await result;
             Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
+            using (MySqlConnection conn = new MySqlConnection(localConfig))
+            {
+                conn.Open();
+                string sql = string.Format("INSERT INTO history(FromLang, ToLang, codeRecord, codeResult) VALUES ({0}, {1}, {2}, {3});", "\'" + data.fromLanguage + "\'", "\'" + data.toLanguage + "\'", "\'" + data.code + "\'", "\'" + result.Result + "\'");
 
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sql, conn);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            metroTextBox1.Text = result.Result;
             this.explainResponse.explain = result.Result;
             updateExplainBoxUI();
             return;
