@@ -20,10 +20,13 @@ namespace ConvertGPT
         public string Prompt_Template => PROMPT_Template;
         public ChatCompletionCreateRequest Options { get; }
 
-        public ConvertType(string from_lang, string to_lang, string code)
+        public ConvertType(ConvertRequest request)
         {
-            
-            Prompt = string.Format(PROMPT_Template, from_lang, to_lang,code);
+            string from_lang = request.fromLanguage;
+            string to_lang = request.toLanguage;
+            string code = request.code;
+
+            Prompt = string.Format(PROMPT_Template, from_lang, to_lang, code);
             
             Options = new ChatCompletionCreateRequest()
             {
