@@ -219,6 +219,12 @@
     <Compile Include="Data\ExplainResponse.cs" />
     <Compile Include="Global\Component\CodeTextBox.cs" />
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Presentation\HistoryScene\HistoryCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\HistoryScene\HistoryCell.Designer.cs">
+      <DependentUpon>HistoryCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Common\KeySyntaxResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,12 @@
     <Compile Include="Network\Service\PromptService.cs" />
     <Compile Include="Network\Service\PromptToImageService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\HistoryScene\HistoryCell.resx">
+      <DependentUpon>HistoryCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Common\KeySyntaxResultForm.resx">
+      <DependentUpon>KeySyntaxResultForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\DatabaseScene\DatabaseScreen.resx">
       <DependentUpon>DatabaseScreen.cs</DependentUpon>
     </EmbeddedResource>
