@@ -230,12 +230,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BugFixRequest.cs" />
     <Compile Include="Data\ConvertResponse.cs" />
     <Compile Include="Data\ExplainRequest.cs" />
     <Compile Include="Data\ExplainResponse.cs" />
     <Compile Include="Global\Component\CodeTextBox.cs" />
     <Compile Include="Data\KeySyntaxRequest.cs" />
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Network\Type\BugFixType.cs" />
     <Compile Include="Presentation\Common\KeySyntaxResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
