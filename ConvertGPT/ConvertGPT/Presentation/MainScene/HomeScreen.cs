@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace ConvertGPT.MainScene
+namespace ConvertGPT
 {
 
 
@@ -21,7 +21,7 @@ namespace ConvertGPT.MainScene
 
         ConvertRequest model = new ConvertRequest("","","");
 
-        MainScene.GuideScreen guideScreen = new MainScene.GuideScreen();
+        GuideScreen guideScreen = new GuideScreen();
 
         public event HomeEventSender homeEventSender;
 
@@ -39,7 +39,7 @@ namespace ConvertGPT.MainScene
             model.code = inputTextBox.Text;
             model.fromLanguage = "...";
 
-            LanguageForm languageForm = new MainScene.LanguageForm();
+            LanguageForm languageForm = new LanguageForm();
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
             languageForm.ShowDialog();
         }
@@ -47,6 +47,7 @@ namespace ConvertGPT.MainScene
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
         {
             model.toLanguage = data.ToString();
+            inputTextBox.Text = "";
             homeEventSender(sender, HomeEvent.nextButtonClicked, model);
 
         }
@@ -108,16 +109,6 @@ namespace ConvertGPT.MainScene
         private void HomeScreen_QueryContinueDrag(object sender, QueryContinueDragEventArgs e)
         {
             Console.WriteLine("DragForm_QueryContinueDrag");
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label2_Click_1(object sender, EventArgs e)

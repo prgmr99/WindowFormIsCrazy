@@ -16,7 +16,7 @@ namespace ConvertGPT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DragForm());
+            Application.Run(new MainForm());
         }
     }
 }

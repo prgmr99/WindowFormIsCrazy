@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvertGPT
+namespace ConvertGPT.Presentation.Common
 {
-    public partial class GuideScreen : UserControl
+    public partial class KeySyntaxResultForm : Form
     {
-        public GuideScreen()
+        public KeySyntaxResultForm()
         {
             InitializeComponent();
-        }
-
-        private void GuideScreen_Load(object sender, EventArgs e)
-        {
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
     }
 }

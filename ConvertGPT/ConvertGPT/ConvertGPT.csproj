@@ -219,17 +219,23 @@
     <Compile Include="Data\ExplainResponse.cs" />
     <Compile Include="Global\Component\CodeTextBox.cs" />
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Presentation\Common\KeySyntaxResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Common\KeySyntaxResultForm.Designer.cs">
+      <DependentUpon>KeySyntaxResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\DatabaseScene\DatabaseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentation\DatabaseScene\DatabaseScreen.Designer.cs">
       <DependentUpon>DatabaseScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\DragForm.cs">
+    <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\DragForm.Designer.cs">
-      <DependentUpon>DragForm.cs</DependentUpon>
+    <Compile Include="Presentation\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FavoriteScene\FavoriteScreen.cs">
       <SubType>UserControl</SubType>
@@ -247,12 +253,6 @@
     </Compile>
     <Compile Include="Presentation\HistoryScene\HistoryScreen.Designer.cs">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Network\Deprecated\GPTTest.cs" />
     <Compile Include="Presentation\MainScene\GuideScreen.cs">
@@ -292,17 +292,14 @@
     <EmbeddedResource Include="Presentation\DatabaseScene\DatabaseScreen.resx">
       <DependentUpon>DatabaseScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\DragForm.resx">
-      <DependentUpon>DragForm.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FavoriteScene\FavoriteScreen.resx">
       <DependentUpon>FavoriteScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\HistoryScene\HistoryScreen.resx">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainScene\GuideScreen.resx">
       <DependentUpon>GuideScreen.cs</DependentUpon>

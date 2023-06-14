@@ -1,18 +1,16 @@
-﻿using ScintillaNET;
-
-namespace ConvertGPT
+﻿namespace ConvertGPT
 {
     partial class MainForm
     {
         /// <summary>
-        /// 필수 디자이너 변수입니다.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 사용 중인 모든 리소스를 정리합니다.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">관리되는 리소스를 삭제해야 하면 true이고, 그렇지 않으면 false입니다.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,190 +20,208 @@ namespace ConvertGPT
             base.Dispose(disposing);
         }
 
-        #region Windows Form 디자이너에서 생성한 코드
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 디자이너 지원에 필요한 메서드입니다. 
-        /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.selectLanguageComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.inputTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.convertBtn = new MetroFramework.Controls.MetroButton();
-            this.CopyBtn = new MetroFramework.Controls.MetroButton();
-            this.outputTextBox = new ScintillaNET.Scintilla();
-            this.lblDB = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.panel = new System.Windows.Forms.Panel();
+            this.slidePanel = new System.Windows.Forms.Panel();
+            this.bottomCheckBox = new System.Windows.Forms.CheckBox();
+            this.historyButton = new System.Windows.Forms.Button();
+            this.favoriteButton = new System.Windows.Forms.Button();
+            this.convertDBButton = new System.Windows.Forms.Button();
+            this.convertCodeButton = new System.Windows.Forms.Button();
+            this.timerSliding = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.slidePanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // selectLanguageComboBox
+            // panel
             // 
-            this.selectLanguageComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel.BackColor = System.Drawing.Color.LightGray;
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel.Location = new System.Drawing.Point(230, 4);
+            this.panel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(910, 917);
+            this.panel.TabIndex = 2;
+            // 
+            // slidePanel
+            // 
+            this.slidePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.selectLanguageComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.selectLanguageComboBox.FormattingEnabled = true;
-            this.selectLanguageComboBox.ItemHeight = 23;
-            this.selectLanguageComboBox.Items.AddRange(new object[] {
-            "C#",
-            "Java",
-            "Javascript",
-            "Python"});
-            this.selectLanguageComboBox.Location = new System.Drawing.Point(10, 71);
-            this.selectLanguageComboBox.Name = "selectLanguageComboBox";
-            this.selectLanguageComboBox.PromptText = "언어 선택";
-            this.selectLanguageComboBox.Size = new System.Drawing.Size(880, 29);
-            this.selectLanguageComboBox.Sorted = true;
-            this.selectLanguageComboBox.TabIndex = 0;
-            this.selectLanguageComboBox.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.selectLanguageComboBox.UseSelectable = true;
-            this.selectLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.selectLanguageComboBox_SelectedIndexChanged);
+            this.slidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.slidePanel.Controls.Add(this.bottomCheckBox);
+            this.slidePanel.Controls.Add(this.historyButton);
+            this.slidePanel.Controls.Add(this.favoriteButton);
+            this.slidePanel.Controls.Add(this.convertDBButton);
+            this.slidePanel.Controls.Add(this.convertCodeButton);
+            this.slidePanel.Location = new System.Drawing.Point(3, 4);
+            this.slidePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.slidePanel.Name = "slidePanel";
+            this.slidePanel.Size = new System.Drawing.Size(221, 917);
+            this.slidePanel.TabIndex = 3;
             // 
-            // inputTextBox
+            // bottomCheckBox
             // 
-            this.inputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bottomCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.bottomCheckBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bottomCheckBox.FlatAppearance.BorderSize = 0;
+            this.bottomCheckBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.bottomCheckBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.bottomCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bottomCheckBox.Image = ((System.Drawing.Image)(resources.GetObject("bottomCheckBox.Image")));
+            this.bottomCheckBox.Location = new System.Drawing.Point(0, 855);
+            this.bottomCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bottomCheckBox.Name = "bottomCheckBox";
+            this.bottomCheckBox.Size = new System.Drawing.Size(221, 62);
+            this.bottomCheckBox.TabIndex = 4;
+            this.bottomCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bottomCheckBox.CheckedChanged += new System.EventHandler(this.bottomCheckBox_CheckedChanged);
             // 
+            // historyButton
             // 
+            this.historyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.historyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.historyButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.historyButton.FlatAppearance.BorderSize = 0;
+            this.historyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.historyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.historyButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.historyButton.ForeColor = System.Drawing.Color.White;
+            this.historyButton.Location = new System.Drawing.Point(0, 186);
+            this.historyButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.historyButton.Name = "historyButton";
+            this.historyButton.Size = new System.Drawing.Size(221, 62);
+            this.historyButton.TabIndex = 2;
+            this.historyButton.Text = "기록";
+            this.historyButton.UseVisualStyleBackColor = true;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
-            this.inputTextBox.CustomButton.Image = null;
-            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-39, 1);
-            this.inputTextBox.CustomButton.Name = "";
-            this.inputTextBox.CustomButton.Size = new System.Drawing.Size(473, 473);
-            this.inputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.inputTextBox.CustomButton.TabIndex = 1;
-            this.inputTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.inputTextBox.CustomButton.UseSelectable = true;
-            this.inputTextBox.CustomButton.Visible = false;
-            this.inputTextBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.inputTextBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.inputTextBox.Lines = new string[0];
-            this.inputTextBox.Location = new System.Drawing.Point(10, 110);
-            this.inputTextBox.MaxLength = 32767;
-            this.inputTextBox.Multiline = true;
-            this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.PasswordChar = '\0';
-            this.inputTextBox.PromptText = "코드를 입력하세요.";
-            this.inputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.inputTextBox.SelectedText = "";
-            this.inputTextBox.SelectionLength = 0;
-            this.inputTextBox.SelectionStart = 0;
-            this.inputTextBox.ShortcutsEnabled = true;
-            this.inputTextBox.Size = new System.Drawing.Size(435, 475);
-            this.inputTextBox.Style = MetroFramework.MetroColorStyle.Orange;
-            this.inputTextBox.TabIndex = 1;
-            this.inputTextBox.UseSelectable = true;
-            this.inputTextBox.WaterMark = "코드를 입력하세요.";
-            this.inputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.inputTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.inputTextBox.Click += new System.EventHandler(this.convertBtn_MouseEnter);
+            // favoriteButton
             // 
-            // outputTextBox
+            this.favoriteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.favoriteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.favoriteButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.favoriteButton.FlatAppearance.BorderSize = 0;
+            this.favoriteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.favoriteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.favoriteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoriteButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.favoriteButton.ForeColor = System.Drawing.Color.White;
+            this.favoriteButton.Location = new System.Drawing.Point(0, 124);
+            this.favoriteButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.favoriteButton.Name = "favoriteButton";
+            this.favoriteButton.Size = new System.Drawing.Size(221, 62);
+            this.favoriteButton.TabIndex = 1;
+            this.favoriteButton.Text = "즐겨찾기";
+            this.favoriteButton.UseVisualStyleBackColor = true;
+            this.favoriteButton.Click += new System.EventHandler(this.favoriteButton_Click);
             // 
-            this.outputTextBox.AdditionalCaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
-            this.outputTextBox.TabIndex = 5;
-            this.outputTextBox.UseTabs = true;
-            this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
+            // convertDBButton
             // 
-            // convertBtn
+            this.convertDBButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.convertDBButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.convertDBButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.convertDBButton.FlatAppearance.BorderSize = 0;
+            this.convertDBButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.convertDBButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.convertDBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertDBButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.convertDBButton.ForeColor = System.Drawing.Color.White;
+            this.convertDBButton.Location = new System.Drawing.Point(0, 62);
+            this.convertDBButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.convertDBButton.Name = "convertDBButton";
+            this.convertDBButton.Size = new System.Drawing.Size(221, 62);
+            this.convertDBButton.TabIndex = 3;
+            this.convertDBButton.Text = "DB 변환";
+            this.convertDBButton.UseVisualStyleBackColor = true;
+            this.convertDBButton.Click += new System.EventHandler(this.convertDBButton_Click);
             // 
-            this.convertBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.convertBtn.BackColor = System.Drawing.Color.DarkOrange;
-            this.convertBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.convertBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.convertBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.convertBtn.Location = new System.Drawing.Point(10, 600);
-            this.convertBtn.Name = "convertBtn";
-            this.convertBtn.Size = new System.Drawing.Size(435, 60);
-            this.convertBtn.TabIndex = 3;
-            this.convertBtn.Text = "변환";
-            this.convertBtn.UseCustomBackColor = true;
-            this.convertBtn.UseCustomForeColor = true;
-            this.convertBtn.UseSelectable = true;
-            this.convertBtn.Click += new System.EventHandler(this.convertBtn_Click);
-            this.convertBtn.MouseEnter += new System.EventHandler(this.convertBtn_MouseEnter);
-            this.convertBtn.MouseLeave += new System.EventHandler(this.convertBtn_MouseLeave);
+            // convertCodeButton
             // 
-            // CopyBtn
+            this.convertCodeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.convertCodeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.convertCodeButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.convertCodeButton.FlatAppearance.BorderSize = 0;
+            this.convertCodeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.convertCodeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.convertCodeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.convertCodeButton.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.convertCodeButton.ForeColor = System.Drawing.Color.White;
+            this.convertCodeButton.Location = new System.Drawing.Point(0, 0);
+            this.convertCodeButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.convertCodeButton.Name = "convertCodeButton";
+            this.convertCodeButton.Size = new System.Drawing.Size(221, 62);
+            this.convertCodeButton.TabIndex = 0;
+            this.convertCodeButton.Text = "코드 변환";
+            this.convertCodeButton.UseVisualStyleBackColor = true;
+            this.convertCodeButton.Click += new System.EventHandler(this.convertCodeButton_Click);
             // 
-            this.CopyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CopyBtn.BackColor = System.Drawing.Color.DarkOrange;
-            this.CopyBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CopyBtn.FontSize = MetroFramework.MetroButtonSize.Medium;
-            this.CopyBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CopyBtn.Location = new System.Drawing.Point(455, 600);
-            this.CopyBtn.Name = "CopyBtn";
-            this.CopyBtn.Size = new System.Drawing.Size(435, 60);
-            this.CopyBtn.TabIndex = 4;
-            this.CopyBtn.Text = "Copy";
-            this.CopyBtn.UseCustomBackColor = true;
-            this.CopyBtn.UseCustomForeColor = true;
-            this.CopyBtn.UseSelectable = true;
-            this.CopyBtn.Click += new System.EventHandler(this.CopyBtn_Click);
+            // timerSliding
             // 
-            // outputTextBox
+            this.timerSliding.Interval = 10;
+            this.timerSliding.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            this.outputTextBox.AdditionalCaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.outputTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.outputTextBox.Location = new System.Drawing.Point(455, 110);
-            this.outputTextBox.Name = "outputTextBox";
-            this.outputTextBox.Size = new System.Drawing.Size(435, 475);
-            this.outputTextBox.TabIndex = 5;
-            this.outputTextBox.UseTabs = true;
-            this.outputTextBox.WrapMode = ScintillaNET.WrapMode.Char;
+            // tableLayoutPanel1
             // 
-            // lblDB
-            //
-            this.lblDB.AutoSize = true;
-            this.lblDB.Location = new System.Drawing.Point(815, 30);
-            this.lblDB.Name = "lblDB";
-            this.lblDB.Size = new System.Drawing.Size(40, 15);
-            this.lblDB.TabIndex = 5;
-            this.lblDB.Text = "Server";
-            //
-            // MainForm
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.9F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.1F));
+            this.tableLayoutPanel1.Controls.Add(this.slidePanel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 75);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1143, 925);
+            this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // DragForm
+            // 
+            this.AllowDrop = true;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 680);
-            this.Controls.Add(this.outputTextBox);
-            this.Controls.Add(this.lblDB);
-            this.Controls.Add(this.CopyBtn);
-            this.Controls.Add(this.convertBtn);
-            this.Controls.Add(this.inputTextBox);
-            this.Controls.Add(this.selectLanguageComboBox);
-            this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ClientSize = new System.Drawing.Size(1143, 1000);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(22, 80, 22, 27);
-            this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "ConvertGPT";
-            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
-
-
-            this.Load += new System.EventHandler(this.MainForm_Load);
-
-            this.Resize += new System.EventHandler(this.MainForm_Resize);
+            this.Name = "DragForm";
+            this.Padding = new System.Windows.Forms.Padding(0, 75, 0, 0);
+            this.ShowIcon = false;
+            this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "Dev Helper";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Empty;
+            this.Load += new System.EventHandler(this.DragForm_Load);
+            this.slidePanel.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroComboBox selectLanguageComboBox;
-        private MetroFramework.Controls.MetroTextBox inputTextBox;
-        private MetroFramework.Controls.MetroButton convertBtn;
-        private MetroFramework.Controls.MetroButton CopyBtn;
-        private ScintillaNET.Scintilla outputTextBox;
-        private System.Windows.Forms.Label lblDB;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel slidePanel;
+        private System.Windows.Forms.Button convertCodeButton;
+        private System.Windows.Forms.Button convertDBButton;
+        private System.Windows.Forms.Button historyButton;
+        private System.Windows.Forms.Button favoriteButton;
+        private System.Windows.Forms.CheckBox bottomCheckBox;
+        private System.Windows.Forms.Timer timerSliding;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
-
