@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConvertGPT.Global.Component;
 using MySql.Data.MySqlClient;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -55,6 +56,10 @@ namespace ConvertGPT.MainScene
 
         private void updateCodeTextBoxUI() {
             this.languageLabel.Text = convertResponse.language;
+
+
+            CodeTextBox.customizeSyntaxHighlighting(this.languageLabel.Text, this.metroTextBox1);
+
             this.metroTextBox1.Text = convertResponse.code;
         }
 
@@ -139,6 +144,11 @@ namespace ConvertGPT.MainScene
 
             languageLabel.Text = data.ToString();
             requestConvertAPI(this.convertRequest);
+        }
+
+        private async void btnCopy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
