@@ -53,22 +53,22 @@ namespace ConvertGPT
             else if (timeSpan.TotalMinutes < 1)
             {
                 int seconds = (int)timeSpan.TotalSeconds;
-                return $"{seconds} second{(seconds != 1 ? "s" : "")} ago";
+                return $"{seconds} s ago";
             }
             else if (timeSpan.TotalHours < 1)
             {
                 int minutes = (int)timeSpan.TotalMinutes;
-                return $"{minutes} minute{(minutes != 1 ? "s" : "")} ago";
+                return $"{minutes} m ago";
             }
             else if (timeSpan.TotalDays < 1)
             {
                 int hours = (int)timeSpan.TotalHours;
-                return $"{hours} hour{(hours != 1 ? "s" : "")} ago";
+                return $"{hours} h ago";
             }
             else
             {
                 int days = (int)timeSpan.TotalDays;
-                return $"{days} day{(days != 1 ? "s" : "")} ago";
+                return $"{days} d ago";
             }
         }
 

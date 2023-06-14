@@ -36,6 +36,7 @@ namespace ConvertGPT
         public void dataBind(HistoryModel data)
         {
             this.data = data;
+            
             languageLabel.Text = data.toLanguage;
             convertResultTextBox.Text = data.outputCode;
             explainResultTextBox.Text = data.explain;

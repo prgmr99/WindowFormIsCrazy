@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.idLabel = new System.Windows.Forms.Label();
+            this.timeAgoLabel = new System.Windows.Forms.Label();
             this.explainLabel = new System.Windows.Forms.Label();
             this.languageLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -39,10 +39,10 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.1414F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.8586F));
-            this.tableLayoutPanel1.Controls.Add(this.idLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.timeAgoLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.explainLabel, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.languageLabel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -50,40 +50,40 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 80);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 80);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
-            // idLabel
+            // timeAgoLabel
             // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.idLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.idLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.idLabel.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.idLabel.ForeColor = System.Drawing.Color.White;
-            this.idLabel.Location = new System.Drawing.Point(10, 10);
-            this.idLabel.Margin = new System.Windows.Forms.Padding(10);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(60, 60);
-            this.idLabel.TabIndex = 6;
-            this.idLabel.Text = "id";
-            this.idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.idLabel.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
+            this.timeAgoLabel.AutoSize = true;
+            this.timeAgoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.timeAgoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeAgoLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timeAgoLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeAgoLabel.ForeColor = System.Drawing.Color.White;
+            this.timeAgoLabel.Location = new System.Drawing.Point(10, 10);
+            this.timeAgoLabel.Margin = new System.Windows.Forms.Padding(10);
+            this.timeAgoLabel.Name = "timeAgoLabel";
+            this.timeAgoLabel.Size = new System.Drawing.Size(100, 60);
+            this.timeAgoLabel.TabIndex = 6;
+            this.timeAgoLabel.Text = "id";
+            this.timeAgoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.timeAgoLabel.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
             // explainLabel
             // 
             this.explainLabel.AutoSize = true;
-            this.explainLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.explainLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.explainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.explainLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.explainLabel.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.explainLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.explainLabel.ForeColor = System.Drawing.Color.White;
-            this.explainLabel.Location = new System.Drawing.Point(258, 10);
+            this.explainLabel.Location = new System.Drawing.Point(314, 10);
             this.explainLabel.Margin = new System.Windows.Forms.Padding(10);
             this.explainLabel.Name = "explainLabel";
             this.explainLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.explainLabel.Size = new System.Drawing.Size(432, 60);
+            this.explainLabel.Size = new System.Drawing.Size(476, 60);
             this.explainLabel.TabIndex = 5;
             this.explainLabel.Text = "이 코드는 무슨 ";
             this.explainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,15 +92,15 @@
             // languageLabel
             // 
             this.languageLabel.AutoSize = true;
-            this.languageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.languageLabel.BackColor = System.Drawing.Color.DimGray;
             this.languageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.languageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.languageLabel.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.languageLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.languageLabel.ForeColor = System.Drawing.Color.White;
-            this.languageLabel.Location = new System.Drawing.Point(90, 10);
+            this.languageLabel.Location = new System.Drawing.Point(130, 10);
             this.languageLabel.Margin = new System.Windows.Forms.Padding(10);
             this.languageLabel.Name = "languageLabel";
-            this.languageLabel.Size = new System.Drawing.Size(148, 60);
+            this.languageLabel.Size = new System.Drawing.Size(164, 60);
             this.languageLabel.TabIndex = 3;
             this.languageLabel.Text = "C → C++";
             this.languageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,6 +124,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label explainLabel;
         private System.Windows.Forms.Label languageLabel;
-        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Label timeAgoLabel;
     }
 }
