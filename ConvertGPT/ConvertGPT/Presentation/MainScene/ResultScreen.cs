@@ -55,14 +55,14 @@ namespace ConvertGPT.MainScene
         }
 
         private void updateCodeTextBoxUI() {
-            CodeTextBox.customizeSyntaxHighlighting(this.languageLabel.Text, this.metroTextBox1);
+            CodeTextBox.customizeSyntaxHighlighting(this.convertRequest.toLanguage, this.convertResultTextBox);
             this.languageLabel.Text = convertResponse.language;
-            this.metroTextBox1.Text = convertResponse.code;
+            this.convertResultTextBox.Text = convertResponse.code;
         }
 
         private void updateExplainBoxUI()
         {
-            this.metroTextBox2.Text = explainResponse.explain;
+            this.explainResultTextBox.Text = explainResponse.explain;
         }
 
         private void saveConvertResultDataBase(ConvertRequest request, ConvertResponse response) {
@@ -127,8 +127,8 @@ namespace ConvertGPT.MainScene
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
             languageForm.ShowDialog();
 
-            metroTextBox1.Text = "로딩 중..";
-            metroTextBox2.Text = "로딩 중..";
+            convertResultTextBox.Text = "로딩 중..";
+            explainResultTextBox.Text = "로딩 중..";
         }
 
         private void SelectLanguageEventSender(object sender, SelectLanguageEvent selectLanguageEvent, Object data)
@@ -145,7 +145,7 @@ namespace ConvertGPT.MainScene
         private async void btnCopy_Click(object sender, EventArgs e)
         {
             // 텍스트 박스에서 텍스트 가져오기
-            string copiedText = metroTextBox1.Text;
+            string copiedText = convertResultTextBox.Text;
 
             // 클립보드에 텍스트 복사
             Clipboard.SetText(copiedText);

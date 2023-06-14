@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.explainResultTextBox = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCopy = new System.Windows.Forms.Button();
             this.languageLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new ScintillaNET.Scintilla();
+            this.convertResultTextBox = new ScintillaNET.Scintilla();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.keySyntaxButton = new System.Windows.Forms.Button();
@@ -51,46 +51,46 @@
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(-252, 1);
-            this.metroTextBox2.CustomButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(823, 823);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox2.Lines = new string[] {
+            this.explainResultTextBox.CustomButton.Image = null;
+            this.explainResultTextBox.CustomButton.Location = new System.Drawing.Point(-252, 1);
+            this.explainResultTextBox.CustomButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.explainResultTextBox.CustomButton.Name = "";
+            this.explainResultTextBox.CustomButton.Size = new System.Drawing.Size(823, 823);
+            this.explainResultTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.explainResultTextBox.CustomButton.TabIndex = 1;
+            this.explainResultTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.explainResultTextBox.CustomButton.UseSelectable = true;
+            this.explainResultTextBox.CustomButton.Visible = false;
+            this.explainResultTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.explainResultTextBox.Lines = new string[] {
         "로딩 중..."};
-            this.metroTextBox2.Location = new System.Drawing.Point(571, 38);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Multiline = true;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(572, 825);
-            this.metroTextBox2.TabIndex = 3;
-            this.metroTextBox2.Text = "로딩 중...";
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.explainResultTextBox.Location = new System.Drawing.Point(571, 38);
+            this.explainResultTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.explainResultTextBox.MaxLength = 32767;
+            this.explainResultTextBox.Multiline = true;
+            this.explainResultTextBox.Name = "metroTextBox2";
+            this.explainResultTextBox.PasswordChar = '\0';
+            this.explainResultTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.explainResultTextBox.SelectedText = "";
+            this.explainResultTextBox.SelectionLength = 0;
+            this.explainResultTextBox.SelectionStart = 0;
+            this.explainResultTextBox.ShortcutsEnabled = true;
+            this.explainResultTextBox.Size = new System.Drawing.Size(572, 825);
+            this.explainResultTextBox.TabIndex = 3;
+            this.explainResultTextBox.Text = "로딩 중...";
+            this.explainResultTextBox.UseSelectable = true;
+            this.explainResultTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.explainResultTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.metroTextBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.explainResultTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroTextBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.convertResultTextBox, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 62);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -169,17 +169,17 @@
             // 
             // metroTextBox1
             // 
-            this.metroTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox1.HScrollBar = false;
-            this.metroTextBox1.Location = new System.Drawing.Point(3, 41);
-            this.metroTextBox1.Margins.Capacity = 0;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.ScrollWidth = 1000;
-            this.metroTextBox1.Size = new System.Drawing.Size(565, 819);
-            this.metroTextBox1.TabIndex = 4;
-            this.metroTextBox1.Text = "로딩 중...";
-            this.metroTextBox1.WrapMode = ScintillaNET.WrapMode.Word;
+            this.convertResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.convertResultTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.convertResultTextBox.HScrollBar = false;
+            this.convertResultTextBox.Location = new System.Drawing.Point(3, 41);
+            this.convertResultTextBox.Margins.Capacity = 0;
+            this.convertResultTextBox.Name = "metroTextBox1";
+            this.convertResultTextBox.ScrollWidth = 1000;
+            this.convertResultTextBox.Size = new System.Drawing.Size(565, 819);
+            this.convertResultTextBox.TabIndex = 4;
+            this.convertResultTextBox.Text = "로딩 중...";
+            this.convertResultTextBox.WrapMode = ScintillaNET.WrapMode.Word;
             // 
             // tableLayoutPanel2
             // 
@@ -302,7 +302,7 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox explainResultTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -313,6 +313,6 @@
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.Label languageLabel;
         private System.Windows.Forms.Label label2;
-        private ScintillaNET.Scintilla metroTextBox1;
+        private ScintillaNET.Scintilla convertResultTextBox;
     }
 }
