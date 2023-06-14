@@ -87,6 +87,7 @@ namespace ConvertGPT
             resultScreen.dataBind(this.data[id]);
             resultScreen.resultEventSender += ResultEventSender;
             panel1.Controls.Add(resultScreen);
+            resultScreen.BringToFront();
         }
 
         private void ResultEventSender(object sender, ResultEvent resultEvent, Object data)
@@ -96,8 +97,8 @@ namespace ConvertGPT
             switch (resultEvent)
             {
                 case ResultEvent.backButtonClicked:
-                    Control bottomControl = this.Controls[this.Controls.Count - 1]; 
-                    this.Controls.Remove(bottomControl); 
+                    Control topControl = this.Controls[0]; // 최상단 컨트롤 가져오기
+                    this.Controls.Remove(topControl);
                     break;
                 default: break;
             }
