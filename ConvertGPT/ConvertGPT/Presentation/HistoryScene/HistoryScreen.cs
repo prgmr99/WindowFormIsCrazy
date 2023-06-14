@@ -25,7 +25,7 @@ namespace ConvertGPT
 
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
-            string sql = "SELECT ToLang, codeRecord, codeResult from history";
+            string sql = "SELECT toLang, codeRecord, codeResult from history";
 
             MySqlConnection conDataBase = new MySqlConnection(localConfig);
             MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
