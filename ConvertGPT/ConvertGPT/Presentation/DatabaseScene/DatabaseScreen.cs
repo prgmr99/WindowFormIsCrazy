@@ -16,5 +16,10 @@ namespace ConvertGPT
         {
             InitializeComponent();
         }
+
+        private void DatabaseScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

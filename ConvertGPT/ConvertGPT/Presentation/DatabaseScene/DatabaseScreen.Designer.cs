@@ -37,9 +37,8 @@
             this.label1.Font = new System.Drawing.Font("굴림", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(258, 297);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 64);
+            this.label1.Size = new System.Drawing.Size(0, 64);
             this.label1.TabIndex = 0;
-            this.label1.Text = "DB Screen";
             // 
             // DatabaseScreen
             // 
@@ -48,6 +47,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DatabaseScreen";
             this.Size = new System.Drawing.Size(800, 740);
+            this.Load += new System.EventHandler(this.DatabaseScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
