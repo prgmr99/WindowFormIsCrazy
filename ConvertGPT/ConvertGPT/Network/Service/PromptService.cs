@@ -31,6 +31,7 @@ namespace ConvertGPT
                     Output += result.Message.Content;
                 }
                 //Console.Out.WriteLine(Output);
+                Output.Replace("\n", "\r\n");
                 return Output;
             }
             else

@@ -13,7 +13,7 @@ namespace ConvertGPT
         const string PROMPT_Template =
 @"# {0}
 {1}
-# Explanation of what the code does
+# Explanation in Korean of what the code does
 
 #";
         public string Prompt { get; set; }
