@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,20 +25,56 @@ namespace ConvertGPT
 
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
-            string sql = "SELECT * from history";
+            string sql = "SELECT ToLang, codeRecord, codeResult from history";
 
-            SqlConnection conn = new SqlConnection(localConfig);
-            conn.Open();
+            MySqlConnection conDataBase = new MySqlConnection(localConfig);
+            MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
 
-            SqlCommand cmd = new SqlCommand(sql, conn);
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bSouce = new BindingSource();
 
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
+                bSouce.DataSource = dbdataset;
+                dataGridView1.DataSource = bSouce;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            DataTable dt = ds.Tables["history"];
-            da.Fill(ds, "temp1");
-            dataGridView1.DataSource = ds.Tables["temp1"];
-            conn.Close();
+        private void HistoryScreen_Load(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
+            string sql = "SELECT ToLang, codeRecord, codeResult from history";
+
+            MySqlConnection conDataBase = new MySqlConnection(localConfig);
+            MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bSouce = new BindingSource();
+
+                bSouce.DataSource = dbdataset;
+                dataGridView1.DataSource = bSouce;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

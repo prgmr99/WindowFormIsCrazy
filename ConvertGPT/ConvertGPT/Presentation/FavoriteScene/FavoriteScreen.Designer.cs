@@ -61,7 +61,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FavoriteScreen";
-            this.Size = new System.Drawing.Size(1000, 740);
+            this.Size = new System.Drawing.Size(1017, 695);
             this.Load += new System.EventHandler(this.FavoriteScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
