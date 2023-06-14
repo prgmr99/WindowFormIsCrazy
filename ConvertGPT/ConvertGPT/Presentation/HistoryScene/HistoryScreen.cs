@@ -37,11 +37,12 @@ namespace ConvertGPT
         public void requestHistoryData()
         {
             this.data.Clear();
+            historyFlowLayoutPanel.Controls.Clear();
             DataSet ds = new DataSet();
 
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
-            string sql = "SELECT curTime, fromLang, toLang, codeRecord, codeResult, explainCode FROM history";
+            string sql = "SELECT curTime, fromLang, toLang, codeRecord, codeResult, explainCode FROM history ORDER BY curTime DESC ";
 
             MySqlConnection conDataBase = new MySqlConnection(exConfig);
             MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
