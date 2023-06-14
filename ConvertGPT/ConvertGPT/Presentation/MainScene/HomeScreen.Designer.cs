@@ -45,6 +45,7 @@
             // nextButton
             // 
             this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.nextButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nextButton.FlatAppearance.BorderSize = 0;
             this.nextButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -52,9 +53,10 @@
             this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextButton.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.nextButton.ForeColor = System.Drawing.Color.White;
-            this.nextButton.Location = new System.Drawing.Point(3, 626);
+            this.nextButton.Location = new System.Drawing.Point(3, 783);
+            this.nextButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(538, 105);
+            this.nextButton.Size = new System.Drawing.Size(616, 130);
             this.nextButton.TabIndex = 0;
             this.nextButton.Text = "코드 변환하기";
             this.nextButton.UseVisualStyleBackColor = false;
@@ -67,9 +69,10 @@
             // 
             // 
             this.inputTextBox.CustomButton.Image = null;
-            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-78, 1);
+            this.inputTextBox.CustomButton.Location = new System.Drawing.Point(-154, 1);
+            this.inputTextBox.CustomButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.inputTextBox.CustomButton.Name = "";
-            this.inputTextBox.CustomButton.Size = new System.Drawing.Size(615, 615);
+            this.inputTextBox.CustomButton.Size = new System.Drawing.Size(769, 769);
             this.inputTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.inputTextBox.CustomButton.TabIndex = 1;
             this.inputTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -77,7 +80,8 @@
             this.inputTextBox.CustomButton.Visible = false;
             this.inputTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.inputTextBox.Lines = new string[0];
-            this.inputTextBox.Location = new System.Drawing.Point(3, 3);
+            this.inputTextBox.Location = new System.Drawing.Point(3, 4);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.inputTextBox.MaxLength = 32767;
             this.inputTextBox.Multiline = true;
             this.inputTextBox.Name = "inputTextBox";
@@ -87,7 +91,7 @@
             this.inputTextBox.SelectionLength = 0;
             this.inputTextBox.SelectionStart = 0;
             this.inputTextBox.ShortcutsEnabled = true;
-            this.inputTextBox.Size = new System.Drawing.Size(538, 617);
+            this.inputTextBox.Size = new System.Drawing.Size(616, 771);
             this.inputTextBox.TabIndex = 1;
             this.inputTextBox.UseSelectable = true;
             this.inputTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -101,10 +105,10 @@
             this.explainLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.explainLabel.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.explainLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.explainLabel.Location = new System.Drawing.Point(0, 187);
+            this.explainLabel.Location = new System.Drawing.Point(0, 233);
             this.explainLabel.Margin = new System.Windows.Forms.Padding(0);
             this.explainLabel.Name = "explainLabel";
-            this.explainLabel.Size = new System.Drawing.Size(244, 219);
+            this.explainLabel.Size = new System.Drawing.Size(280, 274);
             this.explainLabel.TabIndex = 0;
             this.explainLabel.Text = "코드 붙혀넣거나\r\n파일을 드래그 하세요\r\n\r\n";
             this.explainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,9 +116,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(668, 55);
+            this.label1.Location = new System.Drawing.Point(763, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 12);
+            this.label1.Size = new System.Drawing.Size(0, 15);
             this.label1.TabIndex = 2;
             // 
             // label2
@@ -128,7 +132,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 187);
+            this.label2.Size = new System.Drawing.Size(280, 233);
             this.label2.TabIndex = 3;
             this.label2.Text = "언어: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,15 +141,16 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 286F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 740);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 925);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -155,12 +160,13 @@
             this.tableLayoutPanel2.Controls.Add(this.inputTextBox, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.nextButton, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(544, 734);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(622, 917);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -170,25 +176,27 @@
             this.tableLayoutPanel3.Controls.Add(this.explainLabel, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(553, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(631, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.03175F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.96825F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 327F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(244, 734);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 409F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(280, 917);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // HomeScreen
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HomeScreen";
-            this.Size = new System.Drawing.Size(800, 740);
+            this.Size = new System.Drawing.Size(914, 925);
             this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.HomeScreen_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.HomeScreen_DragEnter);
