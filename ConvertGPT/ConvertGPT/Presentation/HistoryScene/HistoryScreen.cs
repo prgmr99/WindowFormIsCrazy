@@ -72,8 +72,12 @@ namespace ConvertGPT
         }
 
         private void addHistoryCell(HistoryModel data) {
-            Console.WriteLine(data);
+            HistoryCell cell = new HistoryCell();
+            cell.dataBind(data);
+            historyFlowLayoutPanel.Controls.Add(cell);
         }
+
+
 
         //private void requestHistoryData()
         //{

@@ -39,8 +39,6 @@ namespace ConvertGPT
         {
             InitializeComponent();
             this.AllowDrop = true;
-
-            
         }
 
 
