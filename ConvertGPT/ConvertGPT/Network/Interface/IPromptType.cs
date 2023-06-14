@@ -13,5 +13,6 @@ namespace ConvertGPT
         string Prompt_Template { get; }
         string Prompt { get; }
         ChatCompletionCreateRequest Options { get; }
+        object parse_output(string output);
     }
 }
