@@ -97,7 +97,7 @@ namespace ConvertGPT.MainScene
             this.convertResponse.code = result.Result;
             this.explainRequest.code = result.Result;
 
-            //saveConvertResultDataBase(this.convertRequest, this.convertResponse);
+            saveConvertResultDataBase(this.convertRequest, this.convertResponse);
 
             updateCodeTextBoxUI();
             requestExplainAPI(this.explainRequest);
