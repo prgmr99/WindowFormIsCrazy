@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
+using System.IO;
 
 namespace ConvertGPT
 {
@@ -20,9 +22,35 @@ namespace ConvertGPT
         public string Prompt_Template => PROMPT_Template;
         public ChatCompletionCreateRequest Options { get; }
 
-        public DBDiagramType(string code)
+        public DBDiagramType(string file_dir)
         {
+            string code;
+            string strcon;
+            strcon = string.Format(@"Data Source={0};Pooling=true;FailIfMissing=false;Version=3", file_dir);
+            using (var connection = new SQLiteConnection(strcon))
+            {
+                connection.Open();
 
+                var command = connection.CreateCommand();
+                command.CommandText =
+                @"
+        select sql from sqlite_master where type = 'table';
+    ";
+
+                using (var reader = command.ExecuteReader())
+                {
+                        StringWriter stringWriter = new StringWriter();
+                    while (reader.Read())
+                    {
+                        var sql = reader.GetString(0);
+                        
+                        stringWriter.WriteLine(sql);
+
+
+                    }
+                    code = stringWriter.ToString();
+                }
+            }
             Prompt = string.Format(PROMPT_Template, code);
 
             Options = new ChatCompletionCreateRequest()
