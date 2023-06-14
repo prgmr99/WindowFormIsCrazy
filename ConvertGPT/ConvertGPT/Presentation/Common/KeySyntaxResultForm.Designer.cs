@@ -1,4 +1,4 @@
-﻿namespace ConvertGPT.Presentation.Common
+﻿namespace ConvertGPT
 {
     partial class KeySyntaxResultForm
     {
@@ -28,12 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.scintilla1 = new ScintillaNET.Scintilla();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.scintilla1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(859, 496);
+            this.panel1.TabIndex = 0;
+            // 
+            // scintilla1
+            // 
+            this.scintilla1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scintilla1.Location = new System.Drawing.Point(0, 0);
+            this.scintilla1.Name = "scintilla1";
+            this.scintilla1.Size = new System.Drawing.Size(859, 496);
+            this.scintilla1.TabIndex = 0;
+            this.scintilla1.Text = "scintilla1";
+            // 
+            // KeySyntaxResultForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "KeySyntaxResultForm";
+            this.ClientSize = new System.Drawing.Size(859, 556);
+            this.Controls.Add(this.panel1);
+            this.Name = "KeySyntaxResultForm";
+            this.Padding = new System.Windows.Forms.Padding(0, 60, 0, 0);
+            this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "핵심 문법";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private ScintillaNET.Scintilla scintilla1;
     }
 }

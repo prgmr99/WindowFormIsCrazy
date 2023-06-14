@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvertGPT.Presentation.Common
+namespace ConvertGPT
 {
-    public partial class KeySyntaxResultForm : Form
+    public partial class KeySyntaxResultForm : MetroFramework.Forms.MetroForm
     {
         public KeySyntaxResultForm()
         {
