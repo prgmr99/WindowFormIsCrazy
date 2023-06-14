@@ -15,7 +15,8 @@ namespace ConvertGPT
     public partial class HistoryScreen : UserControl
     {
 
-        HistoryModel[] data;
+        List<HistoryModel> data = new List<HistoryModel>();
+
 
         public HistoryScreen()
         {
@@ -53,6 +54,7 @@ namespace ConvertGPT
                 sda.Fill(dataTable);
 
                 int count = dataTable.Rows.Count;
+                Console.WriteLine($"서버에서 읽은 데이터 개수: {count}");
 
                 for (int r = 0; r < count; r ++) {
 
@@ -61,7 +63,8 @@ namespace ConvertGPT
 
                     HistoryModel data = new HistoryModel(r, values);
 
-                    this.data.Append(data);
+                    this.data.Add(data);
+                    addHistoryCell(data);
                 }
 
             }
@@ -78,9 +81,26 @@ namespace ConvertGPT
             historyFlowLayoutPanel.Controls.Add(cell);
         }
 
-        private void HistoryCellSelectEventSender(int id) { 
+        private void HistoryCellSelectEventSender(int id) {
+            HistoryResultScreen resultScreen = new HistoryResultScreen();
+            Console.Write(this.data);
+            resultScreen.dataBind(this.data[id]);
+            resultScreen.resultEventSender += ResultEventSender;
+            panel1.Controls.Add(resultScreen);
+        }
 
-            data[id]
+        private void ResultEventSender(object sender, ResultEvent resultEvent, Object data)
+        {
+            Console.WriteLine("back 이벤트가 HistoryScreen 전달 되었습니다");
+
+            switch (resultEvent)
+            {
+                case ResultEvent.backButtonClicked:
+                    Control bottomControl = this.Controls[this.Controls.Count - 1]; 
+                    this.Controls.Remove(bottomControl); 
+                    break;
+                default: break;
+            }
         }
 
 

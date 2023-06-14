@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.convertResultTextBox = new ScintillaNET.Scintilla();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.backButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -47,18 +48,17 @@
             // 
             // 
             this.explainResultTextBox.CustomButton.Image = null;
-            this.explainResultTextBox.CustomButton.Location = new System.Drawing.Point(-208, 2);
+            this.explainResultTextBox.CustomButton.Location = new System.Drawing.Point(-194, 1);
             this.explainResultTextBox.CustomButton.Name = "";
-            this.explainResultTextBox.CustomButton.Size = new System.Drawing.Size(705, 705);
+            this.explainResultTextBox.CustomButton.Size = new System.Drawing.Size(693, 693);
             this.explainResultTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.explainResultTextBox.CustomButton.TabIndex = 1;
             this.explainResultTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.explainResultTextBox.CustomButton.UseSelectable = true;
             this.explainResultTextBox.CustomButton.Visible = false;
             this.explainResultTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.explainResultTextBox.Lines = new string[] {
-        "로딩 중..."};
-            this.explainResultTextBox.Location = new System.Drawing.Point(500, 30);
+            this.explainResultTextBox.Lines = new string[0];
+            this.explainResultTextBox.Location = new System.Drawing.Point(500, 45);
             this.explainResultTextBox.Margin = new System.Windows.Forms.Padding(0);
             this.explainResultTextBox.MaxLength = 32767;
             this.explainResultTextBox.Multiline = true;
@@ -69,9 +69,8 @@
             this.explainResultTextBox.SelectionLength = 0;
             this.explainResultTextBox.SelectionStart = 0;
             this.explainResultTextBox.ShortcutsEnabled = true;
-            this.explainResultTextBox.Size = new System.Drawing.Size(500, 710);
+            this.explainResultTextBox.Size = new System.Drawing.Size(500, 695);
             this.explainResultTextBox.TabIndex = 3;
-            this.explainResultTextBox.Text = "로딩 중...";
             this.explainResultTextBox.UseSelectable = true;
             this.explainResultTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.explainResultTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -90,7 +89,7 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1000, 740);
             this.tableLayoutPanel1.TabIndex = 3;
@@ -99,9 +98,10 @@
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.DimGray;
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel4.Controls.Add(this.backButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnCopy, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.languageLabel, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -110,7 +110,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(500, 30);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(500, 45);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // btnCopy
@@ -124,10 +124,10 @@
             this.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnCopy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCopy.Location = new System.Drawing.Point(470, 0);
+            this.btnCopy.Location = new System.Drawing.Point(455, 0);
             this.btnCopy.Margin = new System.Windows.Forms.Padding(0);
             this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(30, 30);
+            this.btnCopy.Size = new System.Drawing.Size(45, 45);
             this.btnCopy.TabIndex = 0;
             this.btnCopy.UseVisualStyleBackColor = false;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
@@ -139,9 +139,9 @@
             this.languageLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.languageLabel.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.languageLabel.ForeColor = System.Drawing.Color.White;
-            this.languageLabel.Location = new System.Drawing.Point(33, 0);
+            this.languageLabel.Location = new System.Drawing.Point(48, 0);
             this.languageLabel.Name = "languageLabel";
-            this.languageLabel.Size = new System.Drawing.Size(434, 30);
+            this.languageLabel.Size = new System.Drawing.Size(404, 45);
             this.languageLabel.TabIndex = 1;
             this.languageLabel.Text = "Language";
             this.languageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,7 +156,7 @@
             this.label2.Location = new System.Drawing.Point(500, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(500, 30);
+            this.label2.Size = new System.Drawing.Size(500, 45);
             this.label2.TabIndex = 5;
             this.label2.Text = "Description";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,14 +166,13 @@
             this.convertResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.convertResultTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.convertResultTextBox.HScrollBar = false;
-            this.convertResultTextBox.Location = new System.Drawing.Point(3, 32);
+            this.convertResultTextBox.Location = new System.Drawing.Point(3, 47);
             this.convertResultTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.convertResultTextBox.Margins.Capacity = 0;
             this.convertResultTextBox.Name = "convertResultTextBox";
             this.convertResultTextBox.ScrollWidth = 1000;
-            this.convertResultTextBox.Size = new System.Drawing.Size(494, 706);
+            this.convertResultTextBox.Size = new System.Drawing.Size(494, 691);
             this.convertResultTextBox.TabIndex = 4;
-            this.convertResultTextBox.Text = "로딩 중...";
             this.convertResultTextBox.WrapMode = ScintillaNET.WrapMode.Word;
             // 
             // tableLayoutPanel2
@@ -190,13 +189,32 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1000, 740);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
-            // HistryrResultScreen
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.Color.DimGray;
+            this.backButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_left;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.backButton.Location = new System.Drawing.Point(0, 0);
+            this.backButton.Margin = new System.Windows.Forms.Padding(0);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(45, 45);
+            this.backButton.TabIndex = 2;
+            this.backButton.UseVisualStyleBackColor = false;
+            // 
+            // HistoryResultScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Name = "HistryrResultScreen";
+            this.Name = "HistoryResultScreen";
             this.Size = new System.Drawing.Size(1000, 740);
             this.Load += new System.EventHandler(this.ResultScene_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -217,5 +235,6 @@
         private System.Windows.Forms.Label languageLabel;
         private System.Windows.Forms.Label label2;
         private ScintillaNET.Scintilla convertResultTextBox;
+        private System.Windows.Forms.Button backButton;
     }
 }

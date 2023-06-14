@@ -16,7 +16,10 @@ namespace ConvertGPT
     public partial class HistoryResultScreen : UserControl
     {
 
-        HistoryModel historyModel;
+
+        public event ResultEventSender resultEventSender;
+
+        HistoryModel data;
 
 
         public HistoryResultScreen()
@@ -32,6 +35,7 @@ namespace ConvertGPT
 
         public void dataBind(HistoryModel data)
         {
+            this.data = data;
             languageLabel.Text = data.toLanguage;
             convertResultTextBox.Text = data.outputCode;
             explainResultTextBox.Text = data.explain;
@@ -40,6 +44,11 @@ namespace ConvertGPT
 
         private void updateCodeTextBoxUI() {
             
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            resultEventSender(sender, ResultEvent.backButtonClicked, "");
         }
 
         private async void btnCopy_Click(object sender, EventArgs e)
