@@ -31,12 +31,12 @@
             this.explainResultTextBox = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.backButton = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
             this.languageLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.convertResultTextBox = new ScintillaNET.Scintilla();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.backButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -113,6 +113,26 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(500, 45);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.Color.DimGray;
+            this.backButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_left;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.backButton.Location = new System.Drawing.Point(0, 0);
+            this.backButton.Margin = new System.Windows.Forms.Padding(0);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(45, 45);
+            this.backButton.TabIndex = 2;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // btnCopy
             // 
             this.btnCopy.BackColor = System.Drawing.Color.DimGray;
@@ -188,25 +208,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1000, 740);
             this.tableLayoutPanel2.TabIndex = 4;
-            // 
-            // backButton
-            // 
-            this.backButton.BackColor = System.Drawing.Color.DimGray;
-            this.backButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_left;
-            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.backButton.Location = new System.Drawing.Point(0, 0);
-            this.backButton.Margin = new System.Windows.Forms.Padding(0);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(45, 45);
-            this.backButton.TabIndex = 2;
-            this.backButton.UseVisualStyleBackColor = false;
             // 
             // HistoryResultScreen
             // 

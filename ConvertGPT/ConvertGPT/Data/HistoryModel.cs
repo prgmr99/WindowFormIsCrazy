@@ -25,10 +25,6 @@ namespace ConvertGPT
             this.inputCode = inputCode;
             this.outputCode = outputCode;
             this.explain = explain;
-
-
-
-
         }
 
         public HistoryModel(int i, object[] data)
