@@ -12,14 +12,20 @@ namespace ConvertGPT.Presentation.Common
 {
     public partial class HistoryCell : UserControl
     {
+
+        
+
         public HistoryCell()
         {
             InitializeComponent();
         }
 
-        private void explainLabel_Click(object sender, EventArgs e)
+
+        private void tableLayoutPanel1_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

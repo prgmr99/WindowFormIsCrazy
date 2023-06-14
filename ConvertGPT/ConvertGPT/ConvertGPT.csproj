@@ -217,6 +217,7 @@
     <Compile Include="Data\ConvertResponse.cs" />
     <Compile Include="Data\ExplainRequest.cs" />
     <Compile Include="Data\ExplainResponse.cs" />
+    <Compile Include="Data\HistoryModel.cs" />
     <Compile Include="Global\Component\CodeTextBox.cs" />
     <Compile Include="Global\Secret.cs" />
     <Compile Include="Presentation\HistoryScene\HistoryCell.cs">
