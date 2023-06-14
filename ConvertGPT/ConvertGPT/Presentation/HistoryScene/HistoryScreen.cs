@@ -26,7 +26,6 @@ namespace ConvertGPT
 
         private void HistoryScreen_Load(object sender, EventArgs e)
         {
-            requestHistoryData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,13 +34,14 @@ namespace ConvertGPT
         }
 
 
-        private void requestHistoryData()
+        public void requestHistoryData()
         {
+            this.data.Clear();
             DataSet ds = new DataSet();
 
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
-            string sql = "SELECT toLang, codeRecord, codeResult from history";
+            string sql = "SELECT curTime, fromLang, toLang, codeRecord, codeResult, explainCode FROM history";
 
             MySqlConnection conDataBase = new MySqlConnection(exConfig);
             MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);

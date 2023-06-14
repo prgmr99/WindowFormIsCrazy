@@ -184,6 +184,7 @@ namespace ConvertGPT
         {
             panel.Controls.Clear();
             panel.Controls.Add(historyScreen);
+            historyScreen.requestHistoryData();
             historyScreen.Dock = System.Windows.Forms.DockStyle.Fill;
         }
 
