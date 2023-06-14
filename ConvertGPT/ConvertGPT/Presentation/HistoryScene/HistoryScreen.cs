@@ -61,9 +61,9 @@ namespace ConvertGPT
 
                     HistoryModel data = new HistoryModel(r, values);
 
-                    addHistoryCell(data);
-
+                    this.data.Append(data);
                 }
+
             }
             catch (Exception ex)
             {
@@ -74,7 +74,13 @@ namespace ConvertGPT
         private void addHistoryCell(HistoryModel data) {
             HistoryCell cell = new HistoryCell();
             cell.dataBind(data);
+            cell.historyCellSelectEventSender += HistoryCellSelectEventSender;
             historyFlowLayoutPanel.Controls.Add(cell);
+        }
+
+        private void HistoryCellSelectEventSender(int id) { 
+
+            data[id]
         }
 
 

@@ -88,7 +88,6 @@
             // 
             this.historyFlowLayoutPanel.AutoSize = true;
             this.historyFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historyFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.historyFlowLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.historyFlowLayoutPanel.Name = "historyFlowLayoutPanel";
             this.historyFlowLayoutPanel.Size = new System.Drawing.Size(794, 684);

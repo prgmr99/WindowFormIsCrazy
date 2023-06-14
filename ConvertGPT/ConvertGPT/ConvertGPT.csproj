@@ -238,6 +238,12 @@
     <Compile Include="Presentation\DatabaseScene\DatabaseScreen.Designer.cs">
       <DependentUpon>DatabaseScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\HistoryScene\HistoryResultScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\HistoryScene\HistoryResultScreen.Designer.cs">
+      <DependentUpon>HistoryResultScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\DatabaseScene\DatabaseScreen.resx">
       <DependentUpon>DatabaseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\HistoryScene\HistoryResultScreen.resx">
+      <DependentUpon>HistoryResultScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -34,7 +34,7 @@ namespace ConvertGPT
         }
 
         private void updateUI() {
-            idLabel.Text = data.id.ToString();
+            idLabel.Text = (data.id + 1).ToString();
             languageLabel.Text = $"{data.fromLanguage} → {data.toLanguage}";
             explainLabel.Text = data.explain.ToString();
         }
