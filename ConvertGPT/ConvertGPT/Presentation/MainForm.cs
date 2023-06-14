@@ -12,7 +12,7 @@ using MetroFramework;
 
 namespace ConvertGPT
 {
-    public partial class DragForm : MetroFramework.Forms.MetroForm {
+    public partial class MainForm : MetroFramework.Forms.MetroForm {
 
         // Database 객체 생성
         DataTable table = new DataTable();
@@ -35,7 +35,7 @@ namespace ConvertGPT
         DatabaseScreen databaseScreen = new DatabaseScreen();
 
         // Life Cycle
-        public DragForm()
+        public MainForm()
         {
             InitializeComponent();
             this.AllowDrop = true;

@@ -1,6 +1,6 @@
 ﻿namespace ConvertGPT
 {
-    partial class DragForm
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DragForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.bottomCheckBox = new System.Windows.Forms.CheckBox();
