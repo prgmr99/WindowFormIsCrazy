@@ -13,6 +13,11 @@ namespace ConvertGPT.Global.Component
     {
         public static void customizeSyntaxHighlighting(string selectLanguage, ScintillaNET.Scintilla TextBox)
         {
+            TextBox.StyleResetDefault();
+            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
+            TextBox.Styles[ScintillaNET.Style.Default].Size = 10;
+            TextBox.StyleClearAll();
+
             switch (selectLanguage)
             {
                 case "Cpp":
@@ -44,13 +49,6 @@ namespace ConvertGPT.Global.Component
 
         private static void customizeSyntaxHighlighting_Cpp(ScintillaNET.Scintilla TextBox)
         {
-            // Cpp syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 12;
-            
-            TextBox.StyleClearAll();
-
             // Cpp Lexer Style 설정
             TextBox.Styles[ScintillaNET.Style.Cpp.Default].ForeColor = Color.Silver;
             TextBox.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = Color.FromArgb(0, 128, 0);
@@ -73,13 +71,7 @@ namespace ConvertGPT.Global.Component
         }
 
         private static void customizeSyntaxHighlighting_Swift(ScintillaNET.Scintilla TextBox)
-        {
-            // Swift syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 10;
-            TextBox.StyleClearAll();
-
+        {          
             // Swift Lexer Style 설정
             TextBox.Styles[ScintillaNET.Style.Cpp.Default].ForeColor = Color.Silver;
             TextBox.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = Color.FromArgb(0, 128, 0);
@@ -105,12 +97,6 @@ namespace ConvertGPT.Global.Component
 
         private static void customizeSyntaxHighlighting_CSharp(ScintillaNET.Scintilla TextBox)
         {
-            // C# syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 12;
-            TextBox.StyleClearAll();
-
             // C# Lexer Style 설정
             TextBox.Styles[ScintillaNET.Style.Cpp.Default].ForeColor = Color.Silver;
             TextBox.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = Color.FromArgb(0, 128, 0);
@@ -134,12 +120,6 @@ namespace ConvertGPT.Global.Component
 
         public static void customizeSyntaxHighlighting_Java(ScintillaNET.Scintilla TextBox)
         {
-            // Java syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 12;
-            TextBox.StyleClearAll();
-
             // Java Lexer Style 설정
             TextBox.Styles[ScintillaNET.Style.Cpp.Default].ForeColor = Color.FromArgb(64, 64, 64);  // 전체 기본 색상
             TextBox.Styles[ScintillaNET.Style.Cpp.Comment].ForeColor = Color.DarkGreen;  // 주석 색상
@@ -163,12 +143,6 @@ namespace ConvertGPT.Global.Component
 
         public static void customizeSyntaxHighlighting_JS(ScintillaNET.Scintilla TextBox)
         {
-            // JavaScript syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 12;
-            TextBox.StyleClearAll();
-
             // Lexer Style 설정
             TextBox.Styles[ScintillaNET.Style.Default].ForeColor = Color.Black;
             TextBox.Styles[ScintillaNET.Style.Default].BackColor = Color.White;
@@ -196,12 +170,6 @@ namespace ConvertGPT.Global.Component
 
         public static void customizeSyntaxHighlighting_Python(ScintillaNET.Scintilla TextBox)
         {
-            // Python syntax highlighting customization code
-            TextBox.StyleResetDefault();
-            TextBox.Styles[ScintillaNET.Style.Default].Font = "Consolas";
-            TextBox.Styles[ScintillaNET.Style.Default].Size = 12;
-            TextBox.StyleClearAll();
-
             // Set the styles
             TextBox.Styles[ScintillaNET.Style.Python.Default].ForeColor = Color.FromArgb(0x80, 0x80, 0x80); // 기본 스타일의 전경색 설정
             TextBox.Styles[ScintillaNET.Style.Python.CommentLine].ForeColor = Color.FromArgb(0x00, 0x7F, 0x00); // 한 줄 주석 스타일의 전경색 설정

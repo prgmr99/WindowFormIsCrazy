@@ -55,11 +55,8 @@ namespace ConvertGPT.MainScene
         }
 
         private void updateCodeTextBoxUI() {
-            this.languageLabel.Text = convertResponse.language;
-
-
             CodeTextBox.customizeSyntaxHighlighting(this.languageLabel.Text, this.metroTextBox1);
-
+            this.languageLabel.Text = convertResponse.language;
             this.metroTextBox1.Text = convertResponse.code;
         }
 
@@ -109,7 +106,6 @@ namespace ConvertGPT.MainScene
 
         private async void requestExplainAPI(ExplainRequest request)
         {
-
             Console.WriteLine("requestConvertAPI");
             PromptService ps = new PromptService();
             Task<string> result = ps.GetResponse(new ExplainType(request));
@@ -148,6 +144,19 @@ namespace ConvertGPT.MainScene
 
         private async void btnCopy_Click(object sender, EventArgs e)
         {
+            // 텍스트 박스에서 텍스트 가져오기
+            string copiedText = metroTextBox1.Text;
+
+            // 클립보드에 텍스트 복사
+            Clipboard.SetText(copiedText);
+
+            // 기본 백그라운드 이미지 저장
+
+            btnCopy.BackgroundImage = Properties.Resources.icon_check;
+            // 2초 기다린 후
+            await Task.Delay(2000);
+
+            btnCopy.BackgroundImage = Properties.Resources.icon_copy;
 
         }
     }

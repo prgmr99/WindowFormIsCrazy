@@ -124,6 +124,7 @@
             this.btnCopy.BackColor = System.Drawing.Color.DimGray;
             this.btnCopy.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_copy;
             this.btnCopy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCopy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCopy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCopy.FlatAppearance.BorderSize = 0;
             this.btnCopy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
@@ -228,6 +229,7 @@
             this.keySyntaxButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.keySyntaxButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_bulb;
             this.keySyntaxButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.keySyntaxButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.keySyntaxButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.keySyntaxButton.FlatAppearance.BorderSize = 0;
             this.keySyntaxButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -245,6 +247,7 @@
             this.backButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.backButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_left;
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -264,6 +267,7 @@
             this.refreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.refreshButton.BackgroundImage = global::ConvertGPT.Properties.Resources.icon_refresh;
             this.refreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.refreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.refreshButton.FlatAppearance.BorderSize = 0;
             this.refreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
