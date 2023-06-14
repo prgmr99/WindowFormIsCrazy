@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ConvertGPT.Presentation.Common
+namespace ConvertGPT
 {
     public partial class HistoryCell : UserControl
     {
 
-        
+        HistoryModel data = new HistoryModel();
+
+        public event HistoryCellSelectEventSender historyCellSelectEventSender;
 
         public HistoryCell()
         {
@@ -23,7 +25,18 @@ namespace ConvertGPT.Presentation.Common
 
         private void tableLayoutPanel1_Click(object sender, EventArgs e)
         {
+            historyCellSelectEventSender(data.id);
+        }
 
+        public void dataBind(HistoryModel data) { 
+            this.data = data;
+            updateUI();
+        }
+
+        private void updateUI() {
+            idLabel.Text = data.id.ToString();
+            languageLabel.Text = $"{data.fromLanguage} → {data.toLanguage}";
+            explainLabel.Text = data.explain.ToString();
         }
 
         

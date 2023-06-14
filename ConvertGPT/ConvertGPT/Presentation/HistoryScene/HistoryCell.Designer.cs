@@ -1,4 +1,4 @@
-﻿namespace ConvertGPT.Presentation.Common
+﻿namespace ConvertGPT
 {
     partial class HistoryCell
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.idLabel = new System.Windows.Forms.Label();
             this.explainLabel = new System.Windows.Forms.Label();
             this.languageLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -42,7 +42,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.1414F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.8586F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.idLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.explainLabel, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.languageLabel, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -54,22 +54,22 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
-            // label1
+            // idLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 60);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "id";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
+            this.idLabel.AutoSize = true;
+            this.idLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.idLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.idLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.idLabel.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.idLabel.ForeColor = System.Drawing.Color.White;
+            this.idLabel.Location = new System.Drawing.Point(10, 10);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(10);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(60, 60);
+            this.idLabel.TabIndex = 6;
+            this.idLabel.Text = "id";
+            this.idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.idLabel.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
             // explainLabel
             // 
@@ -124,6 +124,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label explainLabel;
         private System.Windows.Forms.Label languageLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label idLabel;
     }
 }
