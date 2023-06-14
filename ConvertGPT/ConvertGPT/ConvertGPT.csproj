@@ -219,6 +219,12 @@
     <Compile Include="Data\ExplainResponse.cs" />
     <Compile Include="Global\Component\CodeTextBox.cs" />
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Presentation\Common\KeySyntaxResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Common\KeySyntaxResultForm.Designer.cs">
+      <DependentUpon>KeySyntaxResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\DatabaseScene\DatabaseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
