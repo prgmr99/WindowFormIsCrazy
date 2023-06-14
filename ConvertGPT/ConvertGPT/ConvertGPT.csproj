@@ -217,7 +217,9 @@
     <Compile Include="Data\ConvertResponse.cs" />
     <Compile Include="Data\ExplainRequest.cs" />
     <Compile Include="Data\ExplainResponse.cs" />
+    <Compile Include="Data\KeySyntaxRequest.cs" />
     <Compile Include="Global\Secret.cs" />
+    <Compile Include="Network\Type\KeySyntaxType.cs" />
     <Compile Include="Presentation\DatabaseScene\DatabaseScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>

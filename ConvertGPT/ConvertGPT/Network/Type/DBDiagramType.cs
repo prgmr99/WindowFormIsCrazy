@@ -172,5 +172,9 @@ course ""1"" -- ""0..*"" prereq
 
             };
         }
+        public object parse_output(string output)
+        {
+            return null;
+        }
     }
 }

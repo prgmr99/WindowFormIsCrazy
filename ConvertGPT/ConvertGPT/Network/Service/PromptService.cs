@@ -42,6 +42,7 @@ namespace ConvertGPT
 
                 Console.WriteLine($"{completionResult.Error.Code}: {completionResult.Error.Message}");
             }
+            
             return string.Empty;
 
         }
