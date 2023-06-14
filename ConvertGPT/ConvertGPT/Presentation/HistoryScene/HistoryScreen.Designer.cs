@@ -86,6 +86,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "HistoryScreen";
             this.Size = new System.Drawing.Size(800, 740);
+            this.Load += new System.EventHandler(this.HistoryScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

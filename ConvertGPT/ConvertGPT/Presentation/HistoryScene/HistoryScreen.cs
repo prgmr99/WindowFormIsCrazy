@@ -47,5 +47,34 @@ namespace ConvertGPT
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void HistoryScreen_Load(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+
+            string localConfig = Secret.LocalHost;
+            string exConfig = Secret.ExConnect;
+            string sql = "SELECT ToLang, codeRecord, codeResult from history";
+
+            MySqlConnection conDataBase = new MySqlConnection(localConfig);
+            MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bSouce = new BindingSource();
+
+                bSouce.DataSource = dbdataset;
+                dataGridView1.DataSource = bSouce;
+                sda.Update(dbdataset);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
