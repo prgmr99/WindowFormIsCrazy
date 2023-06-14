@@ -40,8 +40,8 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.1414F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.8586F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.timeAgoLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.explainLabel, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.languageLabel, 1, 0);
@@ -79,11 +79,11 @@
             this.explainLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.explainLabel.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.explainLabel.ForeColor = System.Drawing.Color.White;
-            this.explainLabel.Location = new System.Drawing.Point(314, 10);
+            this.explainLabel.Location = new System.Drawing.Point(250, 10);
             this.explainLabel.Margin = new System.Windows.Forms.Padding(10);
             this.explainLabel.Name = "explainLabel";
             this.explainLabel.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.explainLabel.Size = new System.Drawing.Size(476, 60);
+            this.explainLabel.Size = new System.Drawing.Size(540, 60);
             this.explainLabel.TabIndex = 5;
             this.explainLabel.Text = "이 코드는 무슨 ";
             this.explainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,9 +100,9 @@
             this.languageLabel.Location = new System.Drawing.Point(130, 10);
             this.languageLabel.Margin = new System.Windows.Forms.Padding(10);
             this.languageLabel.Name = "languageLabel";
-            this.languageLabel.Size = new System.Drawing.Size(164, 60);
+            this.languageLabel.Size = new System.Drawing.Size(100, 60);
             this.languageLabel.TabIndex = 3;
-            this.languageLabel.Text = "C → C++";
+            this.languageLabel.Text = "C#";
             this.languageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.languageLabel.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 

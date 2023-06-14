@@ -108,9 +108,6 @@ namespace ConvertGPT
             updateCodeTextBoxUI();
             requestExplainAPI(this.explainRequest);
 
-            this.explainResponse.explain = result.Result;
-
-            saveConvertResultDataBase(this.convertRequest, this.convertResponse, this.explainResponse);
             return;
         }
 
@@ -125,6 +122,8 @@ namespace ConvertGPT
             Console.WriteLine($"서버 응답이 왔습니다. \n {result.Result}");
             
             this.explainResponse.explain = result.Result;
+            saveConvertResultDataBase(this.convertRequest, this.convertResponse, this.explainResponse);
+
             updateExplainBoxUI();
             return;
         }

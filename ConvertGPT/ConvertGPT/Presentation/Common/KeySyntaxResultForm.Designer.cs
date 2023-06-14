@@ -29,27 +29,28 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.scintilla1 = new ScintillaNET.Scintilla();
+            this.textBox = new ScintillaNET.Scintilla();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.scintilla1);
+            this.panel1.Controls.Add(this.textBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(859, 496);
             this.panel1.TabIndex = 0;
             // 
-            // scintilla1
+            // textBox
             // 
-            this.scintilla1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scintilla1.Location = new System.Drawing.Point(0, 0);
-            this.scintilla1.Name = "scintilla1";
-            this.scintilla1.Size = new System.Drawing.Size(859, 496);
-            this.scintilla1.TabIndex = 0;
-            this.scintilla1.Text = "scintilla1";
+            this.textBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox.EdgeColor = System.Drawing.Color.Black;
+            this.textBox.Location = new System.Drawing.Point(0, 0);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(859, 496);
+            this.textBox.TabIndex = 0;
+            this.textBox.Text = "로딩중";
             // 
             // KeySyntaxResultForm
             // 
@@ -70,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private ScintillaNET.Scintilla scintilla1;
+        private ScintillaNET.Scintilla textBox;
     }
 }
