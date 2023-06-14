@@ -44,5 +44,9 @@ namespace ConvertGPT
                 
             };
         }
+        public object parse_output(string output)
+        {
+            return null;
+        }
     }
 }

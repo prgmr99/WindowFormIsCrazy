@@ -44,5 +44,10 @@ namespace ConvertGPT
                 Stop = "###"
             };
         }
+
+        public object parse_output(string output)
+        {
+            return null;
+        }
     }
 }
