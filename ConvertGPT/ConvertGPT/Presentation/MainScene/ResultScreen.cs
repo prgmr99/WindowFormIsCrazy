@@ -65,12 +65,19 @@ namespace ConvertGPT
             this.explainResultTextBox.Text = explainResponse.explain;
         }
 
-        private void saveConvertResultDataBase(ConvertRequest request, ConvertResponse response) {
+        private DateTime getCurrentTime()
+        {
+            return DateTime.Now;
+        }
+
+        private void saveConvertResultDataBase(ConvertRequest request, ConvertResponse response, ExplainResponse eResponse) {
+            DateTime currentTime = getCurrentTime();
+            string curTime = currentTime.ToString();
 
             using (MySqlConnection conn = new MySqlConnection(Secret.ExConnect))
             {
                 conn.Open();
-                string sql = string.Format("insert into history(fromlang, tolang, coderecord, coderesult) values ({0}, {1}, {2}, {3});", "\'" + request.fromLanguage + "\'", "\'" + response.language + "\'", "\'" + request.code + "\'", "\'" + response.code + "\'");
+                string sql = string.Format("INSERT INTO history(curtime, fromlang, tolang, coderecord, coderesult, explaincode) VALUES ({0}, {1}, {2}, {3}, {4}, {5});", "\'" + curTime + "\'", "\'" + request.fromLanguage + "\'", "\'" + response.language + "\'", "\'" + request.code + "\'", "\'" + response.code + "\'", "\'" + eResponse.explain + "\'");
 
                 try
                 {
@@ -83,7 +90,8 @@ namespace ConvertGPT
                 }
             }
         }
-
+        // 현재 시간 넣어야 함.
+        // explainCode 
 
         private async void requestConvertAPI(ConvertRequest request)
         {
@@ -97,10 +105,12 @@ namespace ConvertGPT
             this.convertResponse.code = result.Result;
             this.explainRequest.code = result.Result;
 
-            saveConvertResultDataBase(this.convertRequest, this.convertResponse);
-
             updateCodeTextBoxUI();
             requestExplainAPI(this.explainRequest);
+
+            this.explainResponse.explain = result.Result;
+
+            saveConvertResultDataBase(this.convertRequest, this.convertResponse, this.explainResponse);
             return;
         }
 
