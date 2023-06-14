@@ -44,7 +44,9 @@ namespace ConvertGPT
         }
 
         private void updateCodeTextBoxUI() {
-            
+            CodeTextBox.customizeSyntaxHighlighting(this.data.toLanguage, this.convertResultTextBox);
+            this.languageLabel.Text = data.toLanguage;
+            this.convertResultTextBox.Text = data.outputCode;
         }
 
         private void backButton_Click(object sender, EventArgs e)
