@@ -254,12 +254,6 @@
     <Compile Include="Presentation\HistoryScene\HistoryScreen.Designer.cs">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Network\Deprecated\GPTTest.cs" />
     <Compile Include="Presentation\MainScene\GuideScreen.cs">
       <SubType>UserControl</SubType>
@@ -306,9 +300,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\HistoryScene\HistoryScreen.resx">
       <DependentUpon>HistoryScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainScene\GuideScreen.resx">
       <DependentUpon>GuideScreen.cs</DependentUpon>

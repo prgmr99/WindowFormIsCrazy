@@ -1,4 +1,4 @@
-﻿namespace ConvertGPT.MainScene
+﻿namespace ConvertGPT
 {
 
     partial class HomeScreen

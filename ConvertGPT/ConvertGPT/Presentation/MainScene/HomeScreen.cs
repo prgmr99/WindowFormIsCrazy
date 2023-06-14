@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 
-namespace ConvertGPT.MainScene
+namespace ConvertGPT
 {
 
 
@@ -21,7 +21,7 @@ namespace ConvertGPT.MainScene
 
         ConvertRequest model = new ConvertRequest("","","");
 
-        MainScene.GuideScreen guideScreen = new MainScene.GuideScreen();
+        GuideScreen guideScreen = new GuideScreen();
 
         public event HomeEventSender homeEventSender;
 
@@ -39,7 +39,7 @@ namespace ConvertGPT.MainScene
             model.code = inputTextBox.Text;
             model.fromLanguage = "...";
 
-            LanguageForm languageForm = new MainScene.LanguageForm();
+            LanguageForm languageForm = new LanguageForm();
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
             languageForm.ShowDialog();
         }

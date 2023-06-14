@@ -11,7 +11,7 @@ using ConvertGPT.Global.Component;
 using MySql.Data.MySqlClient;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace ConvertGPT.MainScene
+namespace ConvertGPT
 {
     public partial class ResultScreen : UserControl
     {
@@ -123,7 +123,7 @@ namespace ConvertGPT.MainScene
         private void refreshButton_Click(object sender, EventArgs e)
         {
             Console.WriteLine("새로고침 버튼이 눌렸습니다.");
-            LanguageForm languageForm = new MainScene.LanguageForm();
+            LanguageForm languageForm = new LanguageForm();
             languageForm.selectLanguageEventSender += SelectLanguageEventSender;
             languageForm.ShowDialog();
 

@@ -27,8 +27,8 @@ namespace ConvertGPT
 
 
         // Screen
-        MainScene.HomeScreen homeScreen = new MainScene.HomeScreen();
-        MainScene.ResultScreen resultScreen = new MainScene.ResultScreen();
+        HomeScreen homeScreen = new HomeScreen();
+        ResultScreen resultScreen = new ResultScreen();
 
         FavoriteScreen favoriteScreen = new FavoriteScreen();
         HistoryScreen historyScreen = new HistoryScreen();
