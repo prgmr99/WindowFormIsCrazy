@@ -42,9 +42,9 @@ namespace ConvertGPT
 
             string localConfig = Secret.LocalHost;
             string exConfig = Secret.ExConnect;
-            string sql = "SELECT curTime, fromLang, toLang, codeRecord, codeResult, explainCode FROM history ORDER BY curTime DESC ";
+            string sql = "SELECT curTime, fromLang, toLang, codeRecord, codeResult, explainCode FROM history ORDER BY curTime DESC ;";
 
-            MySqlConnection conDataBase = new MySqlConnection(exConfig);
+            MySqlConnection conDataBase = new MySqlConnection(localConfig);
             MySqlCommand cmdDataBase = new MySqlCommand(sql, conDataBase);
 
             try

@@ -63,6 +63,7 @@ namespace ConvertGPT
                 try
                 {
                     string fileContent = File.ReadAllText(filePath);
+                    fileContent = fileContent.Replace("\n", "\r\n");
                     inputTextBox.Text = fileContent;
                 }
                 catch (Exception ex)

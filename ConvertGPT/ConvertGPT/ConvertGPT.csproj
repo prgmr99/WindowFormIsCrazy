@@ -393,6 +393,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\out.png" />
     <Content Include="Resource\C#.png" />
     <Content Include="Resource\cpp.png" />
     <Content Include="Resource\Icon\icon_bulb.png" />
